@@ -1,0 +1,336 @@
+body {
+    width: 100%;
+    height: auto;
+}
+.sliderHome {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+.imageSlider {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+h3 {
+    width: 30%;
+    position: absolute;
+    z-index: 2;
+    bottom: 20%;
+    border-radius: 10px;
+    right: 5%;
+    background-color: rgba(0, 0, 0,0.5);
+    padding: 1%;
+    color: white;
+}
+
+.sliderNovedades {
+    padding: 3%;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+p-card {
+    width: 22%;
+    border-radius: 10px;
+}
+
+p-card > ng-template > img {
+    height: 50%;
+}
+
+
+.unidadesAcademicas {
+    padding: 3%;
+}
+
+.iconsUnidadesAcademicas {
+    display: flex;
+    justify-content:space-around ;
+    width: 100%;
+}
+
+.iconsUnidadesAcademicas > img {
+    width: 10%;
+    height: 10%;
+}
+
+hr {
+    color: black;
+}
+.sistemasExternos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* menu carreras */
+
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+.wrap{
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+.wrap:hover {
+    cursor: pointer;
+}
+
+ul.tabs{
+	width: 100%;
+	background: #363636;
+	list-style: none;
+	display: flex;
+}
+
+ul.tabs li{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+ul.tabs li a{
+	width: 100% !important;
+	height: 100% !important;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	text-align: center;
+
+	display: block;
+	padding: 20px 0px;
+}
+
+/* .active{
+	background: rgba(0, 0, 0, 0.6);
+} */
+
+ul.tabs li a .tab-text{
+	margin-left: 8px;
+}
+
+.secciones{
+	width: 100%;
+	background: #fff;
+}
+
+.secciones article{
+	padding: 30px;
+}
+
+.secciones article p{
+	text-align: justify;
+}
+
+
+@media screen and (max-width: 100%){
+	ul.tabs li{
+		width: none;
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+}
+
+@media screen and (max-width: 100%){
+	ul.tabs li a{
+		padding: 15px 0px;
+		width: 100% !important;
+		height: 100% !important;
+	;
+	}
+
+	ul.tabs li a .tab-text{
+		display: none;
+		width: 100% !important;
+		height: 100 !important;
+	}
+
+	.secciones article{
+		padding: 5px;
+	}
+}
+
+/* .cursos, article {
+    display: none !important;
+} */
+
+#tab1 {
+    background-color: #0e3d35;
+	color: white;
+	border-bottom: 10px #0c352e solid;
+	
+}
+
+.tecnicaturas {
+    background-color: #0e3d35;
+}
+
+.licenciaturas {
+    background-color: #255051;
+}
+
+
+
+#tab2 {
+    background-color: #255051;
+	color: white;
+	padding-left: 20%;
+	
+}
+
+.cursosPosgrado {
+    background-color: #117572;
+}
+#tab3 {
+    background-color: #117572;
+	color: white;
+	
+	text-align: center;
+}
+
+.cursosExtension {
+	background-color: #3abf88;
+	
+}
+
+#tab4 {
+    background-color: #3abf88;
+	color: white;
+	padding-right: 20%;
+	text-align: right;
+	
+}
+
+.ciclos {
+    background-color: #8ac979;
+}
+
+#tab5 {
+    background-color: #8ac979;
+	color: white;
+	text-align: right;
+	padding-left: 80%;
+	
+	
+}
+
+::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(1) > div {
+	border-bottom: 10px #0c352e solid;
+}
+::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(2) > div {
+	border-bottom: 10px #244949 solid;
+}
+::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(3) > div {
+	border-bottom: 10px #116b68 solid;
+}
+::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(4) > div {
+	border-bottom: 10px #33a877 solid;
+}
+::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(5) > div {
+	border-bottom: 10px #72bd5e solid;
+}
+a {	
+    text-decoration: none;
+	color: white;
+	width: 100%;
+	height: 100%;	
+}
+a:hover {
+    font-size: 21px
+    
+}
+hr {
+    color: transparent;
+    border: none;
+}
+
+i {
+	width: 100%;
+	height: 100%;
+}
+
+::ng-deep span {
+	font-size: 20px;
+	font-weight: 600;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+@media screen and (max-width: 386px) {
+	::ng-deep .tab-text {
+		font-size: 15px !important;
+	}
+	::ng-deep li {
+		height: 35px !important;
+		
+	}
+	::ng-deep a {
+		padding: 2px 2px !important;
+	}	
+}
+
+::ng-deep span {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+::ng-deep .tab-text {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+::ng-deep li > a > i {
+	width: 400px !important;
+	height: 200px !important;
+	font-style: normal !important;
+}
+
+.container-tecnicaturas {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	
+}
+.container-licenciaturas {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	background-color: #255051 !important;
+}
+.container-ciclos {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	background-color: #117572 !important;
+	
+}
+.container-extension {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	background-color: #3abf88 !important;
+	
+}
+.container-posgrado {
+	font-size: 20px !important;
+	font-weight: 600 !important;
+	background-color: #8ac979 !important;
+	
+}
+
+::ng-depp body > app-root > app-home > div > app-nav-bar > div > ul > li.tecnicaturas.col-lg > div > a > i {
+	width: 100% !important;
+	height: 100% !important;
+}
+

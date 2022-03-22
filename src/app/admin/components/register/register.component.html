@@ -1,0 +1,43 @@
+
+<section  class="containerLogin">
+    <div class=" surface-card p-20 lg:w-4 cardLogin">
+        <figure>
+            <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
+        </figure>
+        <div class="text-center mb-5">
+        </div>
+    
+        <form autocomplete="off" [formGroup]="formRegister">
+            <label class="block text-900 font-medium mb-2">Nombre</label>
+            <input formControlName="nombre" type="text" pInputText class="text-center w-full mb-3" autocomplete="off">
+            <small *ngIf="form['nombre'].errors?.['required'] && campoValido('nombre')" class="p-error block">Ingrese un nombre válido</small>
+            <br>
+            <label class="block text-900 font-medium mb-2">Apellido</label>
+            <input formControlName="apellido" type="text" pInputText class="text-center w-full mb-3" autocomplete="off">
+            <small *ngIf="form['apellido'].errors?.['required'] && campoValido('apellido')" class="p-error block">Ingrese un apellido válido</small>
+            <br>
+            <label class="block text-900 font-medium mb-2">Email</label>
+            <input formControlName="email" type="text" pInputText class="text-center w-full mb-3" autocomplete="off">
+            <small *ngIf="form['email'].errors?.['required'] && campoValido('email')" class="p-error block">Debe ingresar un email válido</small>
+            <br>
+    
+            <label class="block text-900 font-medium mb-2">Contraseña</label>
+            <input formControlName="password" type="password" pInputText class="text-center w-full mb-3" autocomplete="off">
+            <small *ngIf="form['password'].errors?.['required'] || campoValido('password')" class="p-error block">Debe contener al menos 8 caracteres, 1 letra mayúscula y 1 caracter especial</small>
+            <br>
+            <label class="block text-900 font-medium mb-2">Reingrese su contraseña</label>
+            <input formControlName="repassword" type="password" pInputText class="text-center w-full mb-3" autocomplete="off">
+            <small *ngIf="form['repassword'].errors && campoValido('repassword')" class="p-error block">Las contraseñas no coinciden</small>
+            <br>
+    
+            <div class="flex align-items-center justify-content-between mb-6">
+                
+                <a routerLink="/admin" class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer">Iniciar Sesión</a>
+            </div>
+            <div class="containerButtonLogin">
+                <button (click)="register()" [disabled]="formRegister.invalid" pButton pRipple label="Registrarme"  class= "buttonLogin lg:w-6 mb-6"></button>
+            </div>            
+        </form>
+    </div>
+</section>
+<p-toast position="top-right"></p-toast>

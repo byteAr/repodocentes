@@ -1,0 +1,28 @@
+.containerLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 3% 2%
+}
+
+.containerButtonLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonLogin {
+    text-align: center !important;
+    background-color:  rgb(58, 149, 142)
+}
+
+figure {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.iconIugna {
+    width: 80%;
+    text-align: center;
+}

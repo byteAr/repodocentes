@@ -1,0 +1,187 @@
+<app-header></app-header>
+<section class="sliderHome">
+    <img class="imageSlider" src="../../../../assets/img/home.jpeg" alt="">
+    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ducimus quod dolor eum inventore ex, libero adipisci ratione similique obcaecati, architecto delectus alias nobis aliquid neque sunt rerum a doloremque.</h3>
+</section>
+<section class="carreras">
+    <div class="wrap">
+        <ul class="tabs row">
+            
+                <li class="tecnicaturas col-lg">
+                    <div >
+                        <a class="container-tecnicaturas" (click)="ejecutarTab(1)"><br> TECNICATURAS</a>
+                    </div>                
+                </li>
+                <li class="tecnicaturas col-lg">
+                    <div>
+                        <a class="container-licenciaturas" (click)="ejecutarTab(2)"><br> LICENCIATURAS</a>
+                    </div>                
+                </li>
+                <li class="tecnicaturas col-lg">
+                    <div >
+                        <a class="container-ciclos" (click)="ejecutarTab(3)">CICLOS DE <br> LICENCIATURA</a>
+                    </div>                
+                </li>
+                <li class="tecnicaturas col-lg">
+                    <div >
+                        <a  class="container-extension" (click)="ejecutarTab(4)">CURSOS DE <br> EXTENSIÓN</a>
+                    </div>                
+                </li>
+                <li class="tecnicaturas col-lg">
+                    <div >
+                        <a  class="container-posgrado" (click)="ejecutarTab(5)">CURSOS DE <br> POSGRADO</a>
+                    </div>                
+                </li>            
+            
+        </ul>
+    
+        <div class="secciones">
+            <div *ngIf="isTab1Active">
+                <article id="tab1">
+                    <div class="cursos col-lg alinear-texto" id="cursos">
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_SEG_PUB_Y_CIU.pdf">Seguridad Pública y Ciudadana</a>
+                        <hr>
+                        <a class="subDerivacion" href="#">Seguridad Pública y Ciudadana con orientación en:</a>
+                        <hr>
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_ADM_PUB.pdf">Administración Pública</a>
+                        <hr>
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_CRIMINALISTICA.pdf">Criminalistica</a>
+                        <hr>
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_GESTION_COM.pdf">Gestión de las Comunicaciones</a>
+                        <hr>
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_INVESTIG_CRIM.pdf">Investigación Criminal</a>
+                        <hr>
+                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_SEG_VIAL.pdf">Seguridad Vial</a>
+                        <hr>
+                    </div>
+                </article>
+            </div>
+            <div *ngIf="isTab2Active">
+                <article id="tab2">
+                    <div class="cursos col-lg" id="cursos">
+                        <a href="./assets/pdf/escugen/ESCUGEN_administracion_publica_2018.pdf">Administración Pública</a>
+                        <hr>
+                        <a href="./assets/pdf/escugen/ESCUGEN_seguridad_publica_2018.pdf">Seguridad Pública</a>
+                        <hr>
+                        <a href="./assets/pdf/escugen/ESCUGEN_criminalistica_2018.pdf">Criminalistica</a>
+                        <hr>
+                        <a href="./assets/pdf/escugen/ESCUGEN_gestion_y_seguridad 2013.pdf">Gestión y Seguridad de las Tecnologías de la Información</a>
+                    </div>
+                </article>
+            </div>
+            <div *ngIf="isTab3Active">
+                <article id="tab3">
+                    <div class="cursos col-lg" id="cursos">
+                        <a href="./assets/pdf/escusuper/CICLO_Lic_administración_publica.pdf">Administración Pública</a>
+                        <hr>
+                        <a href="./assets/pdf/escusuper/CICLO_Lic_seguridad_publica.pdf">Seguridad Pública</a>
+                        <hr>
+                        <a href="./assets/pdf/escusuper/CICLO_Lic_criminalistica.pdf">Criminalistica</a>
+                        <hr>
+                        <a href="./assets/pdf/escusuper/CICLO_Profesorado.pdf">Profesorado Universitario</a>
+                        <hr>
+    
+                    </div>
+                </article>
+            </div>
+            <div *ngIf="isTab4Active">
+                <article id="tab4">
+                    <div class="cursos col-lg" id="cursos">
+                        <a href="./assets/pdf/extension/AnlisisDelDelito.pdf">Análisis del delito</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/InvestigacionDeAccidentesDeTransito.pdf">Investigación de accidentes de tránsito</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/IdiomaFrancesI.pdf">Francés I</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/IdiomaInglesI.pdf">Inglés I</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/HerramientasDeInformatica.pdf">Herramientas básicas de informática</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/PrevencionDelDelito.pdf">Prevención del delito</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/IdiomaFrancesII.pdf">Francés II</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/IdiomaInglesII.pdf">Inglés II</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/LiderarParaElCambio.pdf">Liderar para el cambio</a>
+                        <hr>
+                        <a href="./assets/pdf/extension/IdiomaInglesIII.pdf">Inglés III</a>
+                        <hr>
+                    </div>
+                </article>
+            </div>
+            <div *ngIf="isTab5Active">
+                <article id="tab5">
+                    <div class="cursos col-lg" id="cursos">
+                       
+                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Fronteras</a>
+                        <hr>
+                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
+                        <hr>
+                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
+                        <hr>
+    
+                    </div>
+                </article>
+            </div>
+        </div>
+        </div>
+</section>
+<section class="sliderNovedades">
+    <h2>Novedades</h2>
+    <hr>
+    <br>
+    <br>
+    <div class="cardContainer">
+        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
+            </ng-template>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
+            
+        </p-card>
+        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
+            </ng-template>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
+            
+        </p-card>
+        <p-card header="Advanced Card" subheader="Card Subheader" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
+            </ng-template>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
+            
+        </p-card>
+        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
+            </ng-template>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
+            
+        </p-card>
+    </div>
+
+</section>
+<section class="unidadesAcademicas">
+    <h2>Unidades Académicas</h2>
+    <br>
+    <br>
+    <div class="iconsUnidadesAcademicas">
+        <img src="../../../../assets/img/icon escuelas/01.png" alt="Escuela de Suboficiales Raul Remberto Cuello">
+        <img src="../../../../assets/img/icon escuelas/02.png" alt="Escuela de formacion de Gendarmes">
+        <img src="../../../../assets/img/icon escuelas/03.png" alt="Ecuela de Oficiales Martin Miguel de Güemes">
+        <img src="../../../../assets/img/icon escuelas/04.png" alt="Escuela Superior Maria Calderon">
+        <img src="../../../../assets/img/icon escuelas/05.png" alt="Escuela de Capacitacion Especializada Cabo Juan Adolfo Romero">
+    </div>
+</section>
+<section class="enlaces">
+    <div class="sistemasExternos">
+        <img src="../../../../assets/img/icon escuelas/CV.png" alt="">
+        <img src="../../../../assets/img/icon escuelas/SIU.png" alt="">
+    </div>
+</section>
+<br>
+<br>
+<app-footer></app-footer>
