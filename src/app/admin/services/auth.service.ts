@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   private baseUrl: string = environment.baseUrl;
-  private _usuario: any;
+  private _usuario?: Usuario;
 
   get usuario() {
     return { ...this._usuario}
@@ -71,5 +71,34 @@ export class AuthService {
       catchError( err => of (err.error.message) )
     );
 
+  }
+
+  validarToken(): any {
+    const url   = `${this.baseUrl}/renew`;
+    const headers = new HttpHeaders()
+      .set('x-token', localStorage.getItem('token') || '');
+
+    return this.http.get<AuthResponse>( url, { headers } )
+      .pipe(
+        map( resp => {
+          const { token, nombre, apellido, id, email, rol} = resp;
+          localStorage.setItem('token', resp.token);
+           this._usuario = {
+            nombre,
+            id,
+            email,
+            apellido,
+            rol
+           }
+          return resp.ok;
+        }),
+        catchError( err => of(false))
+      );
+  }
+
+  logout() {
+    localStorage.clear();
+    localStorage.removeItem('usuario');    
+    this.router.navigateByUrl('/admin');    
   }
 }

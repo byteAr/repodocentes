@@ -46,11 +46,13 @@ export class LoginComponent  {
 
     this.authService.login( email, password )
      .subscribe( resp => {
+       console.log(resp);
         if ( resp.ok ) {
           if(resp.rol === 'admin') {
-            this.router.navigateByUrl('/dashboard')
+            console.log('entro por aca')
+            this.router.navigateByUrl('admin/dashboard')
           } else {
-            this.router.navigateByUrl('/admin')
+            this.router.navigateByUrl('admin')
           }          
         } else {                  
           this.errorMessage(resp);

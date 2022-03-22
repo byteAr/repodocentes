@@ -16,6 +16,8 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import { SharedModule } from '../shared/shared.module';
 import {ToastModule} from 'primeng/toast';
+import { MessageService } from 'primeng/api';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import {ToastModule} from 'primeng/toast';
     ButtonModule,
     InputTextModule,
     SharedModule
-  ]
+  ],
+  providers: [MessageService, ConfirmationService]
 })
 export class AdminModule { }
