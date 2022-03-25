@@ -5,26 +5,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AdminRoutingModule } from './admin-routing.module';
-import { LoginComponent } from './components/login/login.component';
 
 //primeNg modules
 import {CheckboxModule} from 'primeng/checkbox';
-import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
-import { RepositorioComponent } from './components/repositorio/repositorio.component';
-import { RegisterComponent } from './components/register/register.component';
+import {DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
-import { SharedModule } from '../shared/shared.module';
+import {SharedModule } from '../shared/shared.module';
 import {ToastModule} from 'primeng/toast';
-import { MessageService } from 'primeng/api';
-import { ConfirmationService } from 'primeng/api';
+import {MessageService } from 'primeng/api';
+import {ConfirmationService } from 'primeng/api';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    DashboardAdminComponent,
-    RepositorioComponent,
-    RegisterComponent
+    DashboardAdminComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +29,8 @@ import { ConfirmationService } from 'primeng/api';
     ToastModule,
     ButtonModule,
     InputTextModule,
-    SharedModule
+    SharedModule,
+    TableModule
   ],
   providers: [MessageService, ConfirmationService]
 })

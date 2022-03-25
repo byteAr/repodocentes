@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from 'src/app/admin/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +37,7 @@ export class LoginComponent  {
      }
 
   errorMessage( message: string) {
-    this.messageService.add({severity:'error', summary:`${message}`, life: 5000});
+    this.messageService.add({severity:'warn', summary:`${message}`, life: 5000});
   }
 
   login() {
@@ -51,8 +51,8 @@ export class LoginComponent  {
           if(resp.rol === 'admin') {
             console.log('entro por aca')
             this.router.navigateByUrl('admin/dashboard')
-          } else {
-            this.router.navigateByUrl('admin')
+          } else if(resp.rol === 'standart') {
+            this.router.navigateByUrl('invitado')
           }          
         } else {                  
           this.errorMessage(resp);
@@ -65,3 +65,4 @@ export class LoginComponent  {
   
 
 }
+

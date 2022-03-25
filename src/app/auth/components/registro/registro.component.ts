@@ -3,15 +3,16 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors,
 import { Router } from '@angular/router';
 import {MessageService} from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from 'src/app/admin/services/auth.service';
+
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css'],
+  selector: 'app-registro',
+  templateUrl: './registro.component.html',
+  styleUrls: ['./registro.component.css'],
   providers: [MessageService,ConfirmationService]
 })
-export class RegisterComponent implements OnInit {
+export class RegistroComponent implements OnInit {
 
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
   formRegister: FormGroup;
@@ -66,7 +67,7 @@ export class RegisterComponent implements OnInit {
         if ( ok === true ) {
           this.messageService.add({severity:'success', summary:'Registro Exitoso', detail:'Registro exitoso, verifique la bandeja de entrada de su correo para completar el registro', life: 5000});
           setTimeout(() => {            
-            this.router.navigateByUrl('/admin');
+            this.router.navigateByUrl('/auth');
           }, 5000);
         } else {   
           console.log(ok);
@@ -87,3 +88,4 @@ export class RegisterComponent implements OnInit {
    
 
 }
+

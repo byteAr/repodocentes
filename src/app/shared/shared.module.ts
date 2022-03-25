@@ -10,6 +10,7 @@ import { FooterRepoComponent } from './components/footer-repo/footer-repo.compon
 //PrimeNg
 import { AvatarModule } from "primeng/avatar";
 import {MenubarModule} from 'primeng/menubar';
+import {SplitButtonModule} from 'primeng/splitbutton'
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {MenubarModule} from 'primeng/menubar';
     CommonModule,
     SharedRoutingModule,
     AvatarModule,
-    MenubarModule
+    MenubarModule,
+    SplitButtonModule
     
   ],
   exports: [

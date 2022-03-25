@@ -97,8 +97,9 @@ export class AuthService {
   }
 
   logout() {
+    console.log('llego al logaut')
     localStorage.clear();
     localStorage.removeItem('usuario');    
-    this.router.navigateByUrl('/admin');    
+    this.router.navigateByUrl('/auth');    
   }
 }

@@ -7,12 +7,22 @@
     justify-content: space-between;
     align-items: center;
     padding: 2% 1%;
-    background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgb(0, 153, 255) 50%,rgb(2, 51, 107) 100%);
+    background: linear-gradient(90deg, rgb(83, 163, 255) 0%, rgb(6, 114, 185) 50%,rgb(2, 51, 107) 100%);
 }
+
+p-splitButton {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 .tituloPrincipal {
     display: flex;
     align-items: center;
+    color: white
 }
 
 
@@ -31,6 +41,8 @@ p-avatar:hover {
     height: 100%;
     
 }
+
+
 
 ul {
     width: 100%;
@@ -54,3 +66,4 @@ li {
 li:hover {
     cursor: pointer
 }
+
