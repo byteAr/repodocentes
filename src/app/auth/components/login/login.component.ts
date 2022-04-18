@@ -11,8 +11,11 @@ import { AuthService } from 'src/app/admin/services/auth.service';
 })
 export class LoginComponent  {
 
-  emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-  formLogin: FormGroup;
+  productDialog?: boolean;
+  submitted?: boolean;
+  email         :string='';
+  emailPattern  : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
+  formLogin     : FormGroup;
 
   submitForm(value: { email: string, password: string}): void {
     for (const key in this.formLogin.controls) {
@@ -46,10 +49,8 @@ export class LoginComponent  {
 
     this.authService.login( email, password )
      .subscribe( resp => {
-       console.log(resp);
         if ( resp.ok ) {
           if(resp.rol === 'admin') {
-            console.log('entro por aca')
             this.router.navigateByUrl('admin/dashboard')
           } else if(resp.rol === 'standart') {
             this.router.navigateByUrl('invitado')
@@ -62,6 +63,24 @@ export class LoginComponent  {
     
   }
 
+  hideDialog() {
+    this.productDialog = false;
+    this.submitted = false;
+}
+
+openDialog() {
+  this.productDialog=true;
+  this.submitted=false
+
+}
+
+recuperarPass(){
+  this.authService.recoveryPassword(this.email)
+  .subscribe(resp => {
+  })
+  this.submitted=true;
+  this.hideDialog()
+}
   
 
 }

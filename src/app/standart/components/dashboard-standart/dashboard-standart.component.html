@@ -1,2 +1,61 @@
 <app-header-repo></app-header-repo>
+
+<p-toast></p-toast>
+
+<div class="card">
+    
+
+    <p-table  #dt [value]="docentes" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','apellido', 'dni', 'email','unidadrevista']" responsiveLayout="scroll"
+         [rowHover]="true" dataKey="id"
+        currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas" [showCurrentPageReport]="true">
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex p-jc-between">                        
+                    <h5 class="p-m-0">LISTADO DE DOCENTES</h5>
+                    <br>                                                                               
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar..." />
+                    </span>
+               
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <!-- <th style="width: 3rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th> -->
+                <th>Orden</th>
+                <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                <th pSortableColumn="apellido">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>
+                <!-- <th>Image</th> -->
+                <th pSortableColumn="dni">Dni <p-sortIcon field="dni"></p-sortIcon></th>
+                <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+                <th pSortableColumn="unidadrevista">Unidad de Revista <p-sortIcon field="unidadrevista"></p-sortIcon></th>  
+                <th >Documentos</th>  
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-docente let-i="rowIndex">
+            <tr>
+                <!-- <td>
+                    <p-tableCheckbox [value]="persona"></p-tableCheckbox>
+                </td> -->
+                <td>{{i + 1}}</td>
+                <td>{{docente.nombre}}</td>
+                <!-- <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="p-shadow-4" /></td> -->
+                <td>{{docente.apellido}}</td>
+                <td>{{docente.dni}}</td>
+                <td>{{docente.email}}</td>
+                <td>{{docente.unidadrevista}}</td>
+                <!-- <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td> -->
+                
+                <td class="containerAction">                    
+                    <button pButton pRipple  icon="pi pi-book" tooltipPosition="left" pTooltip="Ver documentación de {{docente.nombre}} {{docente.apellido}}" class="p-button-rounded p-button-info" [routerLink]="['docente/', docente.id]"></button>           
+                </td>
+            </tr>
+        </ng-template>
+        <ngx-spinner type ="ball-scale-multiple"></ngx-spinner>
+    </p-table>
+</div>
+
+
 <app-footer-repo></app-footer-repo>

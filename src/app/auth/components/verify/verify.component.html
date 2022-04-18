@@ -1,0 +1,22 @@
+<div class="verifyContainer">
+    <p-progressSpinner *ngIf="verificado==0"></p-progressSpinner>
+    <div *ngIf="verificado==1" class="itemVerify">
+        <h1>Verificación exitosa</h1>
+        <br>
+        <i class="pi pi-check animate__heartBeat" style="font-size: 5rem; color: #5E8F32"></i>
+        <br>
+        <br>
+        <button pButton type="button" routerLink="/auth" label="Iniciar Sesión" class="p-button-success"></button>
+    </div>
+    <div *ngIf="verificado==2" class="itemVerify">
+        <h1>Verificación fallida</h1>
+        <br>
+        <i class="pi pi-times animate__heartBeat" style="font-size: 5rem; color: #C02929 "></i>
+        <br>
+        <br>
+        <button pButton type="button" routerLink="/auth/regiter" label="Registrarme" class="p-button-danger"></button>
+    </div>
+    
+</div>
+
+

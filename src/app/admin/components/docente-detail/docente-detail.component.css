@@ -1,0 +1,43 @@
+.inputFile {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+}
+input[type="file"] {
+    display: none;
+}
+
+.containerButtons {
+    width: 100%;
+    text-align: center;
+}
+
+.documentContainer {
+    min-height: 70vh;
+}
+
+.containerActions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+td {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.containerExclamationIcon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+

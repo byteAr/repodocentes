@@ -1,0 +1,54 @@
+<app-header-repo></app-header-repo>
+<br>
+
+<h1 *ngIf="docente">{{docente.nombre }} {{docente.apellido }}</h1>
+<br>
+<div class="documentContainer">
+    <p-toast></p-toast>
+    <p-table [value]="documents" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Indice</th>
+                <th>Denominación</th>
+                <th>Fecha Creacion</th>
+                <th>Visualizar Archivo</th>
+            </tr>
+        </ng-template>
+        
+            
+        
+        <ng-template pTemplate="body" let-document let-i="rowIndex">
+            <tr>
+                <td>{{i + 1}}</td>
+                <td>{{document.nombreoriginal}}</td>
+                <td>{{document.fechacreacion | date:'d/M/yy h:mm:ss a'}}</td>
+                <td class="containerActions">
+                    
+                        <a href="{{baseUrl}}/{{document.nombreenbase}}">
+                            <button pButton pRipple  icon="pi pi-file-pdf" class="p-button-rounded p-button-info"></button>
+                        </a>
+                    
+                    
+                    
+                </td>
+                
+            </tr>
+        </ng-template>
+    </p-table>
+    <br>
+    <div *ngIf="!documents.length">
+        <div class="containerExclamationIcon">
+            <i class="pi pi-ban" style="font-size: 5rem; color: #899197;" ></i>
+        </div>
+        <h2 style="color: #899197;">Sin archivos</h2>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <ngx-spinner type ="ball-scale-multiple"></ngx-spinner>
+</div>
+<br>
+<p-confirmDialog acceptLabel="SI" [style]="{width: '450px'}"></p-confirmDialog>
+<app-footer-repo></app-footer-repo>
+

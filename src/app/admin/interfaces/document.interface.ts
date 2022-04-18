@@ -1,5 +1,6 @@
-export interface document {
-    id: string;
+export interface Document {
+    id: number;
+    iddocentes: number;
     nombreoriginal: string;
     nombreenbase: string;
     direccionarchivo: string;

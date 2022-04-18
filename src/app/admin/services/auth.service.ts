@@ -73,6 +73,12 @@ export class AuthService {
 
   }
 
+  updatePassword(password:string, id: any) {
+    const url = `${this.baseUrl}/updatepassword`
+    const body = {password, id}
+    return this.http.post<any>(url, body)    
+  }
+
   validarToken(): any {
     const url   = `${this.baseUrl}/renew`;
     const headers = new HttpHeaders()
@@ -96,8 +102,18 @@ export class AuthService {
       );
   }
 
+  verifyEmail(token: string) {
+   const url   = `${this.baseUrl}/verify/${token}`
+   return this.http.get<any>(url)
+  }
+
+  recoveryPassword(email: string) {
+    const url = `${this.baseUrl}/recovery`;
+    const body = { email };
+    return this.http.post(url, body);
+  }
+
   logout() {
-    console.log('llego al logaut')
     localStorage.clear();
     localStorage.removeItem('usuario');    
     this.router.navigateByUrl('/auth');    

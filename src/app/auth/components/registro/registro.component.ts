@@ -70,7 +70,6 @@ export class RegistroComponent implements OnInit {
             this.router.navigateByUrl('/auth');
           }, 5000);
         } else {   
-          console.log(ok);
           this.messageService.add({severity:'error', summary:'ERROR', detail:'ERROR', life: 5000});
         }
      });
