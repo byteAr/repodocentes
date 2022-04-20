@@ -2,7 +2,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 3% 2%
+    padding: 3% 2%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
+box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
 }
 
 .containerButtonLogin {

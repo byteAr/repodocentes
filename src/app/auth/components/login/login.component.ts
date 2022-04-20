@@ -34,8 +34,8 @@ export class LoginComponent  {
     private messageService: MessageService,
     private authService: AuthService) {
       this.formLogin = this.fb.group({        
-        email: ['mlopez@iugna.edu.ar', [Validators.required,Validators.pattern(this.emailPattern)/* pattern(/^[a-zA-Z0-9._-]+\@\gna\.\gob\.\ar$/) */]],
-        password: ['Margen.2', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/)]]
+        email: ['', [Validators.required,Validators.pattern(this.emailPattern)/* pattern(/^[a-zA-Z0-9._-]+\@\gna\.\gob\.\ar$/) */]],
+        password: ['', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/)]]
       });
      }
 
