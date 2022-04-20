@@ -18,7 +18,7 @@ export class ValidarRolAdminGuard implements CanActivate {
     if( rol === 'admin') {
       return true
     } else {
-      this.router.navigateByUrl('/')
+      this.router.navigateByUrl('')
     }
   }
   

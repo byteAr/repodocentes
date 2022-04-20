@@ -18,7 +18,7 @@ export class ValidarRolStandartGuard implements CanActivate {
     if( rol === 'standart') {
       return true
     } else {
-      this.router.navigateByUrl('/')
+      this.router.navigateByUrl('')
     }
   }
   
