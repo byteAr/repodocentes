@@ -66,7 +66,7 @@ export class RecoveryPasswordComponent implements OnInit {
         if ( resp.ok == true ) {
           this.messageService.add({severity:'success', summary:'', detail:'Contraseña Actualizada', life: 5000});
           setTimeout(() => {            
-            this.router.navigateByUrl('./');
+            this.router.navigateByUrl('');
           }, 2000);
         } else {
           this.messageService.add({severity:'error', summary:'ERROR', detail:'ERROR', life: 5000});
