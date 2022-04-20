@@ -69,7 +69,9 @@ export class ListDocentesComponent implements OnInit {
         {label: 'ESCUSUB', value: 'ESCUSUB'},
         {label: 'ESCUSUPER', value: 'ESCUSUPER'},
         {label: 'INSCAES', value: 'INSCAES'},
-        {label: 'INSBARREALL', value: 'INSBARREAL'}
+        {label: 'INSBARREAL', value: 'INSBARREAL'},
+        {label: 'ESPEVIACION', value: 'ESPEVIACION'},
+        {label: 'RECTORADO', value: 'RECTORADO'}
     ];
   }
 
