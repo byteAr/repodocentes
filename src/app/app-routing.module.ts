@@ -5,12 +5,12 @@ import { ValidarTokenGuard } from './guards/loginGuards/validar-token.guard';
 import { ValidarRolStandartGuard } from './guards/loginGuards/validar-rol-standart.guard';
 
 const routes: Routes = [
-  {
+  /* {
     path: '',
     loadChildren: () => import('./user/user.module').then(m => m.UserModule)
-  },
+  }, */
   {
-    path: 'auth',
+    path: '',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
