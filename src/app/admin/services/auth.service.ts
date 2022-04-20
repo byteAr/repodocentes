@@ -116,6 +116,6 @@ export class AuthService {
   logout() {
     localStorage.clear();
     localStorage.removeItem('usuario');    
-    this.router.navigateByUrl('/auth');    
+    this.router.navigateByUrl('');    
   }
 }
