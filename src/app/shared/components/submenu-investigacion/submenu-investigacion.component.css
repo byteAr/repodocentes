@@ -1,0 +1,47 @@
+img {
+    width: 15%;
+}
+
+.containerContacto {
+    width: 100%;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.contactoItems {
+    color: #0a6164;
+    font-weight: 800;
+}
+
+.containerEnlaces{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.itemsEnlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.itemsEnlaces li {
+    padding: 1%;
+    border-radius: 5px;
+ width: 15%;
+ text-align: center;
+ list-style: none;
+ color: #0a6164;
+ font-weight: 700;
+ cursor: pointer;
+ background-color: transparent;
+ transition: ease 0.5s;
+}
+
+.itemsEnlaces li:hover {
+    -webkit-box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+}

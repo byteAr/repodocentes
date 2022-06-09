@@ -1,0 +1,65 @@
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background: linear-gradient(45deg, rgba(0,138,145,1) 0%, rgba(0,173,136,1) 52%, rgba(135,206,128,1) 100%);
+
+}
+
+.subtitulo {
+    color: white;
+    font-size: 2rem;
+    padding-left: 8.5% !important
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 8.5% !important;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 9%;
+}
+
+.title {
+    color: black;
+    font-weight: 700;
+}
+
+:host ::ng-deep .p-card-content {
+    padding-top: 0 !important;
+}
+
+:host ::ng-deep p-card {
+    width: 23%;
+    border-radius: 10px !important;
+}
+
+p-card ng-template img {
+    height:  70%;
+}
+
+.containerPaginator {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+i {
+    color: rgb(4, 192, 14);
+}
+
+.date {
+    color: rgb(153, 154, 155);
+}
+
+.description {
+    color: rgb(15, 164, 233);
+}
+
+:host ::ng-deep .containerPaginator .current {
+    background: #0a7275 !important;
+}

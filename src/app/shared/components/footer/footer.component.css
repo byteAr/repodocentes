@@ -1,7 +1,82 @@
-* {
-    height: 35vh;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.containerFooter {
     width: 100%;
-    background-color: black;
-    position: relative;
-    bottom: 0;
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #004f59;
+}
+:host ::ng-deep .p-dialog-content  {    
+    background-color: #004f59 !important;
+}
+:host ::ng-deep .p-dialog-header  {    
+    background-color: #004f59 !important;
+}
+:host ::ng-deep .p-dialog-title {
+    color: white !important;
+    font-size: 1.5rem !important;
+}
+.containerContacto  {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 2%;
+    color: white;
+}
+div {
+    width: 20%;
+    padding: 2% 0%
+}
+:host ::ng-deep .p-ripple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p {
+    color:white;
+    text-align: center;
+    font-size: 1.3rem;
+}
+p:hover {
+    cursor: pointer;
+}
+
+.rectorado p{
+    text-align: left;
+}
+.rectorado img{
+    text-align: left;
+}
+
+img {
+    width: 70%;
+}
+
+@media (max-width: 940px) {
+	.containerFooter {
+		display: block;
+        margin: auto;
+	}
+
+    .containerFooter div {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .containerFooter p {
+        text-align: center;
+    }
 }

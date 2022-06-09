@@ -1,0 +1,72 @@
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background: linear-gradient(90deg, rgba(255,189,79,1) 0%, rgba(255,142,55,1) 52%, rgba(255,98,32,1) 100%);
+
+}
+
+.subtitulo {
+    color: white;
+    padding-left: 8.5% !important
+}
+
+.containerConvocatoria {
+    width: 80vw;
+    margin: auto;
+}
+
+.containerCuatrimestres {
+    width: 80%;
+    margin: auto;
+}
+
+.buttonConvocatoria {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerContent {
+    width: 81vw;
+    margin: auto;
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 8.5% !important;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.containerContent p {
+    font-size: 1.2rem;
+}
+
+.subtitulo2 {
+    font-size: 1.5rem;
+    color: rgb(4, 158, 4);
+    font-weight: 700;
+}
+
+.container {
+    width: 70vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.imgExtension {
+    width: 30%;
+}
+
+.containerImage {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

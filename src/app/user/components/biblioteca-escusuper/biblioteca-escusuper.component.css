@@ -1,0 +1,61 @@
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background: #1990a6
+
+}
+
+.subtitulo {
+    color: white;
+    padding-left: 5% !important
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 5% !important;
+}
+
+.containerContent {
+    width: 88vw;
+    margin: auto;
+}
+
+ul li {
+    list-style: none;
+}
+
+.containerServiciosCONSULTAS {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.serviciosContainer {
+    width: 50%;
+}
+
+.consultasContainer {
+    width: 50%;
+}
+
+.imgBibliotecaUuaa {
+    width: 50%;
+}
+
+.containerBookContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerContactos {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.containerBookimg{
+    width: 20%;
+}
+

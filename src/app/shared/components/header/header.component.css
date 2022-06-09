@@ -1,29 +1,213 @@
-* {
-    height: 17vh;
-}
-
-.headerContainer {
+:host ::ng-deep .wrapper {
+    height: 20vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5%;
+    padding: 1% 1% 0% 1%;
     background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgb(58,149,142) 50%,rgb(18, 93, 104) 100%);
 }
 
-.iconIugna {
+
+.logo {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+
+:host ::ng-deep .contenedorMenu {
+    display: flex;
+    width: 70%;
+    height: 100% !important;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+button {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.menuDocentes {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.rightMenu {
+    position: relative;
+}
+.containerItems{
+    display: block;
+}
+.dropDownMenuDocentes {
+    display: none;
+    position: absolute;
+    background-color: #125D68;
+    min-width: 400px;
+    z-index: 5;    
+}
+
+li {
+    list-style: none;
+    padding-bottom: 2%;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+ hr {
+     margin-bottom: 2%;
+ }
+.rightMenu:hover .dropDownMenuDocentes {
+    display: block;
+}
+
+.menuDocentes2 {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.rightMenu2 {
+    position: relative;
+}
+.containerItems{
+    display: block;
+}
+.dropDownMenuDocentes2 {
+    display: none;
+    position: absolute;
+    background-color: #125D68;
+    min-width: 400px;
+    z-index: 5;    
+}
+
+.rightMenu2:hover .dropDownMenuDocentes2 {
+    display: block;
+}
+.menuDocentes3 {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+.rightMenu3 {
+    position: relative;
+}
+.containerItems{
+    display: block;
+}
+.dropDownMenuDocentes3 {
+    display: none;
+    position: absolute;
+    left: -310px;
+    padding: 5% 2%;
+    background-color: #125D68;
+    min-width: 400px;
+    z-index: 5;    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.rightMenu3:hover .dropDownMenuDocentes3 {
+    display: block;
+}
+.animate__animated .animate__fadeIn {
+    --animate-duration: 800ms;
+    --animate-delay: 0.1s;
+}
+
+:host ::ng-deep .pi {
+    font-size: 1.2rem !important;
+}
+:host ::ng-deep .p-avatar-icon {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color:  white;
+}
+:host ::ng-deep .p-avatar {
+    background-color: transparent;
+    border: 3px solid white;
+}
+:host ::ng-deep fa-icon:hover {
+    cursor: pointer;
+}
+
+:host ::ng-deep .menuFlotante {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: sticky;
+    z-index: 5;
+}
+
+:host ::ng-deep .mostrar {
+    display:flex;
+}
+
+:host ::ng-deep .itemsMenu {
     width: 25%;
+    text-align: center;
+    background-color: #135E67;
+    color: white;    
+    -webkit-box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
+    -moz-box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
+    box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
+}
+
+:host ::ng-deep .itemMenu {
+    padding: 10%;
+    
+    display: flex;
+    justify-content:space-around;
+}
+
+:host ::ng-deep .itemMenu i {
+}
+ 
+:host ::ng-deep .itemMenu:hover {
+    cursor: pointer;
+    background-color: #0b464d;
+}
+
+:host ::ng-deep fa-icon {
+    font-size: 30px;
+    color: white;
+}
+
+.containeritemsMenu {
+    position: relative;
+    width: 50%;
     height: 100%;
 }
 
 .menuContainer {
-    width: 50%;
-    height: 100%;
-    
+    height: 50%;
 }
 
-ul {
-    width: 100%;
+
+
+:host ::ng-deep .iconIugna {
+    width: 60%;
     height: 100%;
+}
+
+
+:host ::ng-deep .p-ripple {
+    max-width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+:host ::ng-deep .pi-arrow-right {
+    text-align: center;
+}
+
+:host ::ng-deep .menuContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -31,15 +215,112 @@ ul {
     padding-bottom: 1%;
 }
 
-li {
-    width: auto;
-    display: flex;
-    align-items: flex-end;
-    line-height: 100%;
+:host ::ng-deep .menuContainer li {
     color: white;
     font-weight: 400;
 }
 
-li:hover {
+
+:host ::ng-deep .p-button-label {
+    display: none !important;
+}
+:host ::ng-deep li:hover {
     cursor: pointer
 }
+
+
+:host ::ng-deep span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:host ::ng-deep button {
+    border: none !important;
+}
+
+:host ::ng-deep .pi-bars {
+    font-size: 40px !important;
+}
+
+:host ::ng-deep .containerMenuResponsive {
+    display: flex;
+    width: 100%;
+    background-color: #004F59;
+}
+
+
+:host ::ng-deep .containerMenuBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+:host ::ng-deep .logo {
+    width: 60%;
+}
+
+:host ::ng-deep .menu {
+    width: 50%;
+}
+
+:host ::ng-deep p-menuitem-text {
+    color: green;
+}
+
+:host ::ng-deep .itemsSideBar {
+    color: white;
+    list-style: none;
+    font-size: 1.8rem;
+}
+:host ::ng-deep .p-sidebar-left {
+    background-color: #004F59 !important;
+}
+
+:host ::ng-deep .menu {
+    width: 100% !important;
+    background: linear-gradient(45deg, rgb(168, 199, 151) 0%,  rgba(84,151,118,1) 100%) !important;
+    margin: 0 !important;
+    padding: 2% 5% !important;
+    box-shadow: 0 !important;
+    border: 0 !important;
+}
+
+:host ::ng-deep .p-menuitem-text {
+    color:#0c5856 !important
+}
+.menuFlotante {
+    display: none;
+}
+
+.docentes:hover > .menuFlotante {
+    display: block;    
+}
+
+:host ::ng-deep i {
+    font-size: 40px !important;
+    color: white !important;
+}
+
+:host ::ng-deep .p-menubar-mobile-active {
+    background-color: transparent !important;
+    color: transparent !important;
+    border: none !important;
+    border-radius: 0!important;
+}
+
+
+@media (max-width: 940px) {
+    :host ::ng-deep .wrapper {
+        display: none;
+    }
+}
+@media (min-width: 900px) {
+    :host ::ng-deep .containerMenuResponsive {
+        display: none;
+    }
+}
+
+
+  

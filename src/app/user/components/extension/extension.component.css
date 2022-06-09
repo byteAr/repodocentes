@@ -1,0 +1,91 @@
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background:  linear-gradient(90deg, rgba(255,189,79,1) 0%, rgba(255,142,55,1) 52%, rgba(255,98,32,1) 100%);
+
+}
+
+.subtitulo {
+    color: white;
+    font-size: 2rem;
+    padding-left: 8.5% !important
+}
+
+.listCarreras li {
+    list-style: decimal;
+}
+
+.containerConvocatoria {
+    width: 80vw;
+    margin: auto;
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 8.5% !important;
+}
+
+
+
+img {
+    width: 15%;
+}
+
+.containerContacto {
+    width: 100%;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.contactoItems {
+    color: #0a6164;
+    font-weight: 800;
+}
+
+.containerEnlaces{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.itemsEnlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.itemsEnlaces li {
+    padding: 1%;
+    border-radius: 5px;
+ width: 15%;
+ text-align: center;
+ list-style: none;
+ color: #ff6220;
+ font-weight: 700;
+ cursor: pointer;
+ background-color: transparent;
+ transition: ease 0.5s;
+}
+
+.itemsEnlaces li:hover {
+    -webkit-box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+:host ::-webkit-scrollbar {
+    width: 13px;
+    background: linear-gradient(45deg, rgb(2, 2, 2) 0%, rgba(255,142,55,1) 52%, rgba(255,98,32,1)) !important;
+}
+
+:host ::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, rgb(3, 189, 199) 0%, rgb(2, 126, 99) 52%, rgb(55, 133, 48) 100%);
+    border-radius: 12px;
+    -webkit-box-shadow: -2px 7px 21px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 7px 21px 0px rgba(0,0,0,0.75);
+box-shadow: -2px 7px 21px 0px rgba(0,0,0,0.75);
+}

@@ -1,0 +1,55 @@
+.imgDecorativo {
+    width: 15%;
+}
+
+.containerContacto {
+    width: 100%;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.contactoItems {
+    color: #0a6164;
+    font-weight: 800;
+}
+
+.containerEnlaces{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.itemsEnlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background: linear-gradient(45deg, rgba(0,138,145,1) 0%, rgba(0,173,136,1) 52%, rgba(135,206,128,1) 100%);
+
+}
+
+.subtitulo {
+    color: white;
+    font-size: 2rem;
+    padding-left: 8.5% !important
+}
+
+.listCarreras li {
+    list-style: decimal;
+}
+
+.containerConvocatoria {
+    width: 80vw;
+    margin: auto;
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 8.5% !important;
+}
+

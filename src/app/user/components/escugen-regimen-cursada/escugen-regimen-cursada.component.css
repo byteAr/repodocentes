@@ -1,0 +1,13 @@
+.title {
+    font-size: 1.8rem;
+    color: #439a22;
+    font-weight: 700;
+}
+
+.containerDescription {
+    width: 50vw;
+}
+
+p {
+    font-size: 1.2rem;
+}

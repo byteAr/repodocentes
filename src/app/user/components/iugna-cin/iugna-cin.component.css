@@ -1,0 +1,80 @@
+.imgDecorativo {
+    width: 15%;
+}
+
+.containerContacto {
+    width: 100%;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+.contactoItems {
+    color: #0a6164;
+    font-weight: 800;
+}
+
+.containerEnlaces{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.itemsEnlaces {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.containerBiblioteca {
+    width: 80vw;
+    margin: auto;
+}
+
+.containerBodyBiblioteca {
+    display: flex;
+    align-items: center;
+}
+
+.containerImg {
+    width: 8%;
+}
+
+:host ::ng-deep .p-breadcrumb {
+    border: none !important
+}
+
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 8% !important;
+}
+
+img {
+    width: 60%;
+}
+
+.hrBiblioteca {
+    width: 92%;
+    border: 2px solid #04878b;
+}
+
+.containerHr {
+    display: flex;
+    justify-content: flex-end;
+}
+.containerBodyBiblioteca p {
+    color: #007073;
+    font-weight: 800;
+}
+
+.containerDetailBiblioteca {
+    
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .containerDetailBiblioteca p {
+      width: 92%;
+      padding-top:3%
+  }
+
+
+

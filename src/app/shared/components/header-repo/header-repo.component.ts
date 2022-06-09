@@ -11,7 +11,6 @@ import { AuthService } from 'src/app/admin/services/auth.service';
 })
 export class HeaderRepoComponent implements OnInit {
 
-
   items: MenuItem[] = [];
 
   get usuario() {
@@ -24,6 +23,7 @@ export class HeaderRepoComponent implements OnInit {
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;
+
 
     this.items = [{
         label: ``,

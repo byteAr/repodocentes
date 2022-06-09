@@ -1,16 +1,86 @@
-<section class="headerContainer">
+<!-- <img class="logo" src="../../../../assets/img/banner.png" alt=""> -->
+   
+<div class="wrapper">
+    <div class="logo">
+        <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
+    </div>
+    <div class="contenedorMenu">
+        <div class="rightMenu">
+            <button routerLink="/" class="menuDocentes pb-3">INICIO</button>
+        </div>
+        <div class="rightMenu">
+            <button class="menuDocentes pb-3">INSTITUCIONAL</button>
+            <div class="dropDownMenuDocentes p-3 animate__animated animate__fadeIn ">
+                <ul>
+                    <li routerLink="/institucional">El Instituto Universitario</li>
+                    <hr>
+                    <a href="https://www.argentina.gob.ar/gendarmeria">Gendarmeria Nacional Argentina</a>
+                </ul>
+            </div>
+        </div>
+        <div class="rightMenu2">
+            <button class="menuDocentes2 pb-3">INVESTIGACIÓN</button>
+            <div class="dropDownMenuDocentes2 p-3 animate__animated animate__fadeIn">
+                <ul>
+                    <a href="https://revistacys.iugna.edu.ar/">Revista Ciencia y Seguridad</a>
+                    <hr class="mb-2 mt-2">
+                    <a href="https://REPOSITORIODIGITAL.iugna.edu.ar/">Repositorio Digital</a>
+                </ul>
+            </div>
+        </div>
+        <div class="rightMenu">
+            <button routerLink="/extension" class="menuDocentes pb-3">EXTENSIÓN</button>
+        </div>
+        <div class="rightMenu3">
+            <button class="menuDocentes3 pb-3">DOCENTES</button>
+            <div class="dropDownMenuDocentes3 p-3 animate__animated animate__fadeIn">
+                <ul>
+                    <li routerLink="/convocatoria">Convocatoria a Docentes Interinos</li>
+                    <hr>
+                    <li routerLink="/auth" >Repositorio Docente</li>                  
+                </ul>
+                
+            </div>
+        </div>
+        <div class="rightMenu">
+            <button class="menuDocentes pb-3">BIBLIOTECAS</button>
+        </div>
+    </div>
+</div>
+
+<!-- <section class="headerContainer">
     <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
-    <ul class="menuContainer">
-        <li routerLink="/">INICIO</li>
-        <li>|</li>
-        <li>INSTITUCIONAL</li>
-        <li>|</li>
-        <li>INVESTIGACION</li>
-        <li>|</li>
-        <li>EXTENSION</li>
-        <li>|</li>
-        <li>BIBLIOTECA</li>
-        <li>|</li>
-        <li routerLink="/auth" >INGRESAR</li>
+    <div class="containeritemsMenu">       
+        <ul class="menuContainer">        
+            <li routerLink="/">INICIO</li>
+            <li>|</li>
+            <li  routerLink="/institucional">INSTITUCIONAL</li>
+            <li>|</li>
+            <li  routerLink="/investigacion">INVESTIGACION</li>
+            <li >|</li>
+            <li  routerLink="/extension">EXTENSION</li>
+            <li>|</li>
+            <li class="docentes">DOCENTES</li>
+            <li>|</li>
+            <li>BIBLIOTECA</li>
+        </ul>
+    </div>
+</section> -->
+
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+    <ul class="containerItemsSideBar">
+        <li routerLink="/institucional" class="itemsSideBar mt-5">INSTITUCIONAL</li>
+        <li routerLink="/investigacion" class="itemsSideBar mt-5">INVESTIGACIÓN</li>
+        <li routerLink="/extension" class="itemsSideBar mt-5">EXTENSIÓN</li>
+        <li routerLink="/auth" class="itemsSideBar mt-5">INGRESAR</li>
     </ul>
-</section>
+</p-sidebar>
+<div class="containerMenuResponsive">
+    <div class="containerMenuBar">
+        <button pButton class="p-button-outlined" type="button" (click)="visibleSidebar1 = true">
+            <i class="pi pi-bars" style="font-size: 3rem"></i>
+        </button>
+    </div>
+    <img class="logo" src="../../../../assets/img/iconos/iugna-4.png" alt="">
+
+</div>

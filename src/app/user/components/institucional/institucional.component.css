@@ -1,0 +1,162 @@
+.membrete {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 12vh;
+    padding-left: 1%;
+    background: linear-gradient(45deg, rgba(2,54,92,1) 0%, rgba(96,154,158,1) 52%, rgba(255,255,255,1) 100%);
+
+}
+
+.subtitulo {
+    color: white;
+}
+
+.institutoContainer {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2% 7% 0.5% 7%;
+}
+
+.institutoItems {
+    display: flex;
+    justify-content: left;
+    padding: 2% 10% 0.5% 10%;
+}
+
+.icon1 {
+    width: 4rem;
+}
+
+.icon2 {
+  width: 2rem;
+  height: 2rem;
+}
+
+
+
+h2 {
+    margin-left: 2%;
+    font-weight: 900;
+    color: #007073
+    
+}
+
+h3 {
+    
+    margin-left: 1%;
+}
+
+
+
+.divider {
+    border-width: none;
+    height: 5px;
+    width: 74%;
+    background-color: #007073;
+}
+
+
+
+.divideritems {
+    border-width: none;
+    height: 3px;
+    width: 74%;
+    background-color: #007073;
+}
+
+.containerDividerItems {
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+
+  .tabAcordeon {
+    display: flex;
+  }
+
+  
+
+  p-accordiontab {
+    padding: 0px 0px 2% 0px !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none!important;
+    
+  }
+
+  :host ::ng-deep .p-accordion-header-link {
+    display: flex !important;
+    justify-content: space-between !important;
+    outline: none!important;
+    background-color: white !important; 
+    border: none !important   
+    
+    
+  }
+  :host ::ng-deep .p-accordion-header-link {
+    border-bottom: 2px solid #007073 !important    
+    
+    
+  }
+
+  :host ::ng-deep .p-accordion-content {
+    border: none !important
+  }
+
+  :host ::ng-deep .p-accordion-tab-active {
+    outline: none !important;
+    border: none !important
+  }
+  :host ::ng-deep .ng-tns-c34-0 {
+    outline: none !important;
+  }
+
+  .acordeonContainer {
+    width: 75% !important;
+    align-items: center;
+    margin: auto;
+  }
+
+  :host ::ng-deep .p-accordion-toggle-icon {
+    order: 1 !important;
+  }
+  :host ::ng-deep .p-accordion-header-text {
+    flex-grow: 1 !important;
+    font-size: 1.4rem;
+  }
+
+  .containerSchools{
+    padding-left: 5%;
+  }
+
+  .containerItem {
+    width: 70vw;
+  }
+  
+
+  .containerItem ul li {
+    font-size: 1.2rem;
+    color:#007073;
+    font-weight: 700;
+  }
+
+  ul {
+    line-height: 2em;
+  }
+
+  .containerOrganosUnipersonales {
+    width: 68vw;
+  }
+  .containerOrganosColegiados {
+    width: 60vw;
+  }
+
+  .consejo {
+    width: 68vw;
+  }
+
+ 

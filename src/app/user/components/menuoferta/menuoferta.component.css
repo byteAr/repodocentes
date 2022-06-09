@@ -1,0 +1,47 @@
+.containerItemsAccordion {
+    width: 100vw;
+}
+
+:host ::ng-deep .containerItemsAccordion  {
+    max-width: 100%;
+}
+
+:host ::ng-deep .pi-fw {
+    display: none !important;
+}
+
+:host ::ng-deep .p-accordion-header-text {
+    text-align: center !important;    
+    border: none !important;
+}
+
+
+:host ::ng-deep .ng-tns-c42-1 {
+    background-color: #0E3D35 !important;
+    color: white;
+}
+:host ::ng-deep .ng-tns-c42-2 {
+    background-color: #255051 !important;
+    color: white;
+}
+:host ::ng-deep .ng-tns-c42-3 {
+    background-color: #117572 !important;
+    color: white;
+}
+:host ::ng-deep .ng-tns-c42-4 {
+    background-color: #3ABF88 !important;
+    color: white;
+}
+:host ::ng-deep .ng-tns-c42-5 {
+    background-color: #8AC979 !important;
+    color: white;
+}
+
+p {
+    max-width: 100%;
+    text-align: center;
+    font-size: medium;
+    margin-bottom: 1rem;
+    font-weight: 700;
+
+}

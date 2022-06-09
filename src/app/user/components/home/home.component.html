@@ -1,7 +1,10 @@
 <app-header></app-header>
 <section class="sliderHome">
-    <img class="imageSlider" src="../../../../assets/img/home.jpeg" alt="">
-    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia ducimus quod dolor eum inventore ex, libero adipisci ratione similique obcaecati, architecto delectus alias nobis aliquid neque sunt rerum a doloremque.</h3>
+    <img class="imageSlider" src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="">
+    
+</section>
+<section>
+    <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
 </section>
 <section class="carreras">
     <div class="wrap">
@@ -128,39 +131,23 @@
         </div>
 </section>
 <section class="sliderNovedades">
-    <h2>Novedades</h2>
+    <h2 routerLink="/novedades">Novedades</h2>
     <hr>
     <br>
     <br>
     <div class="cardContainer">
-        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
-            <ng-template pTemplate="header">
-                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
-            </ng-template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
-            
-        </p-card>
-        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
-            <ng-template pTemplate="header">
-                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
-            </ng-template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
-            
-        </p-card>
-        <p-card header="Advanced Card" subheader="Card Subheader" styleClass="p-card-shadow">
-            <ng-template pTemplate="header">
-                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
-            </ng-template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
-            
-        </p-card>
-        <p-card header="Advanced Card" subheader="Card Subheader"  styleClass="p-card-shadow">
-            <ng-template pTemplate="header">
-                <img alt="Card" src="https://res.cloudinary.com/dgq2ycemj/image/upload/v1637675809/logo_eliot_pess_uomsjl.png">
-            </ng-template>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt</p>
-            
-        </p-card>
+        <div class="grid grid-cols-4 grid-rows-4 gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6 cardContainer " >
+            <p-card *ngFor="let novedad of novedades | slice: 0:4" styleClass="p-card-shadow mb-5">
+                <ng-template pTemplate="header">
+                    <img alt="Card" [src]="novedad.rutaImage">
+                </ng-template>
+                <p class="title mb-2">{{novedad.title}}</p>
+                <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.date}}</p>
+                <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p>
+                <p class="description text-sky-400">{{novedad.description | slice: 0:30}} ...</p>
+                
+            </p-card>    
+        </div>
     </div>
 
 </section>
@@ -169,17 +156,18 @@
     <br>
     <br>
     <div class="iconsUnidadesAcademicas">
-        <img src="../../../../assets/img/icon escuelas/01.png" alt="Escuela de Suboficiales Raul Remberto Cuello">
-        <img src="../../../../assets/img/icon escuelas/02.png" alt="Escuela de formacion de Gendarmes">
-        <img src="../../../../assets/img/icon escuelas/03.png" alt="Ecuela de Oficiales Martin Miguel de Güemes">
-        <img src="../../../../assets/img/icon escuelas/04.png" alt="Escuela Superior Maria Calderon">
-        <img src="../../../../assets/img/icon escuelas/05.png" alt="Escuela de Capacitacion Especializada Cabo Juan Adolfo Romero">
+        <img routerLink="./uuaa/escusub" src="../../../../assets/img/icon escuelas/01.png" alt="Escuela de Suboficiales Raul Remberto Cuello">
+        <img routerLink="./uuaa/insbarreal" src="../../../../assets/img/icon escuelas/02.png" alt="Escuela de formacion de Gendarmes">
+        <img routerLink="./uuaa/escugen" src="../../../../assets/img/icon escuelas/03.png" alt="Ecuela de Oficiales Martin Miguel de Güemes">
+        <img routerLink="./uuaa/escusuper" src="../../../../assets/img/icon escuelas/04.png" alt="Escuela Superior Maria Calderon">
+        <img routerLink="./uuaa/inscaes" src="../../../../assets/img/icon escuelas/05.png" alt="Escuela de Capacitacion Especializada Cabo Juan Adolfo Romero">
     </div>
 </section>
+
 <section class="enlaces">
     <div class="sistemasExternos">
-        <img src="../../../../assets/img/icon escuelas/CV.png" alt="">
-        <img src="../../../../assets/img/icon escuelas/SIU.png" alt="">
+        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/CV.png" alt=""></a>
+        <a href="https://siu.iugna.edu.ar/autogestion/"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/SIU.png" alt=""></a>
     </div>
 </section>
 <br>

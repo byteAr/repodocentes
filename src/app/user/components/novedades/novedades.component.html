@@ -1,0 +1,21 @@
+<app-header></app-header>
+<p-breadcrumb class=""  [model]="items"></p-breadcrumb>
+<div class="membrete">
+    <h2 class="subtitulo">Novedades</h2>
+</div>
+<div class="grid grid-cols-4 grid-rows-4 gap-2 cardContainer" >
+    <p-card [routerLink]="novedad.route" *ngFor="let novedad of novedades | paginate: { itemsPerPage: 8, currentPage: p }" styleClass="p-card-shadow mb-5">
+        <ng-template pTemplate="header">
+            <img alt="Card" [src]="novedad.rutaImage">
+        </ng-template>
+        <p class="title mb-2">{{novedad.title}}</p>
+        <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.date}}</p>
+        <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p>
+        <p class="description text-sky-400">{{novedad.description}}</p>
+        
+    </p-card>    
+</div>
+<div class="containerPaginator">
+    <pagination-controls (pageChange)="p= $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+</div>
+<app-footer></app-footer>

@@ -1,1 +1,36 @@
-<p>footer</p>
+<div class="containerFooter">
+    <div class="rectorado">
+        <img src="../../../../assets/img/iconos/iugna-4.png" alt="">
+        <p>Rectorado</p>
+        <p>Paseo Colón N° 533 CABA</p>
+        <p>Tel: (011) 5169-3322</p>
+        <p>info@iugna.edu.ar</p>
+    </div>
+    <div>
+        <p routerLink="/uuaa">Oferta Académica</p>
+    </div>
+    <div>
+        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><p>Campus Virtual</p></a>
+    </div>
+    <div>
+        <p (click)="showDialog()">Contactos</p>
+    </div>
+    <p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '70vw'}">
+        <hr>
+        <div class="containerContacto">            
+            <ul>
+                <li>Escuela de Oficiales (Bs. As): Tel: (011) 4620-2063 Interno 253</li>
+                <li>Escuela de Suboficiales (Córdoba): Tel/Fax: (03525)401-964</li>
+                <li>Guardia:(03525)401-965</li>
+                <li>Escuela de Gendarmes (San Juan): Tel: (02648) 441-023 </li>
+            </ul>
+            <p-divider layout="vertical"></p-divider>
+            <ul>
+                <li>Escuela Superior (Bs.As) Tel: (011) 5169-3322</li>
+                <li>Instituto de Capacitación Especializada (Bs.As) Tel: (02324)430-054</li>
+                <li>Centro de Educación a Distancia (Bs.As) Tel: (011) 5169-3355</li>
+            </ul>       
+            
+        </div>
+    </p-dialog>
+</div>

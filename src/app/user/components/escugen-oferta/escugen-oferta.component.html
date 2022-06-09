@@ -1,0 +1,22 @@
+<app-header></app-header>
+<p-breadcrumb class=""  [model]="items"></p-breadcrumb>
+<div class="bannerContainer">
+    <img class="imgOferta" src="../../../../assets/img/oferta/iconoofertaacad.png" alt="">
+    <p>Oferta Académica</p>
+</div>
+<div class="containerContent">
+    <section class="menuLateral m-3">
+        <div *ngFor="let category of categories">
+            <p-radioButton class="radioButton mb-4" styleClass="radioButton" style="font-size: 2rem; font-weight: 700" [label]="category.name" [routerLink]="category.route" [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"
+                [disabled]="category.key === 'U'"></p-radioButton>
+                <hr class="hrMenuLateral mb-5 ml-5">
+        </div>
+        
+    </section>
+    <p-divider layout="vertical"></p-divider>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+</div>
+<app-footer></app-footer>
+

@@ -9,6 +9,8 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+
+
 import { NgxSpinnerModule } from 'ngx-spinner'
 
 @NgModule({
@@ -21,7 +23,8 @@ import { NgxSpinnerModule } from 'ngx-spinner'
     SharedModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
