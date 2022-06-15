@@ -120,6 +120,10 @@ img {
     margin: auto;
 }
 
+.text-base {
+    cursor: pointer;
+}
+
 .containerBodyBiblioteca {
     display: flex;
     align-items: center;

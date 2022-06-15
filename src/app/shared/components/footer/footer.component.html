@@ -1,22 +1,24 @@
-<div class="containerFooter">
+<div class="containerFooter pl-5 pr-5">
     <div class="rectorado">
-        <img src="../../../../assets/img/iconos/iugna-4.png" alt="">
-        <p>Rectorado</p>
-        <p>Paseo Colón N° 533 CABA</p>
-        <p>Tel: (011) 5169-3322</p>
+        <p>INSTITUTO</p>
+        <hr class="mt-2 mb-2">
+        <p class="mb-1">Paseo Colón N° 533 CABA Tel: (011) 5169-3322</p>
         <p>info@iugna.edu.ar</p>
     </div>
-    <div>
+    <div class="acceso">
+        <p>ACCESO</p>
+        <hr class="mt-2 mb-2">
+        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><p class="mb-1">Campus Virtual</p></a>
         <p routerLink="/uuaa">Oferta Académica</p>
     </div>
-    <div>
-        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><p>Campus Virtual</p></a>
-    </div>
-    <div>
-        <p (click)="showDialog()">Contactos</p>
+    <div class="contactos">
+        <p class="text-right" (click)="showDialog()">CONTACTOS</p>
+        <hr class="mt-2 mb-2">
+        <i class="pipi-bars"></i>
+        
     </div>
     <p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '70vw'}">
-        <hr>
+        <hr >
         <div class="containerContacto">            
             <ul>
                 <li>Escuela de Oficiales (Bs. As): Tel: (011) 4620-2063 Interno 253</li>

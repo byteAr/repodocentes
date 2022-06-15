@@ -15,7 +15,7 @@ export class EscusubComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label:'Inicio'},
+      {label:'Inicio', routerLink:'/'},
       {label:'Unidades Académicas', routerLink:'/uuaa'},
       {label:'Unidad Académica Escuela de Gendarmeria Suboficiales de Nacional', disabled: true}
   ];

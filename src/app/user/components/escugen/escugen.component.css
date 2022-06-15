@@ -27,6 +27,11 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.text-base {
+    cursor: pointer;
+}
+
 .membrete {
     display: flex;
     justify-content: left;

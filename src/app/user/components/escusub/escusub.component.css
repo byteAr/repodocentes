@@ -206,6 +206,10 @@ img {
       width: 80%;
   }
 
+  .text-base {
+      cursor: pointer;
+  }
+
   .hrDivider {
       border: 2px solid rgba(135,206,128,1);
   }
