@@ -31,16 +31,12 @@ export class InstitucionalComponent implements OnInit {
     this.visible=id
   }
 
+  //Método de acordeón 
   activeACordeon(): void {
   const acordeon = this.container.nativeElement;
-  this.render2.addClass(acordeon,'visible')     
+  this.render2.addClass(acordeon,'visible')    
 
- /*  for (let i=0; i<acordeon.length; i++) {
-    acordeon[i].addEventListener('click', function () {
-      this.classList.toggle('activa')
-
-    })
-  } */
+ 
   }
 
   
