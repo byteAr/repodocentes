@@ -42,19 +42,19 @@
             <div *ngIf="isTab1Active">
                 <article id="tab1">
                     <div class="cursos col-lg alinear-texto" id="cursos">
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_SEG_PUB_Y_CIU.pdf">Seguridad Pública y Ciudadana</a>
+                        <a >Seguridad Pública y Ciudadana</a>
                         <hr>
-                        <a class="subDerivacion" href="#">Seguridad Pública y Ciudadana con orientación en:</a>
+                        <a >Calígrafo Público Nacional</a>
                         <hr>
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_ADM_PUB.pdf">Administración Pública</a>
+                        <a>Admistración Pública</a>
                         <hr>
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_CRIMINALISTICA.pdf">Criminalistica</a>
+                        <a>Criminalistica</a>
                         <hr>
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_GESTION_COM.pdf">Gestión de las Comunicaciones</a>
+                        <a>Gestión de las Comunicaciones</a>
                         <hr>
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_INVESTIG_CRIM.pdf">Investigación Criminal</a>
+                        <a >Investigación Criminal</a>
                         <hr>
-                        <a href="./assets/pdf/escusub/TECNICATURAS_escusub_SEG_VIAL.pdf">Seguridad Vial</a>
+                        <a>Seguridad Vial</a>
                         <hr>
                     </div>
                 </article>
@@ -62,26 +62,26 @@
             <div *ngIf="isTab2Active">
                 <article id="tab2">
                     <div class="cursos col-lg" id="cursos">
-                        <a href="./assets/pdf/escugen/ESCUGEN_administracion_publica_2018.pdf">Administración Pública</a>
+                        <a>Administración Pública</a>
                         <hr>
-                        <a href="./assets/pdf/escugen/ESCUGEN_seguridad_publica_2018.pdf">Seguridad Pública</a>
+                        <a>Seguridad Pública</a>
                         <hr>
-                        <a href="./assets/pdf/escugen/ESCUGEN_criminalistica_2018.pdf">Criminalistica</a>
+                        <a>Criminalistica</a>
                         <hr>
-                        <a href="./assets/pdf/escugen/ESCUGEN_gestion_y_seguridad 2013.pdf">Gestión y Seguridad de las Tecnologías de la Información</a>
+                        <a>Gestión y Seguridad de las Tecnologías de la Información</a>
                     </div>
                 </article>
             </div>
             <div *ngIf="isTab3Active">
                 <article id="tab3">
                     <div class="cursos col-lg" id="cursos">
-                        <a href="./assets/pdf/escusuper/CICLO_Lic_administración_publica.pdf">Administración Pública</a>
+                        <a>Administración Pública</a>
                         <hr>
-                        <a href="./assets/pdf/escusuper/CICLO_Lic_seguridad_publica.pdf">Seguridad Pública</a>
+                        <a>Seguridad Pública</a>
                         <hr>
-                        <a href="./assets/pdf/escusuper/CICLO_Lic_criminalistica.pdf">Criminalistica</a>
+                        <a>Criminalistica</a>
                         <hr>
-                        <a href="./assets/pdf/escusuper/CICLO_Profesorado.pdf">Profesorado Universitario</a>
+                        <a>Profesorado Universitario</a>
                         <hr>
     
                     </div>
@@ -90,25 +90,25 @@
             <div *ngIf="isTab4Active">
                 <article id="tab4">
                     <div class="cursos col-lg" id="cursos">
-                        <a href="./assets/pdf/extension/AnlisisDelDelito.pdf">Análisis del delito</a>
+                        <a>Análisis del delito</a>
                         <hr>
-                        <a href="./assets/pdf/extension/InvestigacionDeAccidentesDeTransito.pdf">Investigación de accidentes de tránsito</a>
+                        <a>Investigación de accidentes de tránsito</a>
                         <hr>
-                        <a href="./assets/pdf/extension/IdiomaFrancesI.pdf">Francés I</a>
+                        <a>Francés I</a>
                         <hr>
-                        <a href="./assets/pdf/extension/IdiomaInglesI.pdf">Inglés I</a>
+                        <a>Inglés I</a>
                         <hr>
-                        <a href="./assets/pdf/extension/HerramientasDeInformatica.pdf">Herramientas básicas de informática</a>
+                        <a>Herramientas básicas de informática</a>
                         <hr>
-                        <a href="./assets/pdf/extension/PrevencionDelDelito.pdf">Prevención del delito</a>
+                        <a>Prevención del delito</a>
                         <hr>
-                        <a href="./assets/pdf/extension/IdiomaFrancesII.pdf">Francés II</a>
+                        <a>Francés II</a>
                         <hr>
-                        <a href="./assets/pdf/extension/IdiomaInglesII.pdf">Inglés II</a>
+                        <a>Inglés II</a>
                         <hr>
-                        <a href="./assets/pdf/extension/LiderarParaElCambio.pdf">Liderar para el cambio</a>
+                        <a>Liderar para el cambio</a>
                         <hr>
-                        <a href="./assets/pdf/extension/IdiomaInglesIII.pdf">Inglés III</a>
+                        <a>Inglés III</a>
                         <hr>
                     </div>
                 </article>
@@ -167,9 +167,30 @@
 <section class="enlaces">
     <div class="sistemasExternos">
         <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/CV.png" alt=""></a>
-        <a href="https://siu.iugna.edu.ar/autogestion/"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/SIU.png" alt=""></a>
+        <a (click)="showDialog()"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/SIU.png" alt=""></a>
     </div>
 </section>
+<p-dialog header="" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
+    <section class="containerSiu">
+        <div>
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div>
+            <img class="imgSiu" src="../../../../assets/img/siu/A1.png" alt="">
+            <p class="preinscripcion">Preinscripción</p>
+        </div>
+        <div>
+            <img class="imgSiu" src="../../../../assets/img/siu/A2.png" alt="">
+            <p class="autogestion">Autogestión</p>
+        </div>
+        <div>
+            <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
+            <p class="administracion">Administración</p>
+        </div>
+        
+    </section>
+</p-dialog>
 <br>
 <br>
 <app-footer></app-footer>

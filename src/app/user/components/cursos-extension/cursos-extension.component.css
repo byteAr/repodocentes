@@ -18,10 +18,7 @@
     margin: auto;
 }
 
-.containerCuatrimestres {
-    width: 80%;
-    margin: auto;
-}
+
 
 .buttonConvocatoria {
     width: 100%;
@@ -55,7 +52,7 @@ ul li {
 }
 
 .container {
-    width: 70vw;
+    width: 81vw;
     display: flex;
     margin: auto;
     justify-content: space-between;

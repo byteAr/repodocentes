@@ -12,6 +12,7 @@ import {DataViewModule} from 'primeng/dataview';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {DividerModule} from 'primeng/divider';
 import {RadioButtonModule} from 'primeng/radiobutton';
+import {DialogModule} from 'primeng/dialog';
 
 import { SharedModule } from '../shared/shared.module';
 import { InstitucionalComponent } from './components/institucional/institucional.component';
@@ -141,7 +142,8 @@ import { Novedad19Component } from './novedades/novedad19/novedad19.component';
     NgxPaginationModule,
     DividerModule,
     RadioButtonModule,
-    FormsModule
+    FormsModule,
+    DialogModule
   ]
 })
 export class UserModule { }

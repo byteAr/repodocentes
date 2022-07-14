@@ -407,3 +407,37 @@ i {
 	height: 100% !important;
 }
 
+.containerSiu {
+	display: flex;
+	justify-content: space-around;
+}
+
+.preinscripcion {
+	color: #0F8596;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.autogestion {
+	color: #484771;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.administracion {
+	color: #754872;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.imgSiu {
+	border-radius: 10px;
+	transition: transform .7s ease-in;
+}
+
+.imgSiu:hover {
+	cursor: pointer;
+	
+    transform: rotatey(360deg);
+
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {MenuItem} from 'primeng/api';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-convocatoria',
@@ -15,8 +16,8 @@ export class ConvocatoriaComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label:'Inicio'},
-      {label:'Convocatoria a Docentes'}
+      {label:'Inicio', routerLink:'/'},
+      {label:'Convocatoria a Docentes', disabled: true}
   ];
   }
 

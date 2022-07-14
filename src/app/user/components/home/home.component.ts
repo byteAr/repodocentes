@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   isTab3Active:boolean = false;
   isTab4Active:boolean = false;
   isTab5Active:boolean = false;
+  display: boolean = false;
 
   constructor() { }
 
@@ -128,6 +129,10 @@ export class HomeComponent implements OnInit {
       default:
         break;
     }
+   
+  }
+  showDialog() {
+    this.display = true;
   }
 
 }
