@@ -15,28 +15,28 @@
 box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
 }
 
-.cardLogin {
+:host ::ng-deep .cardLogin {
     width: 100%;
 }
 
-.containerButtonLogin {
+:host ::ng-deep .containerButtonLogin {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.buttonLogin {
+:host ::ng-deep .buttonLogin {
     text-align: center !important;
     background-color:  rgb(58, 149, 142)
 }
 
-figure {
+:host ::ng-deep figure {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.iconIugna {
+:host ::ng-deep .iconIugna {
     width: 80%;
     text-align: center;
 }

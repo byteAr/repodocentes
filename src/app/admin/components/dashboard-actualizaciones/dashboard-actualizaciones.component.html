@@ -1,0 +1,31 @@
+<!-- <section class="headerContainer">
+    <h2 class="tituloPrincipal">Dashboard Administrativo</h2>                
+    <p-splitButton label="{{usuario.nombre | slice:0:1}}{{usuario.apellido | slice:0:1}}"  styleClass="p-button-info" [model]="items"></p-splitButton>    
+</section>
+<section class="p-5">
+    <p-button>Nueva novedad</p-button>
+</section>
+<section class="containerForm">
+    <form action="" method="post">
+        <label for="">Titulo</label>        
+        <input type="text">
+        <br>
+        <label for="">Lugar</label>
+        <input type="text">
+        <br>
+        <label for="">Fecha</label>
+        <input type="date">
+        <br>
+        <label for="">Imagen novedad</label>
+        <input type="">
+        <br>
+        <p-fileUpload chooseLabel="Seleccionar" uploadLabel="Subir" cancelLabel="Cancelar" name="document" [customUpload]="true" [multiple]=true (uploadHandler)="getFile($event)">
+            <ng-template  pTemplate="content" let-files>
+                <div *ngIf="files" class="containerExclamationIcon">
+                    <i class="pi pi-inbox" style="font-size: 5rem; color: #899197;"></i>
+                </div>
+                <h3 *ngIf="files" style="color: #899197; text-align: center;">Arrastre y suelte aquí los archivos que desee subir</h3>
+            </ng-template>
+        </p-fileUpload>
+    </form>
+</section> -->

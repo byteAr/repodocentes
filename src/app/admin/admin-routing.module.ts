@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { DocenteDetailComponent } from './components/docente-detail/docente-detail.component';
+import { DashboardActualizacionesComponent } from './components/dashboard-actualizaciones/dashboard-actualizaciones.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'docente/:id',
     component: DocenteDetailComponent
+  },
+  {
+    path: 'actualizacion',
+    component: DashboardActualizacionesComponent
   },
   {
     path: '**', 

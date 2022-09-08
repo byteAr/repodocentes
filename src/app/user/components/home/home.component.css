@@ -436,8 +436,8 @@ i {
 }
 
 .imgSiu:hover {
-	cursor: pointer;
+	cursor: pointer;/* 
 	
-    transform: rotatey(360deg);
+    transform: rotatey(360deg); */
 
 }

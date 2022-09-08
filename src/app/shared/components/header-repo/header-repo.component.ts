@@ -29,20 +29,6 @@ export class HeaderRepoComponent implements OnInit {
         label: ``,
         items: [
         {
-            label: 'Perfil',
-            icon: 'pi pi-user',
-            command: () => {
-                this.logout();
-            }
-        },
-        {
-            label: 'Ayuda',
-            icon: 'pi pi-info-circle',
-            command: () => {
-                this.logout();
-            }
-        },
-        {
           label: 'Cerrar Sesión',
           icon: 'pi pi-sign-out',
           command: () => {

@@ -1,6 +1,6 @@
 <app-header></app-header>
 <section class="sliderHome">
-    <img class="imageSlider" src="../../../../assets/img/portadaHome/banner-iugna02.png" alt="">
+    <img class="imageSlider" src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="">
     
 </section>
 <section>
@@ -42,19 +42,19 @@
             <div *ngIf="isTab1Active">
                 <article id="tab1">
                     <div class="cursos col-lg alinear-texto" id="cursos">
-                        <a >Seguridad Pública y Ciudadana</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Seguridad Pública y Ciudadana</a>
                         <hr>
-                        <a >Calígrafo Público Nacional</a>
+                        <a routerLink="/caligrafo">Calígrafo Público Nacional</a>
                         <hr>
-                        <a>Admistración Pública</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Admistración Pública</a>
                         <hr>
-                        <a>Criminalistica</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Criminalistica</a>
                         <hr>
-                        <a>Gestión de las Comunicaciones</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Gestión de las Comunicaciones</a>
                         <hr>
-                        <a >Investigación Criminal</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas" >Investigación Criminal</a>
                         <hr>
-                        <a>Seguridad Vial</a>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Seguridad Vial</a>
                         <hr>
                     </div>
                 </article>
@@ -62,11 +62,11 @@
             <div *ngIf="isTab2Active">
                 <article id="tab2">
                     <div class="cursos col-lg" id="cursos">
-                        <a>Administración Pública</a>
+                        <a >Administración Pública</a>
                         <hr>
-                        <a>Seguridad Pública</a>
+                        <a >Seguridad Pública</a>
                         <hr>
-                        <a>Criminalistica</a>
+                        <a >Criminalistica</a>
                         <hr>
                         <a>Gestión y Seguridad de las Tecnologías de la Información</a>
                     </div>
@@ -75,11 +75,11 @@
             <div *ngIf="isTab3Active">
                 <article id="tab3">
                     <div class="cursos col-lg" id="cursos">
-                        <a>Administración Pública</a>
+                        <a routerLink="ciclos/administracion">Administración Pública</a>
                         <hr>
-                        <a>Seguridad Pública</a>
+                        <a routerLink="ciclos/seguridad">Seguridad Pública</a>
                         <hr>
-                        <a>Criminalistica</a>
+                        <a routerLink="ciclos/criminalistica">Criminalistica</a>
                         <hr>
                         <a>Profesorado Universitario</a>
                         <hr>
@@ -90,7 +90,7 @@
             <div *ngIf="isTab4Active">
                 <article id="tab4">
                     <div class="cursos col-lg" id="cursos">
-                        <a>Análisis del delito</a>
+                        <!-- <a>Análisis del delito</a>
                         <hr>
                         <a>Investigación de accidentes de tránsito</a>
                         <hr>
@@ -109,20 +109,20 @@
                         <a>Liderar para el cambio</a>
                         <hr>
                         <a>Inglés III</a>
-                        <hr>
+                        <hr> -->
                     </div>
                 </article>
             </div>
             <div *ngIf="isTab5Active">
                 <article id="tab5">
                     <div class="cursos col-lg" id="cursos">
-                       
+                       <!-- 
                         <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Fronteras</a>
                         <hr>
                         <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
                         <hr>
                         <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
-                        <hr>
+                        <hr> -->
     
                     </div>
                 </article>
@@ -141,10 +141,10 @@
                 <ng-template pTemplate="header">
                     <img alt="Card" [src]="novedad.rutaImage">
                 </ng-template>
-                <p class="title mb-2">{{novedad.title}}</p>
+                <!-- <p class="title mb-2">{{novedad.title}}</p>
                 <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.date}}</p>
-                <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p>
-                <p class="description text-sky-400">{{novedad.description | slice: 0:30}} ...</p>
+                <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p> -->
+                <p class="description text-sky-400">{{novedad.description | slice: 0:150}}</p>
                 
             </p-card>    
         </div>
@@ -176,18 +176,25 @@
             <img src="" alt="">
             <p></p>
         </div>
-        <div>
+        <a href="https://preinscripcion.iugna.edu.ar/escuelas/">
+            <div>
             <img class="imgSiu" src="../../../../assets/img/siu/A1.png" alt="">
             <p class="preinscripcion">Preinscripción</p>
-        </div>
-        <div>
-            <img class="imgSiu" src="../../../../assets/img/siu/A2.png" alt="">
-            <p class="autogestion">Autogestión</p>
-        </div>
-        <div>
-            <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
-            <p class="administracion">Administración</p>
-        </div>
+        </div></a>
+        <a href="https://siu.iugna.edu.ar/autogestion/">
+            <div>
+                <img class="imgSiu" src="../../../../assets/img/siu/A2.png" alt="">
+                <p class="autogestion">Autogestión</p>
+            </div>
+        </a>
+        
+        <a href="https://siu.iugna.edu.ar/guarani/">
+            <div>
+                <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
+                <p class="administracion">Administración</p>
+            </div>
+        </a>
+        
         
     </section>
 </p-dialog>

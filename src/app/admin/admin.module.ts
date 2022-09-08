@@ -37,10 +37,13 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import {CardModule} from 'primeng/card';
 import {TooltipModule} from 'primeng/tooltip';
 
+import {SplitButtonModule} from 'primeng/splitbutton';
+
 //Ngx-spinner
 import { NgxSpinnerModule } from 'ngx-spinner'
 import { InterceptorService } from './services/interceptor.service';
 import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.component';
+import { DashboardActualizacionesComponent } from './components/dashboard-actualizaciones/dashboard-actualizaciones.component';
 
 
 
@@ -50,7 +53,8 @@ import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.
     DashboardAdminComponent,
     ListDocentesComponent,
     DocenteDetailComponent,
-    ListUsuariosComponent
+    ListUsuariosComponent,
+    DashboardActualizacionesComponent
   ],
   imports: [
     CommonModule,
@@ -79,7 +83,8 @@ import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.
     InputTextareaModule,
     CardModule,
     TooltipModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    SplitButtonModule
   ],
   
   providers: [

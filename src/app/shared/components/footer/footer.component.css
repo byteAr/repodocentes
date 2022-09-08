@@ -12,13 +12,13 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: #004f59;
+    background-color: #272728;
 }
 :host ::ng-deep .p-dialog-content  {    
-    background-color: #004f59 !important;
+    background-color: #272728 !important;
 }
 :host ::ng-deep .p-dialog-header  {    
-    background-color: #004f59 !important;
+    background-color: #272728 !important;
 }
 :host ::ng-deep .p-dialog-title {
     color: white !important;

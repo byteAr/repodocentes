@@ -1,4 +1,4 @@
-.verifyContainer {
+:host ::ng-deep .verifyContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.itemVerify {
+:host ::ng-deep .itemVerify {
     text-align: center;
 }
 

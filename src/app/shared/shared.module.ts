@@ -21,6 +21,7 @@ import {DividerModule} from 'primeng/divider';
 
 import { SubmenuInvestigacionComponent } from './components/submenu-investigacion/submenu-investigacion.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderActualizacionComponent } from './components/header-actualizacion/header-actualizacion.component';
 
 
 
@@ -33,6 +34,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HeaderRepoComponent,
     FooterRepoComponent,
     SubmenuInvestigacionComponent,
+    HeaderActualizacionComponent,
     
   ],
   imports: [
@@ -54,7 +56,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     FooterComponent,
     HeaderRepoComponent,
     FooterRepoComponent,
-    SubmenuInvestigacionComponent
+    SubmenuInvestigacionComponent,
+    HeaderActualizacionComponent
   ]
 })
 export class SharedModule { }
