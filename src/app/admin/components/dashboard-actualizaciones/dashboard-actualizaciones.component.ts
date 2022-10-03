@@ -1,14 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import {MenuItem, MessageService, PrimeNGConfig} from 'primeng/api';
 import { AuthService } from 'src/app/admin/services/auth.service';
-import { ActivatedRoute } from '@angular/router';
-import { DocumentService } from '../../services/document.service';
-import { Document } from '../../interfaces/document.interface';
-import { environment } from '../../../../environments/environment.prod';
-import { ConfirmationService } from 'primeng/api';
-import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-dashboard-actualizaciones',
@@ -16,10 +10,22 @@ import { UsersService } from '../../services/users.service';
   styleUrls: ['./dashboard-actualizaciones.component.css']
 })
 export class DashboardActualizacionesComponent {
+  miFormulario: FormGroup = this.fb.group({
+    titulo   : ['', [ Validators.required, Validators.minLength(5) ]],
+    lugar    : ['', [ Validators.required, Validators.minLength(3) ]],
+    fecha    : ['', Validators.required],
+    miniatura: ['', Validators.required],
+    banner   : ['', Validators.required],
+    novedad  : ['', Validators.required]
+  })
   private fileTmp:any;
-  
+  public text: string = '';
+  ckeditorContent: string = "<b>Probando Contenido</b>";
+   
   items: MenuItem[] = [];
   formNovedad     : FormGroup;
+  public imgMiniarura?: File;
+  public imgBanner?: File;
 
   get usuario() {
     return this.authService.usuario;
@@ -35,6 +41,28 @@ export class DashboardActualizacionesComponent {
       });
      }
 
+     isValid( campo: string) {
+      return this.miFormulario.controls[campo].errors
+             && this.miFormulario.controls[campo].touched
+     }
+
+     imgMiniatura(event:any) {
+      console.log(event.files[0])
+     }
+
+  /* ngAfterViewChecked(): void {
+    let editor = this.ckeditor.instance;
+    editor.config.height = '400';
+    editor.config.toolbarGroups = [
+      { name:'document', groups: ['mode', 'document', 'doctools'] },
+      { name: 'clipboard', groups: ['clipboard', 'undo']},
+      { name: 'editing', groups: ['find', 'selection', 'spellchecker', 'editing'] },
+      { name: 'paragraph', groups: ['list', 'indent', 'blocks', 'align', 'bidi', 'paragraph'] },
+      { name: 'insert', groups: ['insert']}
+    ];
+    editor.config.removeButton = 'Source,Save,Templates,Find,Replace,SelectAll,Form,Radio';
+    
+  } */
   ngOnInit(): void {
     
     this.primengConfig.ripple = true;
@@ -61,6 +89,16 @@ export class DashboardActualizacionesComponent {
   enviar() {
 
   }
+
+  guardar() {
+    if( this.miFormulario.invalid) {
+      this.miFormulario.markAllAsTouched();
+      return
+    }
+    console.log(this.miFormulario.value)
+    this.miFormulario.reset();
+  }
+
   getFile(event: any): any {
     this.fileTmp = event.files;
 

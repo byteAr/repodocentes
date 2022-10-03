@@ -1,6 +1,4 @@
-* {
-    height: 17vh;
-}
+
 
 :host ::ng-deep .headerContainer {
     display: flex;
@@ -17,7 +15,25 @@
     align-items: center;
 }
 
+:host ::ng-deep form {
+    width: 90%;
+    height: 40vh;
+}
 
+
+:host ::ng-deep .containerSections {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+:host ::ng-deep .sectionForm {
+    height: 40vh;
+    width: 35%;
+}
+
+:host ::ng-deep input {
+    width: 100% !important;
+}
 
 .tituloPrincipal {
     display: flex;
@@ -75,11 +91,8 @@
     display: block !important;
 }
 .containerForm{
-    display: flex;
     justify-content: center;
     align-items: center;
-    height: 40vh;
-    width: 100vw;
 }
 input {
     height: 10%;
@@ -89,4 +102,39 @@ input {
     height: 100%;
     display: block !important;
     margin: auto;
+}
+
+:host ::ng-deep input[type="file"] {
+    display: none;
+}
+
+:host ::ng-deep .form2 {
+    margin-top: 20px;
+}
+
+:host ::ng-deep .labelImgMiniatura, .labelImgMiniatura2 {
+    background-color: #449E48;
+    height: 60px;
+    width: 250px;
+    padding: 10px;
+    color: white;
+    border-radius: 3px;
+}
+:host ::ng-deep .labelImgMiniatura:hover , .labelImgMiniatura2:hover {
+    cursor: pointer;
+    background-color: #2a5f2c;
+} 
+
+:host ::ng-deep li{
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+:host ::ng-deep ul {
+    height: 0;
+}
+
+:host ::ng-deep .error {
+    color: red;
 }

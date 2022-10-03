@@ -110,7 +110,14 @@ export class AuthService {
   recoveryPassword(email: string) {
     const url = `${this.baseUrl}/recovery`;
     const body = { email };
-    return this.http.post(url, body);
+    return this.http.post<any>(url, body)
+    .pipe(
+      map( resp => {
+        const { ok, message } = resp;
+        return resp
+      })
+  
+    )
   }
 
   logout() {

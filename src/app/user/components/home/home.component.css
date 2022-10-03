@@ -201,6 +201,23 @@ ul.tabs li a .tab-text{
 		width: 48%;
 		border-radius: 10px !important;
 	}
+	:host ::ng-deep .iconsUnidadesAcademicas {
+		display: block;
+		width: 100vw;
+	}
+	:host ::ng-deep .iconsUnidadesAcademicas > div > img {
+		width: 100px;
+	}
+	:host ::ng-deep .escuelas1 {
+		width: 100vw;
+		display: flex;
+		justify-content: space-around;
+	}
+	:host ::ng-deep .escuelas2 {
+		width: 100vw;
+		display: flex;
+		justify-content: space-around;
+	}
 }
 
 

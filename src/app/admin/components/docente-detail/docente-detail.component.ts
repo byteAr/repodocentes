@@ -70,11 +70,8 @@ export class DocenteDetailComponent implements OnInit {
   }
 
   getFile(event: any): any {
-    this.fileTmp = event.files;
-
-    
-    this.sendFile()
-    
+    this.fileTmp = event.files;    
+    this.sendFile()    
   }
 
   sendFile() {

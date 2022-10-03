@@ -45,7 +45,8 @@ import { InterceptorService } from './services/interceptor.service';
 import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.component';
 import { DashboardActualizacionesComponent } from './components/dashboard-actualizaciones/dashboard-actualizaciones.component';
 
-
+//ckeditor
+import {EditorModule} from 'primeng/editor';
 
 
 @NgModule({
@@ -59,8 +60,8 @@ import { DashboardActualizacionesComponent } from './components/dashboard-actual
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule,
     FormsModule,
+    HttpClientModule,
     AdminRoutingModule,
     SharedModule,
     TableModule,
@@ -84,7 +85,8 @@ import { DashboardActualizacionesComponent } from './components/dashboard-actual
     CardModule,
     TooltipModule,
     NgxSpinnerModule,
-    SplitButtonModule
+    SplitButtonModule,
+    EditorModule
   ],
   
   providers: [

@@ -25,8 +25,16 @@
                     <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer" (click)="openDialog()">Olvidó su contraseña?</a>
                 </div>
                 <div class="containerButtonLogin">
-                    <button (click)="login()" pButton pRipple label="INGRESAR"  class= "buttonLogin lg:w-6 mb-6"></button>
+                    <button #isButton (click)="login()" pButton pRipple label="INGRESAR"  class= "buttonLogin lg:w-6 mb-6"></button>
                     
+                </div>
+                <div #isSpinner class="spinnerContainer">
+                    <div class="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
