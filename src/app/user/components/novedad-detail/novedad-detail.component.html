@@ -1,0 +1,15 @@
+
+<app-header></app-header>
+<div class="containerImg mt-2 mb-2">
+    <img src="{{url}}/{{novedad.direccionbanner}}" alt="">
+</div>
+<div class="mb-3">
+    <p class="lugar">{{novedad.lugar | uppercase}}</p>
+</div>
+<section class="containerNovedad">
+    <p class="title mb-3 text-teal-600">{{novedad.titulo | uppercase}}</p>
+    <p class="date mb-3">{{novedad.fecha | date:'dd/M/yy'}}</p>
+    <hr class="mb-5">
+    <div class="mb-5" [innerHTML]="descripcion"></div>
+</section>
+<app-footer></app-footer>

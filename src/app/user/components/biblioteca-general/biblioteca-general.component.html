@@ -1,0 +1,71 @@
+<app-header></app-header>
+<p-breadcrumb  [model]="items"></p-breadcrumb>
+<div class="membrete">
+  <h2 class="subtitulo">Sistema de Bibliotecas del IUGNA</h2>
+</div>
+<div class="containerBiblioteca">
+  <div class="bodyBiblioteca">
+    <p class="font-bold mt-5 mb-1" >Mision</p>
+    <p>Brindar a toda la comunidad de Gendarmería Nacional el acceso a distintas fuentes de información, en fondos
+      propios o de otras bibliotecas, y los servicios necesarios que fomenten y favorezcan el estudio y la investigación en el
+      marco de la Seguridad Pública y la Defensa Nacional.</p>
+    <p class="font-bold mt-5 mb-1" >Visión</p>
+    <p>La biblioteca procura ser un referente en los servicios e información proporcionada a sus usuarios utilizando las
+      nuevas tecnologías, en un alto nivel de eficiencia y calidad, para contribuir al desarrollo intelectual y profesional de
+      toda la comunidad de Gendarmería Nacional.</p>
+    <p class="titulos">Servicios</p>
+    <ul class="pl-3 list-none mt-3">
+      <li>- Acceso libre a los estantes</li>
+      <li>- Consulta en Sala de Lectura</li>
+      <li>- Búsqueda y localización de bibliografía</li>
+      <li>- Préstamo a domicilio</li>
+      <li>- Reservas y renovación de préstamos</li>
+      <li>- Formación de usuarios</li>
+      <li>- Internet WIFI</li>
+    </ul>
+    <p class="titulos">Consultas en línea</p>
+    <ul class="enlacesExternos pl-3 list-none mt-3">
+      <li><a href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
+      <li><a href="http://www.bibliotecadigital.gob.ar/">- Biblioteca Digital Ministerio de Justicia</a></li>
+      <li><a href="https://www.undef.edu.ar/libros/biblioteca-digital/">- Biblioteca Digital de la Defensa</a></li>
+      <li><a href=""></a> - Cefa Digital</li>
+      <li><a href="https://repositoriosdigitales.mincyt.gob.ar/vufind/">- Repositorios Digitales</a></li>
+      <li><a href="https://bdu.siu.edu.ar/index.php">- Catálogo Bibliográfico SIU/BDU</a></li>
+      <li><a href="https://www.casede.org/index.php/biblioteca-casede-2-0">- Colectivo Seguridad con Democracia</a></li>
+      <li><a href="https://www.argentina.gob.ar/gendarmeria">- Gendarmería Nacional Argentina</a></li>
+      <li><a href="https://www.argentina.gob.ar/seguridad">- Ministerio de Seguridad de la Nación</a></li>
+      <li><a href="https://www.mseg.gba.gov.ar/">- Ministerio de Seguridad Provincia de Buenos Aires</a></li>
+      <li><a href="https://www.buenosaires.gob.ar/justiciayseguridad">- Ministerio de Seguridad Ciudad de Buenos Aires</a></li>
+    </ul>
+    <div class="containerRecursos">
+      <img src="../../../../assets/img/img-biblioteca.png" alt="">
+      <ul>
+        <li><a href="../../../../assets/pdfs/biblioteca/reglamentoBiblioteca.pdf">Reglamento</a></li>
+        <li><a href="https://repositoriodigital.iugna.edu.ar">Repositorio Digital</a></li>
+        <li><a href="https://bgn.bibliotecarios.ar/">Catálogo</a></li>
+        <li><a href="https://biblioteca.mincyt.gob.ar/">Biblioteca Electrónica</a></li>
+      </ul>
+
+    </div>
+    <div class="containerContacto mb-5 pl-5">
+      <p text-left class="font-bold pb-2 mt-3 text-lg text-cyan-700">BIBLIOTECAS</p>
+      <div class="pl-5">
+        <p routerLink="/uuaa/escusuper/biblioteca" class="font-bold pb-2 pt-3 text-lg text-cyan-700 cursor-pointer hover:text-cyan-400">Unidad Académica Escuela Superior</p>
+        <p>biblioteca.calderon@iugna.edu.ar</p>
+        <p>011- 5169-3300 int. 3405</p>
+        <p>Lunes y Viernes: 8 a 13 y 14 a 17 hs <br>Martes a Jueves: 9 a 17 hs</p>
+        <p routerLink="/uuaa/escugen/biblioteca" class="font-bold pb-2 pt-3 text-lg text-cyan-700 cursor-pointer hover:text-cyan-400">Unidad Académica Escuela de Gendarmería Nacional</p>
+        <p>biblioteca.escugen@gmail.com</p>
+        <p routerLink="/uuaa/escusub/biblioteca" class="font-bold pb-2 pt-3 text-lg text-cyan-700 cursor-pointer hover:text-cyan-400">Unidad Académica Escuela de Suboficiales</p>
+        <p>biblioteca.escusub@iugna.edu.ar</p>
+        <p>03525-401965 Int 1159 / Directo: 03525-401859</p>
+        <p>Lunes a Viernes de 7:00 a 13:00 y de 14:00 a 20:00 hs</p>
+        <p routerLink="/uuaa/inscaes" class="font-bold pb-2 pt-3 text-lg text-cyan-700 cursor-pointer hover:text-cyan-400">Instituto de Capacitación Especializada</p>
+        <p>biblioteca.inscaes@iugna.edu.ar</p>
+        <p routerLink="/uuaa/inscaes" class="font-bold pb-2 pt-3 text-lg text-cyan-700 cursor-pointer hover:text-cyan-400">Instituto de Formación de Gendarmes</p>
+        <p>biblioteca.inscaes@iugna.edu.ar</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -15,11 +15,10 @@ export class EscusuperCaligrafoPublicoComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label:'Inicio'},
-      {label:'Unidad Académica Escuela Superior'},
-      {label:'Oferta Académica'},
-      {label:'Pregrado'},
-      {label:'Calígrafo Público Nacional'}
+      {label:'Inicio', routerLink: '/'},
+      {label:'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper'},
+      {label:'Oferta Académica', routerLink:'/uuaa/escusuper/oferta/ciclos'},
+      {label:'Calígrafo Público Nacional', disabled: true}
   ];
   }
 

@@ -15,11 +15,10 @@ export class CiclosCriminalisticaComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label:'Inicio'},
-      {label:'Unidad Académica Escuela Superior'},
-      {label:'Oferta Académica'},
-      {label:'Ciclos de Licenciatura'},
-      {label:'Licenciatura en Criminalística'}
+      {label:'Inicio', routerLink:'/'},
+      {label:'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper'},
+      {label:'Oferta Académica', routerLink:'/uuaa/escusuper/oferta/ciclos'},
+      {label:'Licenciatura en Criminalística', disabled: true}
   ];
   }
 

@@ -102,19 +102,17 @@ p-card > ng-template > img {
 
 
 .unidadesAcademicas {
-    padding: 3%;
+	padding: 2%;
+	max-width: 100vw;
 }
 
 .iconsUnidadesAcademicas {
     display: flex;
     justify-content:space-around ;
-    width: 100%;
+    width: 80vw;
 }
 
-.iconsUnidadesAcademicas > img {
-    width: 10%;
-    height: 10%;
-}
+
 
 .iconsUnidadesAcademicas img:hover {
 	 cursor: pointer;
@@ -150,9 +148,12 @@ hr {
 
 ul.tabs{
 	width: 100%;
+	height: 100% !important;
 	background: #363636;
 	list-style: none;
 	display: flex;
+	justify-content: center !important;
+	align-items: center !important;
 }
 
 ul.tabs li{
@@ -171,14 +172,14 @@ ul.tabs li a{
 	display: block;
 	padding: 20px 0px;
 }
-
+.aqui {
+	color: rgb(0, 136, 255) !important;
+	text-decoration: none;
+}
 /* .active{
 	background: rgba(0, 0, 0, 0.6);
 } */
 
-ul.tabs li a .tab-text{
-	margin-left: 8px;
-}
 
 .secciones{
 	width: 100%;
@@ -192,10 +193,78 @@ ul.tabs li a .tab-text{
 .secciones article p{
 	text-align: justify;
 }
+.iconsUnidadesAcademicas {
+	display: flex;
+	width: 100%;
+}
+:host ::ng-deep .iconsUnidadesAcademicas > div > img {
+	width: 180px;
+}
+:host ::ng-deep .escuelas1 {
+	width: 60%;
+	display: flex;
+	justify-content: space-around;
+}
+:host ::ng-deep .escuelas2 {
+	width: 40%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.containerNovedadDestacada {
+	width: 80vw;
+	display: flex;
+	margin: 3% auto;
+	padding: 2% 0%;
+	border: 2px solid #BBDCB1;
+	border-radius: 10px;
+}
+
+.imgNovedadDestacada {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imgNovedadDestacada > img {
+	width: 130px;
+}
+
+.descripcionNovedadDestacada {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
 
 @media (max-width: 940px) {
 	.carreras {
 		display: none;
+	}
+	.tituloNovedadDestacada {
+		font-size: 1rem !important;
+	}
+	.contenidoUnidadDestacada {
+		font-size: 15px !important;
+	}
+	.containerNovedadDestacada {
+		width: 90vw;
+	}
+	.imgNovedadDestacada {
+		width: 30%;
+	}
+	.imgNovedadDestacada > img {
+		width: 90px;
+	}
+
+	.descripcionNovedadDestacada {
+		width: 70%;
+		padding: 2% 3%;
 	}
 	:host ::ng-deep p-card {
 		width: 48%;
@@ -270,15 +339,15 @@ ul.tabs li a .tab-text{
 }
 
 .licenciaturas {
-    background-color: #255051;
+    background-color: #117572;
 }
 
 
 
 #tab2 {
-    background-color: #255051;
+    background-color: #117572;
 	color: white;
-	padding-left: 20%;
+	padding-left: 25%;
 	
 }
 
@@ -286,22 +355,23 @@ ul.tabs li a .tab-text{
     background-color: #117572;
 }
 #tab3 {
-    background-color: #117572;
+    background-color: #3abf88;
 	color: white;
 	
-	text-align: center;
+	padding-left: 50%;
+	
+	text-align: left;
 }
 
 .cursosExtension {
-	background-color: #3abf88;
 	
 }
 
 #tab4 {
-    background-color: #3abf88;
+    background-color: #8ac979;
 	color: white;
-	padding-right: 20%;
-	text-align: right;
+	padding-left: 75%;
+	text-align: left;
 	
 }
 
@@ -313,7 +383,6 @@ ul.tabs li a .tab-text{
     background-color: #8ac979;
 	color: white;
 	text-align: right;
-	padding-left: 80%;
 	
 	
 }
@@ -329,9 +398,6 @@ ul.tabs li a .tab-text{
 }
 :host ::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(4) > div {
 	border-bottom: 10px #33a877 solid;
-}
-:host ::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(5) > div {
-	border-bottom: 10px #72bd5e solid;
 }
 a {	
     text-decoration: none;
@@ -398,26 +464,21 @@ i {
 .container-licenciaturas {
 	font-size: 20px !important;
 	font-weight: 600 !important;
-	background-color: #255051 !important;
+	background-color: #117572 !important;
 }
 .container-ciclos {
-	font-size: 20px !important;
-	font-weight: 600 !important;
-	background-color: #117572 !important;
-	
-}
-.container-extension {
 	font-size: 20px !important;
 	font-weight: 600 !important;
 	background-color: #3abf88 !important;
 	
 }
-.container-posgrado {
+.container-extension {
 	font-size: 20px !important;
 	font-weight: 600 !important;
 	background-color: #8ac979 !important;
 	
 }
+
 
 :host ::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li.tecnicaturas.col-lg > div > a > i {
 	width: 100% !important;
@@ -457,4 +518,8 @@ i {
 	
     transform: rotatey(360deg); */
 
+}
+
+p {
+	line-height: 170%;
 }

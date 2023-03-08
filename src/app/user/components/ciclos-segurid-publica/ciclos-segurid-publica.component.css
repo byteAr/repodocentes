@@ -43,7 +43,6 @@ ul {
 ul li {
     list-style: decimal;
     font-size: 1rem;
-    height: 6vh;
     color: black;
     cursor: pointer;
 }
@@ -72,3 +71,14 @@ ul li i {
     width: 50%;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(4, 109, 100)
+}
+
+a > p {
+    color: rgb(4, 109, 100)
+}

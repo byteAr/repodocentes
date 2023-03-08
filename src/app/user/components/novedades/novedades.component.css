@@ -20,7 +20,7 @@
 
 .cardContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 2% 9%;
 }
 
@@ -62,4 +62,14 @@ i {
 
 :host ::ng-deep .containerPaginator .current {
     background: #0a7275 !important;
+}
+
+:host ::ng-deep p-card-body {
+    max-height: 1000px;
+    min-height: 1000px;
+}
+
+:host ::ng-deep a {
+    display: block;
+    color: rgb(132, 7, 28);
 }

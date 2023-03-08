@@ -1,7 +1,7 @@
 <app-header></app-header>
 <section class="sliderHome">
     <img class="imageSlider" src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="">
-    
+
 </section>
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
@@ -9,42 +9,40 @@
 <section class="carreras">
     <div class="wrap">
         <ul class="tabs row">
-            
+
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a class="container-tecnicaturas" (click)="ejecutarTab(1)"><br> TECNICATURAS</a>
-                    </div>                
+                        <a class="container-tecnicaturas" (click)="ejecutarTab(1)">PREGRADO</a>
+                    </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div>
-                        <a class="container-licenciaturas" (click)="ejecutarTab(2)"><br> LICENCIATURAS</a>
-                    </div>                
+                        <a class="container-licenciaturas" (click)="ejecutarTab(2)">GRADO</a>
+                    </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a class="container-ciclos" (click)="ejecutarTab(3)">CICLOS DE <br> LICENCIATURA</a>
-                    </div>                
+                        <a class="container-ciclos" (click)="ejecutarTab(3)">CURSOS DE POSGRADO</a>
+                    </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a  class="container-extension" (click)="ejecutarTab(4)">CURSOS DE <br> EXTENSIÓN</a>
-                    </div>                
+                        <a  class="container-extension" (click)="ejecutarTab(4)">CURSOS DE EXTENSIÓN</a>
+                    </div>
                 </li>
-                <li class="tecnicaturas col-lg">
-                    <div >
-                        <a  class="container-posgrado" (click)="ejecutarTab(5)">CURSOS DE <br> POSGRADO</a>
-                    </div>                
-                </li>            
-            
+
         </ul>
-    
+
         <div class="secciones">
             <div *ngIf="isTab1Active">
                 <article id="tab1">
                     <div class="cursos col-lg alinear-texto" id="cursos">
-                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Seguridad Pública y Ciudadana</a>
-                        <hr>
                         <a routerLink="/caligrafo">Calígrafo Público Nacional</a>
+                        <hr>
+                        <br>
+                        <h2 class="text-base">Tecnicaturas Universitarias:</h2>
+                        <br>
+                        <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Seguridad Pública y Ciudadana</a>
                         <hr>
                         <a routerLink="/uuaa/escusub/oferta/tecnicaturas">Admistración Pública</a>
                         <hr>
@@ -69,66 +67,86 @@
                         <a >Criminalistica</a>
                         <hr>
                         <a>Gestión y Seguridad de las Tecnologías de la Información</a>
+                        <br>
+                        <br>
+                        <a routerLink="ciclos/administracion">Administración Pública (CCC)</a>
+                        <hr>
+                        <a routerLink="ciclos/seguridad">Seguridad Pública (CCC)</a>
+                        <hr>
+                        <a routerLink="ciclos/criminalistica">Criminalística (CCC)</a>
+                        <hr>
+                        <a routerLink="ciclos/investigacion">Investigación Judicial (CCC)</a>
+                        <hr>
+                        <a routerLink="/profesorado">Profesorado Universitario</a>
                     </div>
                 </article>
             </div>
             <div *ngIf="isTab3Active">
                 <article id="tab3">
                     <div class="cursos col-lg" id="cursos">
-                        <a routerLink="ciclos/administracion">Administración Pública</a>
+                        <a routerLink="uuaa/escusuper/frontera">Diplomatura Universitaria en Seguridad y Desarrllo de fronteras (a distancia)</a>
                         <hr>
-                        <a routerLink="ciclos/seguridad">Seguridad Pública</a>
+                        <a routerLink="">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
                         <hr>
-                        <a routerLink="ciclos/criminalistica">Criminalistica</a>
+                        <a routerLink="">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
                         <hr>
-                        <a>Profesorado Universitario</a>
-                        <hr>
-    
+
                     </div>
                 </article>
             </div>
             <div *ngIf="isTab4Active">
                 <article id="tab4">
                     <div class="cursos col-lg" id="cursos">
-                        <!-- <a>Análisis del delito</a>
+                        <a routerLink="uuaa/escusuper/extension"> Francés - Nivel I</a>
                         <hr>
-                        <a>Investigación de accidentes de tránsito</a>
+                        <a routerLink="uuaa/escusuper/extension">Inglés - Nivel I</a>
                         <hr>
-                        <a>Francés I</a>
+                        <a routerLink="uuaa/escusuper/extension">  Francés - Nivel II</a>
                         <hr>
-                        <a>Inglés I</a>
+                        <a routerLink="uuaa/escusuper/extension">Inglés - Nivel II</a>
                         <hr>
-                        <a>Herramientas básicas de informática</a>
+                        <a routerLink="uuaa/escusuper/extension">Liderar para el cambio</a>
                         <hr>
-                        <a>Prevención del delito</a>
+                        <a routerLink="uuaa/escusuper/extension">Introducción a la Mediación y la Negociación</a>
                         <hr>
-                        <a>Francés II</a>
-                        <hr>
-                        <a>Inglés II</a>
-                        <hr>
-                        <a>Liderar para el cambio</a>
-                        <hr>
-                        <a>Inglés III</a>
-                        <hr> -->
                     </div>
                 </article>
             </div>
             <div *ngIf="isTab5Active">
                 <article id="tab5">
                     <div class="cursos col-lg" id="cursos">
-                       <!-- 
-                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Fronteras</a>
+                        <a href="">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
                         <hr>
-                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
+                        <a href="">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
                         <hr>
-                        <a href="./assets/pdf/diplomaturas2020.pdf">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
-                        <hr> -->
-    
+
                     </div>
                 </article>
             </div>
         </div>
         </div>
+</section>
+<!-- <section class="containerNovedadDestacada">
+    <div class="imgNovedadDestacada">
+        <img src="../../../../assets/img/iconos/librito.png" alt="">
+    </div>
+    <div class="descripcionNovedadDestacada">
+        <div>
+            <p class="sm:text.base tituloNovedadDestacada"><b class="text-base">IUGNA: Unidad Académica Escuela Superior</b></p>
+            <p class="text-cyan-600"><b class="text-2xl">Inscripciones abiertas 2023</b></p>
+            <br>
+            <p class="text-base contenidoUnidadDestacada text-xl"><b>Ciclos de Licenciatura en: Seguridad Pública, Administración Pública,
+                Criminalística, Investigación Judicial y el Profesorado Universitario.</b></p>
+            <br>
+            <b class="text-xl">Pregrado: Calígrafo Público Nacional.</b>
+            <p class="text-xl">01 de noviembre al 20 de diciembre 2022</p>
+            <br>
+            <p class="text-xl">06 al 25 de febrero de 2023</p>
+            <br>
+            <p class="text-xl">Más información acceder <b><a routerLink="/novedadrapida" class="text-blue-400">aquí</a></b></p>
+
+        </div>
+    </div>
 </section>
 <section class="sliderNovedades">
     <h2 routerLink="/novedades">Novedades</h2>
@@ -137,23 +155,21 @@
     <br>
     <div class="cardContainer">
         <div class="grid grid-cols-4 grid-rows-4 gap-2 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-6 cardContainer " >
-            <p-card *ngFor="let novedad of novedades | slice: 0:4" styleClass="p-card-shadow mb-5">
+            <p-card [routerLink]="['/novedad/', novedad.id]" class="cursor-pointer" *ngFor="let novedad of novedades | slice: 0:4" styleClass="p-card-shadow mb-5" [routerLink]="">
                 <ng-template pTemplate="header">
-                    <img alt="Card" [src]="novedad.rutaImage">
+                    <img alt="Card" src="{{url}}/{{novedad.direccionminiatura}}">
                 </ng-template>
-                <!-- <p class="title mb-2">{{novedad.title}}</p>
+                <p class="title mb-2">{{novedad.title}}</p>
                 <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.date}}</p>
-                <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p> -->
-                <p class="description text-sky-400">{{novedad.description | slice: 0:150}}</p>
-                
-            </p-card>    
+                <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p>
+                <p class="description text-base text-green-600" [innerHTML]="novedad.descripcion | slice: 0:100"></p>
+            </p-card>
         </div>
     </div>
 
-</section>
+</section> -->
 <section class="unidadesAcademicas">
     <h2>Unidades Académicas</h2>
-    <br>
     <br>
     <div class="iconsUnidadesAcademicas">
         <div class="escuelas1">
@@ -167,7 +183,9 @@
         </div>
     </div>
 </section>
-
+<br>
+<br>
+<br>
 <section class="enlaces">
     <div class="sistemasExternos">
         <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/CV.png" alt=""></a>
@@ -191,15 +209,15 @@
                 <p class="autogestion">Autogestión</p>
             </div>
         </a>
-        
+
         <a href="https://siu.iugna.edu.ar/guarani/">
             <div>
                 <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
                 <p class="administracion">Administración</p>
             </div>
         </a>
-        
-        
+
+
     </section>
 </p-dialog>
 <br>

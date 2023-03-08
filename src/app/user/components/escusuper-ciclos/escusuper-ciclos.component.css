@@ -12,6 +12,11 @@
     font-weight: 700;
 }
 
+.title2:hover {
+    cursor: pointer;
+    color: #439a22;
+}
+
 .title3 {
     font-size: 1.5rem;
     font-weight: 700;

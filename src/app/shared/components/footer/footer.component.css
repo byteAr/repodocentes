@@ -88,3 +88,7 @@ p:hover {
         text-align: center;
     }
 }
+
+:host :ng-deep ul .depAlumnos {
+    list-style: disc !important;
+}

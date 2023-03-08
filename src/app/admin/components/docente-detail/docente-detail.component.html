@@ -21,12 +21,14 @@
             <tr>
                 <td>{{i + 1}}</td>
                 <td>{{document.nombreoriginal}}</td>
+                <!-- <td>{{document.nombreoriginal}}</td> -->
                 <td>{{document.fechacreacion | date:'d/M/yy h:mm:ss a'}}</td>
                 <td class="containerActions">
                     
                         <a href="{{baseUrl}}/{{document.nombreenbase}}">
                             <button pButton pRipple  icon="pi pi-file-pdf" class="p-button-rounded p-button-info"></button>
                         </a>
+                        
                     
                     
                     <button (click)="deleteDocument(document)" pButton pRipple  icon="pi pi-trash" class="p-button-rounded p-button-danger"></button>

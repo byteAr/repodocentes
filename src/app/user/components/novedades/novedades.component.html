@@ -4,15 +4,14 @@
     <h2 class="subtitulo">Novedades</h2>
 </div>
 <div class="grid grid-cols-4 grid-rows-4 gap-2 cardContainer" >
-    <p-card [routerLink]="novedad.route" *ngFor="let novedad of novedades | paginate: { itemsPerPage: 8, currentPage: p }" styleClass="p-card-shadow mb-5">
+    <p-card class="cursor-pointer" [routerLink]="['/novedad/', novedad.id]"  *ngFor="let novedad of novedades | paginate: { itemsPerPage: 8, currentPage: p }" styleClass="p-card-shadow mb-5">
         <ng-template pTemplate="header">
-            <img alt="Card" [src]="novedad.rutaImage">
+            <img alt="Card" src="{{url}}/{{novedad.direccionminiatura}}">
         </ng-template>
-        <p class="title mb-2">{{novedad.title}}</p>
-        <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.date}}</p>
-        <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.location}}</p>
-        <p class="description text-sky-400">{{novedad.description}}</p>
-        
+        <p class="title mb-2">{{novedad.titulo}}</p>
+        <p class="date mb-2 text-base lg:text-sm"><i class="pi pi-calendar mr-1"></i> {{novedad.fecha}}</p>
+        <p class="mb-2 text-base lg:text-sm"><i class="pi pi-map mr-1"></i> {{novedad.lugar}}</p>
+        <div class="description font-base text-green-600 font-normal" [innerHTML]="novedad.descripcion | slice: 0:70">...</div>        
     </p-card>    
 </div>
 <div class="containerPaginator">

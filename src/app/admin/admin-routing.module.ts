@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardAdminComponent } from './components/dashboard-admin/dashboard-admin.component';
 import { DocenteDetailComponent } from './components/docente-detail/docente-detail.component';
 import { DashboardActualizacionesComponent } from './components/dashboard-actualizaciones/dashboard-actualizaciones.component';
+import { NewNovedadComponent } from './components/new-novedad/new-novedad.component';
+import { AutoridadesComponent } from './components/autoridades/autoridades.component';
+import { InscripcionesComponent } from './components/inscripciones/inscripciones.component';
+import { OfertaAcademicaComponent } from './components/oferta-academica/oferta-academica.component';
+import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.component';
 
 
 const routes: Routes = [
@@ -16,8 +21,31 @@ const routes: Routes = [
   },
   {
     path: 'actualizacion',
-    component: DashboardActualizacionesComponent
+    component: DashboardActualizacionesComponent,
+    children: [
+      {
+        path: 'novedades',
+        component: NewNovedadComponent
+      },
+      {
+        path: 'autoridades',
+        component: AutoridadesComponent
+      },
+      {
+        path: 'inscripciones',
+        component: InscripcionesComponent
+      },
+      {
+        path: 'ofertaAcademica',
+        component: OfertaAcademicaComponent
+      },
+      {
+        path: 'convocatoria',
+        component: ConvocatoriaComponent
+      }
+    ]
   },
+  
   {
     path: '**', 
     redirectTo: ''

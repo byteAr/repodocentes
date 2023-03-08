@@ -25,10 +25,9 @@ export class LoginComponent  {
       this.formLogin.controls[key].updateValueAndValidity();
     }
   }
-  get form(): { [key: string]: AbstractControl; }
-{
-    return this.formLogin.controls;
-}
+  get form(): { [key: string]: AbstractControl; } {
+        return this.formLogin.controls;
+  }
 
 
   constructor(private fb: FormBuilder,
@@ -36,7 +35,7 @@ export class LoginComponent  {
     private messageService: MessageService,
     private authService: AuthService,
     private render2: Renderer2) {
-      this.formLogin = this.fb.group({        
+      this.formLogin = this.fb.group({
         email: ['', [Validators.required,Validators.pattern(this.emailPattern)/* pattern(/^[a-zA-Z0-9._-]+\@\gna\.\gob\.\ar$/) */]],
         password: ['', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/)]]
       });
@@ -63,15 +62,15 @@ export class LoginComponent  {
             this.router.navigateByUrl('admin/dashboard')
           } else if(resp.rol === 'standart') {
             this.router.navigateByUrl('invitado')
-          }          
-        } else {                  
+          }
+        } else {
           this.errorMessage(resp);
           this.render2.setStyle(asButton, 'display', 'flex');
           this.render2.setStyle(asSpinner, 'display', 'none');
         }
-        
+
      });
-    
+
   }
 
   hideDialog() {
@@ -92,12 +91,12 @@ recuperarPass(){
       this.messageService.add({severity:'success', summary:'RECUPERACIÓN DE CONTRASEÑA', detail:`${resp.message}`, life: 5000});
     }  else {
       this.messageService.add({severity:'warn', summary:`${resp.message}`, life: 5000});
-    } 
+    }
   })
   this.submitted=true;
   this.hideDialog()
 }
-  
+
 
 }
 

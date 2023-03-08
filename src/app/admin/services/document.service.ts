@@ -19,7 +19,7 @@ export class DocumentService {
   }
 
   sendPost(body:FormData):Observable<any> {
-    const url = `${this.baseUrl}/upload`
+    const url = `${this.baseUrl}/upload/documentos`
     return this.http.post<any>(url, body)
   }
 

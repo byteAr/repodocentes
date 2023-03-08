@@ -52,25 +52,11 @@ import { BibliotecaEscusubComponent } from './components/biblioteca-escusub/bibl
 import { InscaesComponent } from './components/inscaes/inscaes.component';
 import { InsbarrealComponent } from './components/insbarreal/insbarreal.component';
 import { MenuofertaComponent } from './components/menuoferta/menuoferta.component';
-import { Novedad1Component } from './novedades/novedad1/novedad1.component';
-import { Novedad2Component } from './novedades/novedad2/novedad2.component';
-import { Novedad3Component } from './novedades/novedad3/novedad3.component';
-import { Novedad4Component } from './novedades/novedad4/novedad4.component';
-import { Novedad5Component } from './novedades/novedad5/novedad5.component';
-import { Novedad6Component } from './novedades/novedad6/novedad6.component';
-import { Novedad7Component } from './novedades/novedad7/novedad7.component';
-import { Novedad8Component } from './novedades/novedad8/novedad8.component';
-import { Novedad9Component } from './novedades/novedad9/novedad9.component';
-import { Novedad10Component } from './novedades/novedad10/novedad10.component';
-import { Novedad11Component } from './novedades/novedad11/novedad11.component';
-import { Novedad12Component } from './novedades/novedad12/novedad12.component';
-import { Novedad13Component } from './novedades/novedad13/novedad13.component';
-import { Novedad14Component } from './novedades/novedad14/novedad14.component';
-import { Novedad15Component } from './novedades/novedad15/novedad15.component';
-import { Novedad16Component } from './novedades/novedad16/novedad16.component';
-import { Novedad17Component } from './novedades/novedad17/novedad17.component';
-import { Novedad18Component } from './novedades/novedad18/novedad18.component';
-import { Novedad19Component } from './novedades/novedad19/novedad19.component';
+
+import { NovedadDetailComponent } from './components/novedad-detail/novedad-detail.component';
+import { NovedadRapidaComponent } from './components/novedad-rapida/novedad-rapida.component';
+import { FronterasComponent } from './components/fronteras/fronteras.component';
+import { BibliotecaGeneralComponent } from './components/biblioteca-general/biblioteca-general.component';
 
 
 @NgModule({
@@ -110,26 +96,8 @@ import { Novedad19Component } from './novedades/novedad19/novedad19.component';
     BibliotecaEscusubComponent,
     InscaesComponent,
     InsbarrealComponent,
-    MenuofertaComponent,
-    Novedad1Component,
-    Novedad2Component,
-    Novedad3Component,
-    Novedad4Component,
-    Novedad5Component,
-    Novedad6Component,
-    Novedad7Component,
-    Novedad8Component,
-    Novedad9Component,
-    Novedad10Component,
-    Novedad11Component,
-    Novedad12Component,
-    Novedad13Component,
-    Novedad14Component,
-    Novedad15Component,
-    Novedad16Component,
-    Novedad17Component,
-    Novedad18Component,
-    Novedad19Component
+    MenuofertaComponent,   
+    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent
   ],
   imports: [
     CommonModule,
