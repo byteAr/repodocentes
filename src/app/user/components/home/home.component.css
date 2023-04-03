@@ -7,7 +7,7 @@ body {
     height: 60vh;
     position: relative;
     overflow: hidden;
-    
+
 }
 
 
@@ -224,11 +224,11 @@ ul.tabs li a{
 	width: 20%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items:flex-start;
 }
 
 .imgNovedadDestacada > img {
-	width: 130px;
+	width: 70px;
 }
 
 .descripcionNovedadDestacada {
@@ -256,14 +256,15 @@ ul.tabs li a{
 		width: 90vw;
 	}
 	.imgNovedadDestacada {
-		width: 30%;
+		width:20%;
+    padding-top: 2%;
 	}
 	.imgNovedadDestacada > img {
-		width: 90px;
+		width: 30px;
 	}
 
 	.descripcionNovedadDestacada {
-		width: 70%;
+		width: 80%;
 		padding: 2% 3%;
 	}
 	:host ::ng-deep p-card {
@@ -331,7 +332,7 @@ ul.tabs li a{
     background-color: #0e3d35;
 	color: white;
 	border-bottom: 10px #0c352e solid;
-	
+
 }
 
 .tecnicaturas {
@@ -348,7 +349,7 @@ ul.tabs li a{
     background-color: #117572;
 	color: white;
 	padding-left: 25%;
-	
+
 }
 
 .cursosPosgrado {
@@ -357,14 +358,14 @@ ul.tabs li a{
 #tab3 {
     background-color: #3abf88;
 	color: white;
-	
+
 	padding-left: 50%;
-	
+
 	text-align: left;
 }
 
 .cursosExtension {
-	
+
 }
 
 #tab4 {
@@ -372,7 +373,7 @@ ul.tabs li a{
 	color: white;
 	padding-left: 75%;
 	text-align: left;
-	
+
 }
 
 .ciclos {
@@ -383,8 +384,8 @@ ul.tabs li a{
     background-color: #8ac979;
 	color: white;
 	text-align: right;
-	
-	
+
+
 }
 
 :host ::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(1) > div {
@@ -399,16 +400,16 @@ ul.tabs li a{
 :host ::ng-deep body > app-root > app-home > div > app-nav-bar > div > ul > li:nth-child(4) > div {
 	border-bottom: 10px #33a877 solid;
 }
-a {	
+a {
     text-decoration: none;
 	color: white;
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 }
 
 a:hover {
     color: #539441;
-    
+
 }
 hr {
     color: transparent;
@@ -433,11 +434,11 @@ i {
 	}
 	:host ::ng-deep li {
 		height: 35px !important;
-		
+
 	}
 	:host ::ng-deep a {
 		padding: 2px 2px !important;
-	}	
+	}
 }
 
 :host ::ng-deep span {
@@ -459,7 +460,7 @@ i {
 .container-tecnicaturas {
 	font-size: 20px !important;
 	font-weight: 600 !important;
-	
+
 }
 .container-licenciaturas {
 	font-size: 20px !important;
@@ -470,13 +471,13 @@ i {
 	font-size: 20px !important;
 	font-weight: 600 !important;
 	background-color: #3abf88 !important;
-	
+
 }
 .container-extension {
 	font-size: 20px !important;
 	font-weight: 600 !important;
 	background-color: #8ac979 !important;
-	
+
 }
 
 
@@ -514,8 +515,8 @@ i {
 }
 
 .imgSiu:hover {
-	cursor: pointer;/* 
-	
+	cursor: pointer;/*
+
     transform: rotatey(360deg); */
 
 }
