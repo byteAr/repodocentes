@@ -27,60 +27,193 @@
   margin: auto;
 }
 
-.titulos {
-  margin-top: 3%;
-  color: white;
+ul {
   width: 50%;
-  padding: 1% 3%;
-  font-weight: 700;
-  background: linear-gradient(45deg, rgba(0,138,145,1) 0%, rgba(0,173,136,1) 52%, rgba(135,206,128,1) 100%);
+  margin-left: 8.5%;
 }
 
-a {
-  text-decoration: none;
-}
-
-.enlacesExternos > li , a {
-  color: rgb(5, 131, 72);
-  font-weight: 500;
-}
-.enlacesExternos >li > a:hover {
-  color: rgb(10, 206, 114);
-  font-weight: 500;
-}
-
-.containerRecursos {
-  margin-top: 5%;
+figure {
+  width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.li1, .li2, .li3, .li4 {
+  width: auto;
+  padding: 1.5% 5%;
+  margin-top: 5%;
+  border-radius: 40px;
+}
+
+.li1 > a , .li2 > a, .li3 > a, .li4 > a {
+  width: auto;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.li1 {
+ background-color: #008a91;
+}
+.li2 {
+ background-color: #98CA88;
+}
+.li3 {
+ background-color: #4C8BB9;
+}
+.li4 {
+ background-color: #545454;
+}
+
+img {
+  width: 25%;
+}
+
+
+
+.sectionTags {
+  margin: auto;
+  width: 85%;
+}
+
+.icon1 {
+  width: 4rem;
+}
+
+.icon2 {
+width: 2rem;
+height: 2rem;
+}
+
+
+
+h2 {
+  margin-left: 2%;
+  font-weight: 900;
+  color: #007073
+
+}
+
+h3 {
+
+  margin-left: 1%;
+}
+
+
+
+.divider {
+  border-width: none;
+  height: 5px;
+  width: 74%;
+  background-color: #007073;
+}
+
+
+
+.divideritems {
+  border-width: none;
+  height: 3px;
+  width: 74%;
+  background-color: #007073;
+}
+
+.containerDividerItems {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.tabAcordeon {
+  display: flex;
+}
+
+.containerServicios {
+  text-align: left;
+}
+
+p-accordiontab {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none!important;
+
+}
+
+:host ::ng-deep .p-accordion-header-link {
+  display: flex !important;
+  justify-content: space-between !important;
+  outline: none!important;
+  background-color: white !important;
+  border: none !important
+
+
+}
+:host ::ng-deep .p-accordion-header-link {
+
+}
+
+:host ::ng-deep .p-accordion-content {
+  border: none !important
+}
+
+:host ::ng-deep .p-accordion-tab-active {
+  outline: none !important;
+  border: none !important
+}
+:host ::ng-deep .ng-tns-c34-0 {
+  outline: none !important;
+}
+
+.acordeonContainer {
+  width: 75% !important;
   align-items: center;
-  justify-content:left;
+  margin: auto;
 }
 
-.containerRecursos >img {
-  width: 30%;
-  margin-right: 20%;
+:host ::ng-deep .p-accordion-toggle-icon {
+  order: 0.5 !important;
 }
-
-.containerRecursos > ul > li > a {
-  color: #008a91;
-  font-size: 1.5rem;
-  line-height:200%;
-  font-weight: 800;
-}
-
-.containerRecursos > ul > li {
-  color: #008a91;
-}
-.containerRecursos > ul > li > a:hover {
-  cursor: pointer;
-  color: #04a5ad;
-  font-size: 1.5rem;
-  line-height:200%;
-  font-weight: 800;
-}
-
-.containerContacto {
-  border-left: 5px solid #000000;
+:host ::ng-deep .p-accordion-header-text {
+  flex-grow: 1 !important;
+  font-size: 1.4rem;
 }
 
 
+.containerItem {
+  width: 70vw;
+}
+
+
+
+
+ul {
+  line-height: 2em;
+}
+
+.containerOrganosUnipersonales {
+  width: 68vw;
+}
+.containerOrganosColegiados {
+  width: 60vw;
+}
+
+.consejo {
+  width: 68vw;
+}
+
+
+.containerContactos {
+  background-color: #92B4B1;
+  padding: 2% 2%;
+  margin-top: 2% ;
+  margin-bottom: 2%;
+}
+
+hr {
+  border: 2px solid black;
+  margin: 1% 0%
+}
+p > span {
+  font-weight: 600;
+}
