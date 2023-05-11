@@ -219,12 +219,28 @@ p > span {
 }
 
 @media (max-width: 940px) {
-  img {
-      display: none;
+  .containerItems {
+    display:block;
+    padding: 2% 5%;
+  }
+  ul {
+    margin: 0;
+    width: 100%;
+  }
+  li {
+    width: 100% !important;
   }
 }
 @media (min-width: 900px) {
-   img {
-      display: none;
+  .containerItems {
+    display:block;
+    padding: 2% 5%;
   }
+  li {
+    width: 100%;
+  }
+  ul {
+    margin: 0
+  }
+
 }
