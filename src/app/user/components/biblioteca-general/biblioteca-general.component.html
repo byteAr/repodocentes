@@ -6,9 +6,9 @@
 </div>
 <section class="w-full md:block lg:block xl:flex 2xl:flex ">
   <ul class="containerItems">
-    <li class="list-none li1"><a href="https://bgn.bibliotecarios.ar/">Catálogo</a></li>
+    <li class="list-none li1"><a href="https://bgn.bibliotecarios.ar/">Catálogo de búsqueda bibliográfica</a></li>
     <li class="list-none li2"><a href="https://repositoriodigital.iugna.edu.ar">Repositorio Digital Institucional</a></li>
-    <li class="list-none li3"><a href="www.bidi.la/account/iugna/login">Bidi</a></li>
+    <li class="list-none li3"><a href="https://www.bidi.la/account/iugna/login">Bidi</a></li>
     <li class="list-none li4"><a href="https://biblioteca.mincyt.gob.ar/">Biblioteca Electrónica de Ciencia y Tecnología</a></li>
   </ul>
 </section>
@@ -16,10 +16,10 @@
   <p-accordion class="mb-5" >
     <p-accordionTab class="institutoItems" header="Servicios" [selected]="false" iconPos="right">
       <ul class="containerServicios list-none">
-          <li class="text-base lg:text-lg"> - Acceso libre a los estantes</li>
-          <li class="text-base lg:text-lg"> - Consulta en Sala de Lectura</li>
+          <li class="text-base lg:text-lg"> - Asesoramiento bibliográfico</li>
           <li class="text-base lg:text-lg"> - Búsqueda y localización de bibliografía</li>
-          <li class="text-base lg:text-lg"> - Préstamo a domicilio</li>
+          <li class="text-base lg:text-lg"> - Sala de Lectura</li>
+          <li class="text-base lg:text-lg"> - Préstamo a domicilio e interbibliotecario</li>
           <li class="text-base lg:text-lg"> - Reservas y renovación de préstamos</li>
           <li class="text-base lg:text-lg"> - Formación de usuarios</li>
           <li class="text-base lg:text-lg"> - Internet WIFI</li>
@@ -59,15 +59,20 @@
       <br>
       <p ><a class="text-xl font-bold text-teal-600 underline" href="../../../../assets/pdfs/pdf/REGLAMENTO_BIBLIOTECAS_IUGNA.pdf">Reglamento de Bibliotecas del IUGNA</a></p>
       <br>
-      <div class="containerContactos">
-        <p class="font-bold text-xl">Contactos</p>
-        <hr>
-        <p class="mb-5 text-lg"><span>Unidad Académica Escuela Superior (CABA):</span> biblioteca.calderon@iugna.edu.ar</p>
-        <p class="mb-5 text-lg"><span>Unidad Académica Escuela de Gendarmería Nacional (Buenos Aires):</span> biblioteca.escugen@gmail.com</p>
-        <p class="mb-5 text-lg"><span>Unidad Académica Escuela de Suboficiales (Córdoba):</span> biblioteca.escusub@iugna.edu.ar</p>
-        <p class="mb-5 text-lg"><span>Instituto de Capacitación Especializada (Buenos Aires):</span> biblioteca.inscaes@iugna.edu.ar</p>
-        <p class="mb-5 text-lg"><span>Instituto de Formación de Gendarmes:</span> Tel. (02648) 441-023</p>
-      </div>
+    </div>
   </div>
-</div>
+  <section class=" sectionTags mt-5 mb-5">
+    <p-accordion class="mb-5" >
+      <p-accordionTab class="institutoItems" header="Bibliotecas Integrantes" [selected]="false" iconPos="right">
+        <ul class="list-none">
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela Superior (CABA):</span> biblioteca.calderon@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Gendarmería Nacional (Buenos Aires):</span> biblioteca.escugen@gmail.com</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Suboficiales (Córdoba):</span> biblioteca.escusub@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Instituto de Capacitación Especializada (Buenos Aires):</span> biblioteca.inscaes@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Instituto de Formación de Gendarmes:</span> Tel. (02648) 441-023</p></li>
+        </ul>
+      </p-accordionTab>
+    </p-accordion>
+    <br>
+  </section>
 <app-footer></app-footer>
