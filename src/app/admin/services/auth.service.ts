@@ -24,10 +24,10 @@ export class AuthService {
   login( email: string, password: string) {
 
     const url = `${this.baseUrl}/login`;
-    
+
 
     const body = { email, password }
-    
+
     return this.http.post<AuthResponse>( url, body )
      .pipe(
        tap( resp => {
@@ -42,7 +42,7 @@ export class AuthService {
              rol: resp.rol
            };
          }
-        }),/* 
+        }),/*
        map( res => res.ok), */
        catchError( err => of (err.error.message) )
      );
@@ -53,7 +53,7 @@ export class AuthService {
     const url = `${this.baseUrl}/register`;
     const body = {nombre,apellido,email,password};
 
-    return this.http.post<AuthResponse>(url, body) 
+    return this.http.post<AuthResponse>(url, body)
     .pipe(
       tap( resp => {
         if (resp.ok ){
@@ -64,7 +64,6 @@ export class AuthService {
             rol: resp.rol,
             unidadrevista: resp.unidadrevista
           } */
-          
         }
        }),
       map( res => res.ok ),
@@ -76,7 +75,7 @@ export class AuthService {
   updatePassword(password:string, id: any) {
     const url = `${this.baseUrl}/updatepassword`
     const body = {password, id}
-    return this.http.post<any>(url, body)    
+    return this.http.post<any>(url, body)
   }
 
   validarToken(): any {
@@ -116,13 +115,13 @@ export class AuthService {
         const { ok, message } = resp;
         return resp
       })
-  
+
     )
   }
 
   logout() {
     localStorage.clear();
-    localStorage.removeItem('usuario');    
-    this.router.navigateByUrl('');    
+    localStorage.removeItem('usuario');
+    this.router.navigateByUrl('');
   }
 }

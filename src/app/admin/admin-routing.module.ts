@@ -8,13 +8,14 @@ import { AutoridadesComponent } from './components/autoridades/autoridades.compo
 import { InscripcionesComponent } from './components/inscripciones/inscripciones.component';
 import { OfertaAcademicaComponent } from './components/oferta-academica/oferta-academica.component';
 import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.component';
+import { DashboardDigestoComponent } from './components/dashboard-digesto/dashboard-digesto.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: DashboardAdminComponent,    
-  },  
+    component: DashboardAdminComponent,
+  },
   {
     path: 'docente/:id',
     component: DocenteDetailComponent
@@ -45,9 +46,12 @@ const routes: Routes = [
       }
     ]
   },
-  
   {
-    path: '**', 
+    path: 'digesto',
+    component: DashboardDigestoComponent
+  },
+  {
+    path: '**',
     redirectTo: ''
   },
 ];

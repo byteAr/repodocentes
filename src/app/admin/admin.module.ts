@@ -54,6 +54,7 @@ import { AutoridadesComponent } from './components/autoridades/autoridades.compo
 import { InscripcionesComponent } from './components/inscripciones/inscripciones.component';
 import { OfertaAcademicaComponent } from './components/oferta-academica/oferta-academica.component';
 import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.component';
+import { DashboardDigestoComponent } from './components/dashboard-digesto/dashboard-digesto.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.co
     AutoridadesComponent,
     InscripcionesComponent,
     OfertaAcademicaComponent,
-    ConvocatoriaComponent
+    ConvocatoriaComponent,
+    DashboardDigestoComponent
   ],
   imports: [
     CommonModule,

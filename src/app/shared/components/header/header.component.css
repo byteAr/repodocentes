@@ -10,8 +10,9 @@
 
 .logo {
     float: left;
-    width: 30%;
+    width: 40%;
     height: 100%;
+    margin-bottom: 1.5%;
 }
 
 
@@ -43,7 +44,7 @@ button {
     position: absolute;
     background-color: #125D68;
     min-width: 400px;
-    z-index: 5;    
+    z-index: 5;
 }
 
 li {
@@ -76,7 +77,7 @@ li {
     position: absolute;
     background-color: #125D68;
     min-width: 400px;
-    z-index: 5;    
+    z-index: 5;
 }
 
 .rightMenu2:hover .dropDownMenuDocentes2 {
@@ -100,7 +101,7 @@ li {
     padding: 5% 2%;
     background-color: #125D68;
     min-width: 400px;
-    z-index: 5;    
+    z-index: 5;
 }
 
 a {
@@ -150,7 +151,7 @@ a {
     width: 25%;
     text-align: center;
     background-color: #135E67;
-    color: white;    
+    color: white;
     -webkit-box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
     -moz-box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
     box-shadow: 3px 22px 75px 14px rgba(71,70,71,1);
@@ -158,14 +159,14 @@ a {
 
 :host ::ng-deep .itemMenu {
     padding: 10%;
-    
+
     display: flex;
     justify-content:space-around;
 }
 
 :host ::ng-deep .itemMenu i {
 }
- 
+
 :host ::ng-deep .itemMenu:hover {
     cursor: pointer;
     background-color: #0b464d;
@@ -295,7 +296,7 @@ a {
 }
 
 .docentes:hover > .menuFlotante {
-    display: block;    
+    display: block;
 }
 
 :host ::ng-deep i {
@@ -323,4 +324,3 @@ a {
 }
 
 
-  
