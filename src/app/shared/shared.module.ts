@@ -22,6 +22,7 @@ import {DividerModule} from 'primeng/divider';
 import { SubmenuInvestigacionComponent } from './components/submenu-investigacion/submenu-investigacion.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderActualizacionComponent } from './components/header-actualizacion/header-actualizacion.component';
+import { HeaderDigestoComponent } from './components/header-digesto/header-digesto.component';
 
 
 
@@ -35,7 +36,8 @@ import { HeaderActualizacionComponent } from './components/header-actualizacion/
     FooterRepoComponent,
     SubmenuInvestigacionComponent,
     HeaderActualizacionComponent,
-    
+    HeaderDigestoComponent,
+
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,7 @@ import { HeaderActualizacionComponent } from './components/header-actualizacion/
     SidebarModule,
     DialogModule,
     DividerModule
-    
+
   ],
   exports: [
     HeaderComponent,
@@ -57,7 +59,8 @@ import { HeaderActualizacionComponent } from './components/header-actualizacion/
     HeaderRepoComponent,
     FooterRepoComponent,
     SubmenuInvestigacionComponent,
-    HeaderActualizacionComponent
+    HeaderActualizacionComponent,
+    HeaderDigestoComponent
   ]
 })
 export class SharedModule { }

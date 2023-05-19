@@ -36,6 +36,7 @@ import { MessageService } from 'primeng/api';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import {CardModule} from 'primeng/card';
 import {TooltipModule} from 'primeng/tooltip';
+import {AccordionModule} from 'primeng/accordion';
 
 import {SplitButtonModule} from 'primeng/splitbutton';
 
@@ -102,9 +103,10 @@ import { DashboardDigestoComponent } from './components/dashboard-digesto/dashbo
     TooltipModule,
     NgxSpinnerModule,
     SplitButtonModule,
-    EditorModule
+    EditorModule,
+    AccordionModule
   ],
-  
+
   providers: [
     MessageService,
     ConfirmationService,

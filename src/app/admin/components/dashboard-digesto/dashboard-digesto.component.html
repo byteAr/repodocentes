@@ -1,1 +1,41 @@
-<p>dashboard-digesto works!</p>
+<app-header-digesto></app-header-digesto>
+<section class="buttonsSection ">
+  <p-button icon="pi pi-plus" label="Nuevo" styleClass="p-button-help" class=" p-mr-6 "></p-button>
+</section>
+<section class="mr-5 mb-5 ml-5 mt-5">
+  <p-fileUpload styleClass="p-button-help" chooseLabel="Seleccionar" uploadLabel="Subir" cancelLabel="Cancelar" name="digesto" [customUpload]="true" [multiple]=true (uploadHandler)="getFile($event)">
+    <ng-template  pTemplate="content" let-files>
+        <h3 *ngIf="files" style="color: #899197; text-align: center;">Arrastre y suelte aquí los archivos que desee subir</h3>
+    </ng-template>
+</p-fileUpload>
+<ngx-spinner type ="ball-scale-multiple"></ngx-spinner>
+</section>
+<section class="containerDigesto">
+  <p-accordion class="mt-5">
+    <p-accordionTab class="institutoItems" header="hola" [selected]="false" iconPos="right">
+      <ul class="containerServicios list-none">
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
+      </ul>
+    </p-accordionTab>
+    <p-accordionTab class="institutoItems" header="hola" [selected]="false" iconPos="right">
+      <ul class="containerServicios list-none">
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
+      </ul>
+    </p-accordionTab>
+    <p-accordionTab class="institutoItems" header="hola" [selected]="false" iconPos="right">
+      <ul class="containerServicios list-none">
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
+      </ul>
+    </p-accordionTab>
+    <p-accordionTab class="institutoItems" header="hola" [selected]="false" iconPos="right">
+      <ul class="containerServicios list-none">
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
+      </ul>
+    </p-accordionTab>
+  </p-accordion>
+</section>
+
+
+<app-footer-repo></app-footer-repo>
+
+
