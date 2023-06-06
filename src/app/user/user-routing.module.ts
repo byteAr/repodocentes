@@ -213,7 +213,7 @@ const routes: Routes = [
     component: NovedadDetailComponent
   },
   {
-    path: 'novedadconvocatoria',
+    path: 'inscripciones',
     component: NovedadRapidaComponent
   }
 
