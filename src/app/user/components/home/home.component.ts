@@ -28,10 +28,10 @@ export class HomeComponent implements OnInit {
     this.novedadesService.traerTodasLasNovedades().subscribe(data => {
       this.novedades = data.rows.reverse()
     })
-    
-    
+
+
     this.novedades = [
-     
+
      /*  {
         id: 0,
         title: 'Educación Superior',
@@ -41,12 +41,12 @@ export class HomeComponent implements OnInit {
         location: 'IUGNA: Escuela Superior',
         route: 'novedades/novedad1'
       }, */
-      
-      
+
+
     ]
   }
   ejecutarTab(key:number) {
-    
+
     switch (key) {
       case 1:
         this.isTab1Active = !this.isTab1Active;
@@ -83,11 +83,11 @@ export class HomeComponent implements OnInit {
           this.isTab4Active = false;
           this.isTab1Active = false;
         break;
-    
+
       default:
         break;
     }
-   
+
   }
   showDialog() {
     this.display = true;
