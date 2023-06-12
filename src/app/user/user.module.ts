@@ -57,6 +57,7 @@ import { NovedadDetailComponent } from './components/novedad-detail/novedad-deta
 import { NovedadRapidaComponent } from './components/novedad-rapida/novedad-rapida.component';
 import { FronterasComponent } from './components/fronteras/fronteras.component';
 import { BibliotecaGeneralComponent } from './components/biblioteca-general/biblioteca-general.component';
+import { ConvocatoriaDocentesComponent } from './components/convocatoria-docentes/convocatoria-docentes.component';
 
 
 @NgModule({
@@ -97,7 +98,7 @@ import { BibliotecaGeneralComponent } from './components/biblioteca-general/bibl
     InscaesComponent,
     InsbarrealComponent,
     MenuofertaComponent,   
-    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent
+    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent
   ],
   imports: [
     CommonModule,

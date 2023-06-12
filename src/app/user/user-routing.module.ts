@@ -41,6 +41,7 @@ import { NovedadDetailComponent } from './components/novedad-detail/novedad-deta
 import { NovedadRapidaComponent } from './components/novedad-rapida/novedad-rapida.component';
 import { FronterasComponent } from './components/fronteras/fronteras.component';
 import { BibliotecaGeneralComponent } from './components/biblioteca-general/biblioteca-general.component';
+import { ConvocatoriaDocentesComponent } from './components/convocatoria-docentes/convocatoria-docentes.component';
 
 const routes: Routes = [
   {
@@ -215,6 +216,10 @@ const routes: Routes = [
   {
     path: 'inscripciones',
     component: NovedadRapidaComponent
+  },
+  {
+    path: 'convocatoria-docentes',
+    component: ConvocatoriaDocentesComponent
   }
 
 ]

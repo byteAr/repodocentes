@@ -1,0 +1,30 @@
+.membrete {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 12vh;
+  padding-left: 1%;
+  background: linear-gradient(45deg, rgba(0,138,145,1) 0%, rgba(0,173,136,1) 52%, rgba(135,206,128,1) 100%);
+
+}
+
+.subtitulo {
+  color: white;
+  padding-left: 8.5% !important
+}
+
+.containerConvocatoria {
+  width: 80vw;
+  margin: auto;
+}
+
+.buttonConvocatoria {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+:host ::ng-deep p-breadcrumb ul {
+  padding-left: 8.5% !important;
+}
+
