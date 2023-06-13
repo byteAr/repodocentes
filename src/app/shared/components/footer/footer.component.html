@@ -14,12 +14,14 @@
     <div class="contactos">
         <p class="text-right" (click)="showDialog()">CONTACTOS</p>
         <hr class="mt-2 mb-2">
-        <i class="pipi-bars"></i>
-        
+        <div class="text-right w-full">
+          <i class="pi pi-phone" style="font-size: 1.5rem; color:white"></i>
+        </div>
+
     </div>
     <p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '70vw'}">
         <hr >
-        <div class="containerContacto">            
+        <div class="containerContacto">
             <ul>
                 <li>Escuela de Oficiales (Bs. As): Tel: (011) 4620-2063 Interno 253</li>
                 <li>Escuela de Suboficiales (Córdoba): Tel/Fax: (03525)401-964</li>
@@ -34,8 +36,8 @@
                 </ul>
                 <li>Instituto de Capacitación Especializada (Bs.As) Tel: (02324)430-054</li>
                 <li>Centro de Educación a Distancia (Bs.As) Tel: (011) 5169-3355</li>
-            </ul>       
-            
+            </ul>
+
         </div>
     </p-dialog>
 </div>

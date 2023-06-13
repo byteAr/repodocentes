@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Novedad } from '../../interfaces/interfaces.interface';
 import { NovedadesService } from '../../../admin/services/novedades.service';
 import { environment } from '../../../../environments/environment.prod';
+import { Carousel } from "flowbite";
+import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
 
 @Component({
   selector: 'app-home',
@@ -10,8 +12,9 @@ import { environment } from '../../../../environments/environment.prod';
 })
 export class HomeComponent implements OnInit {
 
+
   novedades:Novedad[] = [];
-  url= environment.baseUrl
+  url= environment.baseUrl;
 
   isTab1Active:boolean = false;
   isTab2Active:boolean = false;
@@ -20,16 +23,17 @@ export class HomeComponent implements OnInit {
   isTab5Active:boolean = false;
   display: boolean = false;
 
+
+
   constructor(
     private novedadesService: NovedadesService
   ) { }
 
   ngOnInit(): void {
+
     this.novedadesService.traerTodasLasNovedades().subscribe(data => {
       this.novedades = data.rows.reverse()
     })
-
-
     this.novedades = [
 
      /*  {
@@ -92,5 +96,7 @@ export class HomeComponent implements OnInit {
   showDialog() {
     this.display = true;
   }
+
+
 
 }

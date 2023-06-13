@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { UserRoutingModule } from './user-routing.module';
 import { HomeComponent } from './components/home/home.component'
@@ -13,6 +13,10 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {DividerModule} from 'primeng/divider';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
+import {GalleriaModule} from 'primeng/galleria';
+
+//splide
+import { NgxSplideModule } from 'ngx-splide';
 
 import { SharedModule } from '../shared/shared.module';
 import { InstitucionalComponent } from './components/institucional/institucional.component';
@@ -97,7 +101,7 @@ import { ConvocatoriaDocentesComponent } from './components/convocatoria-docente
     BibliotecaEscusubComponent,
     InscaesComponent,
     InsbarrealComponent,
-    MenuofertaComponent,   
+    MenuofertaComponent,
     NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent
   ],
   imports: [
@@ -112,7 +116,9 @@ import { ConvocatoriaDocentesComponent } from './components/convocatoria-docente
     DividerModule,
     RadioButtonModule,
     FormsModule,
-    DialogModule
+    DialogModule,
+    GalleriaModule,
+    NgxSplideModule
   ]
 })
 export class UserModule { }

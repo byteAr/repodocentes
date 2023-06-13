@@ -1,8 +1,21 @@
 <app-header></app-header>
+<!-- splide -->
+<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
+  <splide-slide>
+      <img routerLink="/inscripciones" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/bannerHomeOferta.png" alt="" />
+  </splide-slide>
+  <splide-slide>
+      <img routerLink="/convocatoria-docentes" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/bannerHomeConvocatoria.png" alt="" />
+  </splide-slide>
+</splide>
+<!-- fin splide -->
 <!-- <section class="banner">
   <img class="imgBanner" routerLink="inscripciones" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/portadaHome/bannerHomeOferta.png" alt="">
 </section> -->
-<section class="slider">
+<!-- inicio prime gallery -->
+
+<!-- fin prime gallery -->
+<!-- <section class="slider">
   <div class="slide-track">
     <div class="slide cursor-pointer">
       <img routerLink="/inscripciones" src="../../../../assets/img/slider/bannerHomeOferta.png" alt="">
@@ -11,10 +24,10 @@
       <img routerLink="/convocatoria-docentes" src="../../../../assets/img/slider/bannerHomeConvocatoria.png" alt="">
     </div>
     <div class="slide cursor-pointer">
-      <img routerLink="/inscripciones" src="../../../../assets/img/slider/bannerHomeOferta.png" alt="">
+      <img routerLink="/convocatoria-docentes" src="../../../../assets/img/slider/bannerHomeConvocatoria.png" alt="">
     </div>
   </div>
-</section>
+</section> -->
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
 </section>
@@ -162,7 +175,7 @@
             <p>El <b>IUGNA</b> informa que se encuentra abierta la <b>Convocatoria de Selección a
               Docentes Interinos para cubrir cuatro cargos</b> en la <b>Unidad Académica Escuela
                 Superior de Gendarmería, </b>con asiento en Avenida Paseo Colón Nro. 533 – (CABA),
-                del 12 al 21 de junio de 2023,</p>
+                del 13 al 22 de junio de 2023,</p>
             <p><a routerLink="/convocatoria-docentes" class="text-blue-400 cursor-pointer underline">más información.</a></p>
         </div>
     </div>
