@@ -92,3 +92,7 @@ p:hover {
 :host :ng-deep ul .depAlumnos {
     list-style: disc !important;
 }
+
+.phone {
+  transform: rotateY(180deg);
+}
