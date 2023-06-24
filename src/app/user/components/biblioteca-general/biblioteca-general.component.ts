@@ -8,6 +8,7 @@ import {MenuItem} from 'primeng/api';
 })
 export class BibliotecaGeneralComponent implements OnInit {
   items: MenuItem[] = [];
+  display: boolean = true;
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class BibliotecaGeneralComponent implements OnInit {
       {label:'Biblioteca', routerLink:'/biblioteca'},
       {label:'Sistema de Bibliotecas del IUGNA', disabled: true}
   ];
+  }
+
+  showDisplay() {
+    this.display = true
   }
 
 }

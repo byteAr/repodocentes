@@ -14,6 +14,7 @@ import {DividerModule} from 'primeng/divider';
 import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
 import {GalleriaModule} from 'primeng/galleria';
+import { ButtonModule } from 'primeng/button';
 
 //splide
 import { NgxSplideModule } from 'ngx-splide';
@@ -118,7 +119,8 @@ import { ConvocatoriaDocentesComponent } from './components/convocatoria-docente
     FormsModule,
     DialogModule,
     GalleriaModule,
-    NgxSplideModule
+    NgxSplideModule,
+    ButtonModule
   ]
 })
 export class UserModule { }

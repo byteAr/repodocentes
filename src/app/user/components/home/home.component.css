@@ -25,6 +25,9 @@ h3 {
     color: white;
 }
 
+.containerBanner > img {
+ width: 100%;
+}
 .cardContainer {
     display: flex;
     justify-content: space-between;

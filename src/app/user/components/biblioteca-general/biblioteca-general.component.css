@@ -26,6 +26,39 @@
   width: 82vw;
   margin: auto;
 }
+:host ::ng-deep .p-dialog-content  {
+  background-color: #272728 !important;
+  color: white;
+}
+:host ::ng-deep .p-dialog-header  {
+  background-color: #272728 !important;
+}
+
+.containerButtonBidi {
+  display: flex;
+  justify-content: center
+}
+
+.buttonBidi {
+  background-color: #4C8BB9;
+  color: white;
+  font-size: 1.2rem;
+  padding: 2% 5%;
+  cursor: pointer;
+  border-radius: 10px
+}
+
+.buttonBidi > a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.buttonBidi:hover {
+  background-color: #6ca3cb;
+}
+
+
 
 ul {
   width: 50%;
