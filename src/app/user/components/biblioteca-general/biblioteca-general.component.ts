@@ -8,7 +8,7 @@ import {MenuItem} from 'primeng/api';
 })
 export class BibliotecaGeneralComponent implements OnInit {
   items: MenuItem[] = [];
-  display: boolean = true;
+  display: boolean = false;
 
   constructor() { }
 
