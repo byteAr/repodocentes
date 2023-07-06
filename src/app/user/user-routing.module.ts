@@ -42,6 +42,8 @@ import { NovedadRapidaComponent } from './components/novedad-rapida/novedad-rapi
 import { FronterasComponent } from './components/fronteras/fronteras.component';
 import { BibliotecaGeneralComponent } from './components/biblioteca-general/biblioteca-general.component';
 import { ConvocatoriaDocentesComponent } from './components/convocatoria-docentes/convocatoria-docentes.component';
+import { NovedadRapidaExtensionComponent } from './components/novedad-rapida-extension/novedad-rapida-extension.component';
+import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-rapida-seguridad-distancia/novedad-rapida-seguridad-distancia.component';
 
 const routes: Routes = [
   {
@@ -87,6 +89,16 @@ const routes: Routes = [
   {
     path:'novedades',
     component: NovedadesComponent
+
+  },
+  {
+    path:'novedad/extension',
+    component: NovedadRapidaExtensionComponent
+
+  },
+  {
+    path:'novedad/seguridad-distancia',
+    component: NovedadRapidaSeguridadDistanciaComponent
 
   },
   {

@@ -1,16 +1,19 @@
 <app-header></app-header>
-<section class="containerBanner">
+<!-- <section class="containerBanner">
   <img class="cursor-pointer" routerLink="/inscripciones" src="../../../../assets/img/slider/bannerHomeOferta.png" alt="">
-</section>
+</section> -->
 <!-- splide -->
-<!-- <splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
+<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
   <splide-slide>
-      <img routerLink="/inscripciones" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/bannerHomeOferta.png" alt="" />
+      <img routerLink="/inscripciones" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/nivelacion.png" alt="" />
   </splide-slide>
   <splide-slide>
-      <img routerLink="/convocatoria-docentes" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/bannerHomeConvocatoria.png" alt="" />
+    <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/extension.png" alt="" />
   </splide-slide>
-</splide> -->
+  <splide-slide>
+      <img routerLink="/novedad/seguridad-distancia" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/seguridadPublicaDistancia.jpeg" alt="" />
+  </splide-slide>
+</splide>
 
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
@@ -136,6 +139,20 @@
         </div>
         </div>
 </section>
+<section class="containerNovedadDestacada2">
+  <div class="imgNovedadDestacada">
+      <img src="../../../../assets/img/iconos/distancia.png" alt="">
+  </div>
+  <div class="descripcionNovedadDestacada">
+      <div>
+          <p><b>IUGNA: Unidad Académica Escuela Superior</b></p>
+          <p>Inscripciones abiertas del 07 al 11 de julio de 2023, para el <b>Ciclo de
+            Licenciatura en Seguridad Pública a Distancia.</b></p>
+          <p>Más información acceder <a routerLink="/novedad/seguridad-distancia" class="text-blue-400 cursor-pointer underline">aqui</a></p>
+      </div>
+  </div>
+</section>
+
 <section class="containerNovedadDestacada">
     <div class="imgNovedadDestacada">
         <img src="../../../../assets/img/iconos/librito.png" alt="">
@@ -150,7 +167,22 @@
         </div>
     </div>
 </section>
-
+<section class="containerNovedadDestacada">
+    <div class="imgNovedadDestacada">
+        <img src="../../../../assets/img/iconos/incono-extension-uuaa.png" alt="">
+    </div>
+    <div class="descripcionNovedadDestacada">
+        <div>
+            <p><b>IUGNA: Unidad Académica Escuela Superior</b></p>
+            <p><b>Inscripciones abiertas</b> para los <b>Cursos de Extensión Universitaria:</b> Francés;
+              Introducción a la Gestión Organizacional;
+              Mediación – Negociación; Prevención y Protección de la Violencia
+              Intrafamiliar y de Género e Inglés, hasta el 08 de agosto 2023, más
+              información</p>
+            <p>Más información acceder <a routerLink="/novedad/extension" class="text-blue-400 cursor-pointer underline">aqui</a></p>
+        </div>
+    </div>
+</section>
 <!-- <section class="sliderNovedades">
     <h2 routerLink="/novedades">Novedades</h2>
     <hr>

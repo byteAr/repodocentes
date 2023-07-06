@@ -217,8 +217,23 @@ ul.tabs li a{
 	border: 2px solid #BBDCB1;
 	border-radius: 10px;
 }
+.containerNovedadDestacada2 {
+	width: 80vw;
+	display: flex;
+	margin: 3% auto;
+	padding: 2% 0%;
+	border: 2px solid #FF914D;
+	border-radius: 10px;
+}
+
 
 .imgNovedadDestacada {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items:flex-start;
+}
+.imgNovedadDestacada2 {
 	width: 20%;
 	display: flex;
 	justify-content: center;
@@ -228,6 +243,7 @@ ul.tabs li a{
 .imgNovedadDestacada > img {
 	width: 70px;
 }
+
 
 .descripcionNovedadDestacada {
 	width: 80%;
@@ -251,6 +267,9 @@ ul.tabs li a{
 		font-size: 15px !important;
 	}
 	.containerNovedadDestacada {
+		width: 90vw;
+	}
+	.containerNovedadDestacada2 {
 		width: 90vw;
 	}
 	.imgNovedadDestacada {

@@ -4,11 +4,11 @@ import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-novedad-rapida',
-  templateUrl: './novedad-rapida.component.html',
-  styleUrls: ['./novedad-rapida.component.css']
+  selector: 'app-novedad-rapida-extension',
+  templateUrl: './novedad-rapida-extension.component.html',
+  styleUrls: ['./novedad-rapida-extension.component.css']
 })
-export class NovedadRapidaComponent implements OnInit {
+export class NovedadRapidaExtensionComponent implements OnInit {
   items: MenuItem[] = [];
 
   constructor() { }
