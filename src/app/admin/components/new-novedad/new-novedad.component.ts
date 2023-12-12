@@ -1,6 +1,6 @@
 import { Component,ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AbstractControl, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators, FormControl } from '@angular/forms';
 import {MenuItem, MessageService, PrimeNGConfig} from 'primeng/api';
 import { AuthService } from 'src/app/admin/services/auth.service';
 import { NovedadServiceService } from '../../services/novedad-service.service';
@@ -12,7 +12,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrls: ['./new-novedad.component.css']
 })
 export class NewNovedadComponent implements OnInit {
-  miFormulario: FormGroup = this.fb.group({
+  miFormulario: UntypedFormGroup = this.fb.group({
     titulo   : ['', [ Validators.required, Validators.minLength(5) ]],
     lugar    : ['', [ Validators.required, Validators.minLength(3) ]],
     fecha    : ['', Validators.required],
@@ -26,7 +26,7 @@ export class NewNovedadComponent implements OnInit {
   ckeditorContent: string = "<b>Probando Contenido</b>";
    
   items: MenuItem[] = [];
-  formNovedad     : FormGroup;
+  formNovedad     : UntypedFormGroup;
   public imgMiniatura?: any;
   public imgBanner?: any;
   public pdf?: any;
@@ -39,7 +39,7 @@ export class NewNovedadComponent implements OnInit {
   constructor(private authService: AuthService,
     private sanitizer: DomSanitizer,
     private novedadService: NovedadServiceService,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private router: Router,
     private primengConfig: PrimeNGConfig) {
       this.formNovedad = this.fb.group({        

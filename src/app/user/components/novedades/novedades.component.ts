@@ -19,7 +19,7 @@ export class NovedadesComponent implements OnInit {
   url: string = environment.baseUrl;
   description: any = ''
 
- 
+
 
   constructor( private novedadesSerice: NovedadesService,
               private sanitizer: DomSanitizer ) { }
@@ -29,14 +29,14 @@ export class NovedadesComponent implements OnInit {
       {label:'Inicio', routerLink: '/'},
       {label:'Novedades', disabled: true}
     ];
-    
-    this.novedadesSerice.traerTodasLasNovedades().subscribe( resp => {
+
+    /* this.novedadesSerice.traerTodasLasNovedades().subscribe( resp => {
       this.novedades = resp.rows.reverse()
-    });
+    }); */
 
 
 
-    
+
 
 }
 

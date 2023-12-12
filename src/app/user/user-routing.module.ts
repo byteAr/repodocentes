@@ -97,7 +97,7 @@ const routes: Routes = [
 
   },
   {
-    path:'novedad/seguridad-distancia',
+    path:'novedad/escusuper/inscripciones',
     component: NovedadRapidaSeguridadDistanciaComponent
 
   },

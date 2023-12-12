@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators, FormControl } from '@angular/forms';
 import { NovedadServiceService } from '../../services/novedad-service.service';
 
 
@@ -9,13 +9,13 @@ import { NovedadServiceService } from '../../services/novedad-service.service';
   styleUrls: ['./autoridades.component.css']
 })
 export class AutoridadesComponent implements OnInit {
-  miFormulario: FormGroup = this.fb.group({    
+  miFormulario: UntypedFormGroup = this.fb.group({    
     autoridades  : ['', Validators.required]
   })
 
   constructor(
     private novedadService: NovedadServiceService,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
   ) {
 
    }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MessageService} from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
@@ -15,7 +15,7 @@ import { AuthService } from 'src/app/admin/services/auth.service';
 export class RegistroComponent implements OnInit {
 
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-  formRegister: FormGroup;
+  formRegister: UntypedFormGroup;
 
   submitForm(value: { nombre: string, apellido: string, email: string, password: string, rePassword: string}): void {
     for (const key in this.formRegister.controls) {
@@ -30,7 +30,7 @@ export class RegistroComponent implements OnInit {
 
 
  
-  confirmValidator = (control: FormControl): { [s: string]: boolean } => {
+  confirmValidator = (control: UntypedFormControl): { [s: string]: boolean } => {
     if (!control.value) {
       return { error: true, required: true };
     } else if (control.value !== this.formRegister.controls['password'].value) {
@@ -39,7 +39,7 @@ export class RegistroComponent implements OnInit {
     return {};
   };
  
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
               private router: Router,
               private messageService: MessageService,
               private authService: AuthService) { 

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { AuthService } from 'src/app/admin/services/auth.service';
@@ -17,7 +17,7 @@ export class LoginComponent  {
   submitted?: boolean;
   email         :string='';
   emailPattern  : string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-  formLogin     : FormGroup;
+  formLogin     : UntypedFormGroup;
 
   submitForm(value: { email: string, password: string}): void {
     for (const key in this.formLogin.controls) {
@@ -30,7 +30,7 @@ export class LoginComponent  {
   }
 
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
     private router: Router,
     private messageService: MessageService,
     private authService: AuthService,

@@ -25,12 +25,12 @@ export class NovedadDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.id = this.activateRoute.snapshot.paramMap.get("id");
+    /* this.id = this.activateRoute.snapshot.paramMap.get("id");
     this.novedadService.traerNovedad(this.id)
       .subscribe(data => {
         this.novedad = data.rows[0];
         this.descripcion = this.sanitizer.bypassSecurityTrustHtml(this.novedad.descripcion)
-      })
+      }) */
 
   }
 
