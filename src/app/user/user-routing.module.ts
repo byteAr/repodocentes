@@ -44,6 +44,7 @@ import { BibliotecaGeneralComponent } from './components/biblioteca-general/bibl
 import { ConvocatoriaDocentesComponent } from './components/convocatoria-docentes/convocatoria-docentes.component';
 import { NovedadRapidaExtensionComponent } from './components/novedad-rapida-extension/novedad-rapida-extension.component';
 import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-rapida-seguridad-distancia/novedad-rapida-seguridad-distancia.component';
+import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
 
 const routes: Routes = [
   {
@@ -99,6 +100,11 @@ const routes: Routes = [
   {
     path:'novedad/escusuper/inscripciones',
     component: NovedadRapidaSeguridadDistanciaComponent
+
+  },
+  {
+    path:'novedad/escusuper/posgrado',
+    component: NovedadRapidaPostgradoComponent
 
   },
   {

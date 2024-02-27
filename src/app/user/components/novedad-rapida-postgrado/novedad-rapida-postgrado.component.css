@@ -11,7 +11,7 @@ img {
 
 .lugar {
   padding: 1% 10% 1% 10%;
-  background-color: #ffa600;
+  background-color: #69AEA9;
   color: white;
   font-weight: 800;
 }
@@ -38,31 +38,35 @@ p {
 }
 
 .membrete {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 12vh;
-  padding-left: 1%;
-  background: linear-gradient(45deg, rgb(255, 145, 77) 0%, rgb(255, 163, 77) 52%, rgb(255, 251, 0) 100%);
+display: flex;
+justify-content: left;
+align-items: center;
+height: 12vh;
+padding-left: 1%;
+background: linear-gradient(45deg,#924A7E 0%, #866580 52%, #536F8E 100%);
 
 }
 
 .subtitulo {
-  color: white;
-  padding-left: 8.5% !important
+color: white;
+padding-left: 8.5% !important
 }
 
 .containerConvocatoria {
-  width: 80vw;
-  margin: auto;
+width: 80vw;
+margin: auto;
 }
 
 .buttonConvocatoria {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+width: 100%;
+display: flex;
+justify-content: center;
 }
 
 :host ::ng-deep p-breadcrumb ul {
-  padding-left: 8.5% !important;
+padding-left: 8.5% !important;
+}
+
+.cuadro {
+  border-color: 5px solid red;
 }

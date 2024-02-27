@@ -16,7 +16,8 @@ export class NovedadRapidaExtensionComponent implements OnInit {
   ngOnInit(): void {
     this.items = [
       {label:'Inicio', routerLink:'/'},
-      {label:'Novedades', disabled: true}
+      {label:'Unidad Académica Escuela Superior', routerLink:'/uuaa/escusuper'},
+      {label:'Cursos de Extensión', disabled: true},
   ];
   }
 
