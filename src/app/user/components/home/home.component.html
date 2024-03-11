@@ -1,9 +1,9 @@
 <app-header></app-header>
-<!-- <section class="containerBanner">
-  <img class="cursor-pointer" routerLink="/novedad/escusuper/inscripciones" src="../../../../assets/img/portadaHome/portadaHomeConvocatoria.jpeg" alt="">
-</section> -->
+<section class="containerBanner">
+  <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/portadaHome/banner-extension.png" alt="" />
+</section>
 <!-- splide -->
-<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
+<!-- <splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
   <splide-slide>
     <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/portadaHome/banner-extension.png" alt="" />
   </splide-slide>
@@ -14,7 +14,7 @@
       <img class="object-cover w-full cursor-pointer h-auto" routerLink="/novedad/escusuper/inscripciones" src="../../../../assets/img/portadaHome/ciclos-licenciaturas-caligrafo.png" alt="">
   </splide-slide>
 
-</splide>
+</splide> -->
 
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
@@ -158,40 +158,7 @@
   </div>
 </section>
 
-<section class="containerNovedadDestacada2">
-  <div class="imgNovedadDestacada w-1/4">
-      <img src="../../../../assets/img/iconos/librito.png" alt="">
-  </div>
-  <div class="descripcionNovedadDestacada">
-      <div>
-          <p>IUGNA: Unidad Académica Escuela Superior</p>
-          <p class="text-xl font-bold text-cyan-700">Inscripciones abiertas 2024</p>
-          <p class="text-base font-bold w-full">La Unidad Académica Escuela Superior del Instituto Universitario de
-            Gendarmería Nacional, informa que se encuentra abierta la inscripción
-            para la Diplomatura en Gestión Integral de Riesgos de Desastre</p>
-          <p>Hasta el 04 Marzo de 2024</p>
-          <p class="font-bold text-cyan-700">La oferta educativa es gratuita</p>
-          <p>Más información acceder <a routerLink="/novedad/escusuper/posgrado" class="text-blue-400 cursor-pointer underline">aqui</a></p>
-      </div>
-  </div>
-</section>
-<section class="containerNovedadDestacada2">
-  <div class="imgNovedadDestacada">
-      <img src="../../../../assets/img/iconos/librito.png" alt="">
-  </div>
-  <div class="descripcionNovedadDestacada">
-      <div>
-          <p>IUGNA: Unidad Académica Escuela Superior</p>
-          <p class="text-xl font-bold text-cyan-700">Inscripciones abiertas 2024</p>
-          <p class="text-base font-bold">Ciclos de Licenciaturas en: Seguridad Pública, Administración Pública,
-            Criminalística, Investigación Judicial y el Profesorado Universitario.
-            Pregrado: Calígrafo Público Nacional.</p>
-          <p>Hasta el 04 de Marzo de 2024</p>
-          <p class="font-bold text-cyan-700">La oferta educativa es gratuita</p>
-          <p>Más información acceder <a routerLink="/novedad/escusuper/inscripciones" class="text-blue-400 cursor-pointer underline">aqui</a></p>
-      </div>
-  </div>
-</section>
+
 
 
 <!-- <section class="containerNovedadDestacada">
