@@ -48,10 +48,9 @@ import { DashboardActualizacionesComponent } from './components/dashboard-actual
 
 //ckeditor
 import {EditorModule} from 'primeng/editor';
-import { NewNovedadComponent } from './components/new-novedad/new-novedad.component';
 import { BodyDashboardActualizacionesComponent } from './components/body-dashboard-actualizaciones/body-dashboard-actualizaciones.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { AutoridadesComponent } from './components/autoridades/autoridades.component';
+
 import { InscripcionesComponent } from './components/inscripciones/inscripciones.component';
 import { OfertaAcademicaComponent } from './components/oferta-academica/oferta-academica.component';
 import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.component';
@@ -65,10 +64,8 @@ import { DashboardDigestoComponent } from './components/dashboard-digesto/dashbo
     DocenteDetailComponent,
     ListUsuariosComponent,
     DashboardActualizacionesComponent,
-    NewNovedadComponent,
     BodyDashboardActualizacionesComponent,
     SidenavComponent,
-    AutoridadesComponent,
     InscripcionesComponent,
     OfertaAcademicaComponent,
     ConvocatoriaComponent,

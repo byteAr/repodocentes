@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {MessageService} from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
@@ -15,7 +15,7 @@ import { AuthService } from 'src/app/admin/services/auth.service';
 export class RegistroComponent implements OnInit {
 
   emailPattern: string = "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$";
-  formRegister: UntypedFormGroup;
+  formRegister: FormGroup;
 
   submitForm(value: { nombre: string, apellido: string, email: string, password: string, rePassword: string}): void {
     for (const key in this.formRegister.controls) {
@@ -29,8 +29,8 @@ export class RegistroComponent implements OnInit {
 }
 
 
- 
-  confirmValidator = (control: UntypedFormControl): { [s: string]: boolean } => {
+
+  confirmValidator = (control: FormControl): { [s: string]: boolean } => {
     if (!control.value) {
       return { error: true, required: true };
     } else if (control.value !== this.formRegister.controls['password'].value) {
@@ -38,11 +38,11 @@ export class RegistroComponent implements OnInit {
     }
     return {};
   };
- 
-  constructor(private fb: UntypedFormBuilder,
+
+  constructor(private fb: FormBuilder,
               private router: Router,
               private messageService: MessageService,
-              private authService: AuthService) { 
+              private authService: AuthService) {
                 this.formRegister = this.fb.group({
                   nombre: ['', [Validators.required, Validators.minLength(3)]],
                   apellido: ['',[Validators.required, Validators.minLength(3)]],
@@ -66,15 +66,15 @@ export class RegistroComponent implements OnInit {
      .subscribe( ok => {
         if ( ok === true ) {
           this.messageService.add({severity:'success', summary:'Registro Exitoso', detail:'Registro exitoso, verifique la bandeja de entrada de su correo para completar el registro', life: 5000});
-          setTimeout(() => {            
+          setTimeout(() => {
             this.router.navigateByUrl('/auth');
           }, 5000);
-        } else {   
+        } else {
           this.messageService.add({severity:'error', summary:'ERROR', detail:'ERROR', life: 5000});
         }
      });
-  } 
-  
+  }
+
 
   /* passwordSonIguales() {
     console.log(this.formRegister)
@@ -84,7 +84,7 @@ export class RegistroComponent implements OnInit {
     } else {
       return true
     } */
-   
+
 
 }
 

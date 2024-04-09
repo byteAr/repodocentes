@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import {MessageService} from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 import { AuthService } from 'src/app/admin/services/auth.service';
@@ -13,7 +13,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RecoveryPasswordComponent implements OnInit {
 
-  formRegister: UntypedFormGroup;
+  formRegister: FormGroup;
   id: any;
 
   submitForm(value: {password: string, rePassword: string}): void {
@@ -28,8 +28,8 @@ export class RecoveryPasswordComponent implements OnInit {
 }
 
 
- 
-  confirmValidator = (control: UntypedFormControl): { [s: string]: boolean } => {
+
+  confirmValidator = (control: FormControl): { [s: string]: boolean } => {
     if (!control.value) {
       return { error: true, required: true };
     } else if (control.value !== this.formRegister.controls['password'].value) {
@@ -37,13 +37,13 @@ export class RecoveryPasswordComponent implements OnInit {
     }
     return {};
   };
- 
+
 
   constructor(private activatedRoute: ActivatedRoute,
               private messageService: MessageService,
               private router: Router,
               private authService: AuthService,
-              private fb: UntypedFormBuilder) {
+              private fb: FormBuilder) {
     this.formRegister = this.fb.group({
       password: ['', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/)]],
       repassword: ['', [Validators.required, this.confirmValidator]]
@@ -62,16 +62,16 @@ export class RecoveryPasswordComponent implements OnInit {
   updatePassword() {
     const { password } = this.formRegister.value;
     this.authService.updatePassword( password, this.id )
-     .subscribe( resp => {       
+     .subscribe( resp => {
         if ( resp.ok == true ) {
           this.messageService.add({severity:'success', summary:'', detail:'Contraseña Actualizada', life: 5000});
-          setTimeout(() => {            
+          setTimeout(() => {
             this.router.navigateByUrl('');
           }, 2000);
         } else {
           this.messageService.add({severity:'error', summary:'ERROR', detail:'ERROR', life: 5000});
         }
      });
-  } 
+  }
 
 }
