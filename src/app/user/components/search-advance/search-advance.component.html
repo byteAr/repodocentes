@@ -1,0 +1,19 @@
+<app-header></app-header>
+<p-breadcrumb class=""  [model]="items"></p-breadcrumb>
+<br>
+
+<div class="">
+    <span class="p-input-icon-left mr-2">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText  placeholder="Buscar por título...">
+    </span>
+    <br>
+      <p-calendar placeholder="Buscar por fecha..." [(ngModel)]="date3" [showIcon]="true" inputId="icon"></p-calendar>
+
+    <br>
+    <p-treeSelect [options]="nodes" placeholder="Seleccione un tipo"></p-treeSelect>
+    <br>
+    <div class="containerButton ">
+      <p-button label="Buscar" icon="pi pi-search" iconPos="left"></p-button>
+    </div>
+</div>

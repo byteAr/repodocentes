@@ -45,6 +45,8 @@ import { ConvocatoriaDocentesComponent } from './components/convocatoria-docente
 import { NovedadRapidaExtensionComponent } from './components/novedad-rapida-extension/novedad-rapida-extension.component';
 import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-rapida-seguridad-distancia/novedad-rapida-seguridad-distancia.component';
 import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
+import { DigestoComponent } from './components/digesto/digesto.component';
+import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
 
 const routes: Routes = [
   {
@@ -238,6 +240,14 @@ const routes: Routes = [
   {
     path: 'convocatoria-docentes',
     component: ConvocatoriaDocentesComponent
+  },
+  {
+    path: 'digesto',
+    component: DigestoComponent
+  },
+  {
+    path: 'busqueda-avanzada',
+    component: SearchAdvanceComponent
   }
 
 ]

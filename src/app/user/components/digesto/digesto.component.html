@@ -1,0 +1,86 @@
+<app-header></app-header>
+<p-breadcrumb class=""  [model]="items"></p-breadcrumb>
+
+<div class="containerTable">
+  <div class="containerHeaderTable">
+    <p-selectButton [options]="cities" [(ngModel)]="selectedCity" optionLabel="name"></p-selectButton>
+    <div>
+      <div>
+        <span class="p-input-icon-left pr-2">
+          <i class="pi pi-search"></i>
+          <input type="text" pInputText  placeholder="Search">
+        </span>
+
+        <button (click)="openNew()" pButton type="button" label="Búsqueda Avanzada" ></button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p-table  [value]="digesto" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Título</th>
+            <th>Fecha</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Archivo</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-digesto>
+        <tr>
+            <td>{{digesto.title}}</td>
+            <td>{{digesto.date}}</td>
+            <td>{{digesto.type}}</td>
+            <td>{{digesto.description}}</td>
+            <td class="w-full flex justify-center"><img class="h-3 cursor-pointer hover:h-5" src="../../../../assets/img/iconos/TeenyiconsPdfSolid.svg" alt=""></td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>
+
+<p-dialog [(visible)]="productDialog" [style]="{width: '600px', heigth: '70vh'}" header="Busqueda avanzada" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+      <!-- <img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.image" class="product-image" *ngIf="product.image"> -->
+      <div class="p-field">
+        <label for="date">Fecha</label>
+        <p-calendar placeholder="Buscar por fecha..." [style]="{width: '100%', heigth: '70vh'}" id="date" [showIcon]="true" inputId="icon"></p-calendar>
+    </div>
+    <br>
+      <div class="p-field">
+          <label  for="title">Título</label>
+          <input placeholder="Búsqueda por título..." type="text" pInputText id="title" required />
+      </div>
+
+      <br>
+      <!-- <div class="p-field">
+          <label for="description">description</label>
+          <textarea id="description" pInputTextarea [(ngModel)]="persona.description" required rows="3" cols="20"></textarea>
+      </div> -->
+      <div class="p-field">
+          <label for="type">Tipo Normativa</label>
+          <p-dropdown  inputId="type" [options]="types" placeholder="Seleccione un tipo de normativa">
+              <ng-template let-option pTemplate="item">
+                  <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
+              </ng-template>
+          </p-dropdown>
+      </div>
+      <br>
+      <div class="p-field">
+        <label for="title">Descripción</label>
+        <input placeholder="Ingrese una descripción..." type="text" pInputText id="title" required />
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+  </ng-template>
+  <ng-template pTemplate="footer">
+      <button pButton pRipple label="Buscar" icon="pi pi-search" class="p-button-text" (click)="hideDialog()"></button>
+  </ng-template>
+</p-dialog>

@@ -8,3 +8,17 @@ export interface Novedad {
     lugar: string,
     descripcion: any,
 }
+
+export interface Digesto {
+  title: string;
+  type: string;
+  date: string;
+  affair: string
+  urlDocument: string;
+  description: string
+}
+
+export interface City {
+  name: string,
+  code: string
+}

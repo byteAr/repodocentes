@@ -15,6 +15,12 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {DialogModule} from 'primeng/dialog';
 import {GalleriaModule} from 'primeng/galleria';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from "primeng/table";
+import {SelectButtonModule} from 'primeng/selectbutton';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {TreeSelectModule} from 'primeng/treeselect';
+import {DropdownModule} from 'primeng/dropdown';
 
 //splide
 import { NgxSplideModule } from 'ngx-splide';
@@ -66,6 +72,8 @@ import { ConvocatoriaDocentesComponent } from './components/convocatoria-docente
 import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-rapida-seguridad-distancia/novedad-rapida-seguridad-distancia.component';
 import { NovedadRapidaExtensionComponent } from './components/novedad-rapida-extension/novedad-rapida-extension.component';
 import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
+import { DigestoComponent } from './components/digesto/digesto.component';
+import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
 
 
 @NgModule({
@@ -106,7 +114,7 @@ import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-pos
     InscaesComponent,
     InsbarrealComponent,
     MenuofertaComponent,
-    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent
+    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent, DigestoComponent, SearchAdvanceComponent
   ],
   imports: [
     CommonModule,
@@ -123,7 +131,15 @@ import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-pos
     DialogModule,
     GalleriaModule,
     NgxSplideModule,
-    ButtonModule
+    ButtonModule,
+    TableModule,
+    SelectButtonModule,
+    InputTextModule,
+    CalendarModule,
+    TreeSelectModule,
+    DropdownModule
+
+
   ]
 })
 export class UserModule { }
