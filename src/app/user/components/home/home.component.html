@@ -1,20 +1,16 @@
 <app-header></app-header>
-<section class="containerBanner">
-  <img class="cursor-pointer" routerLink="/novedad/escusuper/inscripciones" src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="Banner de la página principal">
-</section>
+<!-- <section class="containerBanner">
+  <img src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="Banner de la página principal">
+</section> -->
 <!-- splide -->
-<!-- <splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
+<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
   <splide-slide>
-    <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/portadaHome/banner-extension.png" alt="" />
+    <img routerLink="/inscripciones-ciclos" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/banner-2024-04.png" alt="" />
   </splide-slide>
   <splide-slide>
-    <img routerLink="/novedad/escusuper/posgrado" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/portadaHome/diplomatura.png" alt="" />
+    <img routerLink="/caligrafo" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/banner-2024-05.png" alt="" />
   </splide-slide>
-  <splide-slide>
-      <img class="object-cover w-full cursor-pointer h-auto" routerLink="/novedad/escusuper/inscripciones" src="../../../../assets/img/portadaHome/ciclos-licenciaturas-caligrafo.png" alt="">
-  </splide-slide>
-
-</splide> -->
+</splide>
 
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
@@ -146,10 +142,18 @@
   </div>
   <div class="descripcionNovedadDestacada">
       <div>
-          <p class="text-base">El <span class="font-bold text-base">IUGNA</span> informa que se encuentra abierta la <span class="text-base font-bold">Convocatoria de Selección a
-            Docentes Interinos</span> para la carrera Especialización en Investigación de lavado de
-            activos, en la Unidad Académica Escuela Superior de Gendarmería, con asiento en
-            Avenida Paseo Colón Nro. 533 – (CABA), del 10 al 19 de abril de 2024, <span routerLink="/convocatoria-docentes" class="text-base underline decoration-solid cursor-pointer text-blue-500">más información.</span></p>
+          <p>IUGNA: Unidad Académica Escuela Superior</p>
+          <p class="text-teal-600 md:text-xl font-bold">Inscripciones abiertas 2025</p>
+          <p class="font-bold mb-2">Ciclos de Licenciaturas en:</p>
+          <ul class="list-none">
+            <li class="font-bold mb-2">- Seguridad Pública, Administración Pública, Investigación Judicial y
+              Criminalística. <span routerLink="/inscripciones-ciclos" class="underline text-blue-400 cursor-pointer md: text-base"> Más información.</span></li>
+            <li class="font-bold mb-2">- Profesorado Universitario.</li>
+            <li class="font-bold mb-2">- Pregrado: Calígrafo Público Nacional. <span routerLink="/caligrafo" class="underline text-blue-400 cursor-pointer md: text-base"> Más información.</span></li>
+          </ul>
+          <br>
+          <p>03 al 21 de febrero de 2025</p>
+          <p class="md: text-base text-teal-600 italic font-bold">Oferta educativa gratuita</p>
 
       </div>
   </div>
