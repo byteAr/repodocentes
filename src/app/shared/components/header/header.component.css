@@ -1,10 +1,11 @@
 :host ::ng-deep .wrapper {
-    height: 20vh;
+    height: 17vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1% 1% 0% 1%;
-    background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgb(58,149,142) 50%,rgb(18, 93, 104) 100%);
+    padding: 0% 1% 0% 1%;
+    background-color: white;
+    /* background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgb(58,149,142) 50%,rgb(18, 93, 104) 100%); */
 }
 
 
@@ -21,7 +22,7 @@
     width: 70%;
     height: 100% !important;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:center;
 }
 button {
     font-size: 1rem;
@@ -29,8 +30,8 @@ button {
 }
 
 .menuDocentes {
-    background-color: transparent;
-    color: #fff;
+    background: transparent;
+    color: #008584;
     cursor: pointer;
 }
 .rightMenu {
@@ -40,6 +41,7 @@ button {
     display: block;
 }
 .dropDownMenuDocentes {
+    margin-top: 3px;
     display: none;
     position: absolute;
     background-color: #125D68;
@@ -63,7 +65,7 @@ li {
 
 .menuDocentes2 {
     background-color: transparent;
-    color: #fff;
+    color: #008584;
     cursor: pointer;
 }
 .rightMenu2 {
@@ -85,7 +87,7 @@ li {
 }
 .menuDocentes3 {
     background-color: transparent;
-    color: #fff;
+    color: #008584;
     cursor: pointer;
 }
 .rightMenu3 {
@@ -190,7 +192,7 @@ a {
 
 
 :host ::ng-deep .iconIugna {
-    width: 60%;
+    width: 50%;
     height: 100%;
 }
 
