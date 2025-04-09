@@ -43,13 +43,13 @@ export class ListDocentesComponent implements OnInit {
   submitted?: boolean;
   productDialog1?: boolean;
   productDialog2?: boolean;
-  
-  
+
+
 
   statuses:Array<Object>=[];
-  
 
-  constructor(private messageService: MessageService, 
+
+  constructor(private messageService: MessageService,
               private confirmationService: ConfirmationService,
               private userService: UsersService) { }
 
@@ -62,12 +62,13 @@ export class ListDocentesComponent implements OnInit {
       .subscribe(resp => {
       this.usuarios = resp
     })
-    
+
 
     this.statuses = [
         {label: 'ESCUGEN', value: 'ESCUGEN'},
         {label: 'ESCUSUB', value: 'ESCUSUB'},
         {label: 'ESCUSUPER', value: 'ESCUSUPER'},
+        {label: 'INSTRIPEPI', value: 'INSTRIPEPI'},
         {label: 'INSCAES', value: 'INSCAES'},
         {label: 'INSBARREAL', value: 'INSBARREAL'},
         {label: 'ESPEVIACION', value: 'ESPEVIACION'},
@@ -124,8 +125,8 @@ export class ListDocentesComponent implements OnInit {
                         }
                     })
                 this.docente = {};
-                
-                
+
+
             }
         });
     }
@@ -158,7 +159,7 @@ export class ListDocentesComponent implements OnInit {
         this.submitted = false;
     }
 
-    
+
 
     /* logOut() {
       this.userService.rolUser = 'standart';
@@ -181,11 +182,11 @@ export class ListDocentesComponent implements OnInit {
                     this.messageService.add({severity:'error', summary: 'Error', detail: `${resp.message}`, life: 3000});
                 }
             })
-            
+
 
             this.hideDialog();
 
-        
+
     }
 
     findIndexById(id: string): number {
@@ -216,8 +217,8 @@ export class ListDocentesComponent implements OnInit {
               this.messageService.add({severity:'error', summary: 'ERROR', detail: `${resp.message}`, life: 7000});
               this.productDialog1 = false;
             }
-            
-          })      
+
+          })
     }
     saveNewUsuario() {
         this.submitted = true;
@@ -235,8 +236,8 @@ export class ListDocentesComponent implements OnInit {
               this.messageService.add({severity:'error', summary: 'ERROR', detail: `${resp.message}`, life: 7000});
               this.productDialog2 = false;
             }
-            
-          })      
+
+          })
     }
 
   createId(): string {
@@ -256,6 +257,6 @@ export class ListDocentesComponent implements OnInit {
     this.tablaUsuarios = false
   }
 
-  
+
 
 }

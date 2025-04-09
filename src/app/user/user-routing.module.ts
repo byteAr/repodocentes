@@ -47,6 +47,7 @@ import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-r
 import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
 import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
+import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
 
 const routes: Routes = [
   {
@@ -97,6 +98,11 @@ const routes: Routes = [
   {
     path:'novedad/extension',
     component: NovedadRapidaExtensionComponent
+
+  },
+  {
+    path:'novedad/profesorado&caligrafo',
+    component: NovedadProfesoradoComponent
 
   },
   {

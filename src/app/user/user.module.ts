@@ -74,6 +74,7 @@ import { NovedadRapidaExtensionComponent } from './components/novedad-rapida-ext
 import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
 import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
+import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
 
 
 @NgModule({
@@ -114,7 +115,7 @@ import { SearchAdvanceComponent } from './components/search-advance/search-advan
     InscaesComponent,
     InsbarrealComponent,
     MenuofertaComponent,
-    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent, DigestoComponent, SearchAdvanceComponent
+    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent, DigestoComponent, SearchAdvanceComponent, NovedadProfesoradoComponent
   ],
   imports: [
     CommonModule,
