@@ -1,43 +1,69 @@
-<div class="containerFooter pl-5 pr-5">
-    <div class="rectorado">
-        <p>RECTORADO</p>
+
+<!-- <div class="containerFooter block pl-5 pr-5 pt-5 pb-4 text-white lg:pl-5 lg:flex lg:pr-5 lg:justify-between ">
+    <div class="mb-4">
+        <p class="font-bold">RECTORADO</p>
         <hr class="mt-2 mb-2">
-        <p class="mb-1">Paseo Colón N° 533 CABA Tel: (011) 5169-3322</p>
+        <p class="mb-1">Paseo Colón N° 533 CABA </p>
+        <p>Tel: (011) 5169-3322</p>
         <p>info@iugna.edu.ar</p>
     </div>
-    <div class="acceso">
-        <p>ACCESO</p>
+    <div class="mb-4">
+        <p class="font-bold">ACCESO</p>
         <hr class="mt-2 mb-2">
-        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><p class="mb-1">Campus Virtual</p></a>
+        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><p class="mb-1 text-white">Campus Virtual</p></a>
         <p routerLink="/uuaa">Oferta Académica</p>
     </div>
-    <div class="contactos">
-        <p class="text-right xl:text-right md:text-center sm:text-center" (click)="showDialog()">CONTACTO</p>
+    <div>
+        <p class="lg:text-right xl:text-right md:text-center font-bold" (click)="showDialog()">CONTACTO</p>
         <hr class="mt-2 mb-2">
-        <div (click)="showDialog()" class="text-right cursor-pointer  w-full xl:text-right md:text-center sm:text-center">
+        <div (click)="showDialog()" class="lg:text-right cursor-pointer w-full xl:text-right md:text-center sm:text-center">
           <svg  xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#ffffff" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
         </div>
 
     </div>
-    <p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '70vw'}">
-        <hr >
-        <div class="containerContacto">
-            <ul>
-                <li>Escuela de Oficiales (Bs. As): Tel: (011) 4620-2063 Interno 253</li>
-                <li>Escuela de Suboficiales (Córdoba): Tel/Fax: (03525)401-964</li>
-                <li>Guardia:(03525)401-965</li>
-                <li>Escuela de Gendarmes (San Juan): Tel: (02648) 441-023 </li>
-            </ul>
-            <p-divider layout="vertical"></p-divider>
-            <ul>
-                <li>Escuela Superior (Bs.As) Tel: (011) 5169-3322</li>
-                <ul>
-                    <li class="ml-5 depAlumnos">Departamento Alumnos (011) 5169-3364</li>
-                </ul>
-                <li>Instituto de Capacitación Especializada (Bs.As) Tel: (02324)430-054</li>
-                <li>Centro de Educación a Distancia (Bs.As) Tel: (011) 5169-3355</li>
-            </ul>
 
-        </div>
-    </p-dialog>
+</div> -->
+<div class="bg-gray-600 block lg:flex lg:justify-between w-full text-white pt-5 pb-5 h-full">
+  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-left px-16 mb-3 lg:mb-0">
+    <p class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-2">RECTORADO</p>
+    <hr class="hidden md:hidden lg:block">
+    <p>Paseo Colón N° 533 CABA</p>
+    <p>Tel: (011) 5169-3322</p>
+    <p>info@iugna.edu.ar</p>
+  </div>
+  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-left px-16 mb-3 lg:mb-0">
+    <p class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-2">ACCESO</p>
+    <hr class="hidden md:hidden lg:block">
+    <p>Campus Virtual</p>
+    <p>Oferta Académica</p>
+  </div>
+  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-right px-16 mb-3 lg:mb-0">
+    <p  class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-1">CONTACTO</p>
+    <hr class="hidden md:hidden lg:block">
+    <div (click)="showDialog()" class="flex w-full justify-center lg:justify-end cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#ffffff" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
+    </div>
+  </div>
 </div>
+
+<p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '70vw'}">
+  <hr >
+  <div class="containerContacto">
+      <ul>
+          <li>Escuela de Oficiales (Bs. As): Tel: (011) 4620-2063 Interno 253</li>
+          <li>Escuela de Suboficiales (Córdoba): Tel/Fax: (03525)401-964</li>
+          <li>Guardia:(03525)401-965</li>
+          <li>Escuela de Gendarmes (San Juan): Tel: (02648) 441-023 </li>
+      </ul>
+      <p-divider layout="vertical"></p-divider>
+      <ul>
+          <li>Escuela Superior (Bs.As) Tel: (011) 5169-3322</li>
+          <ul>
+              <li class="ml-5 depAlumnos">Departamento Alumnos (011) 5169-3364</li>
+          </ul>
+          <li>Instituto de Capacitación Especializada (Bs.As) Tel: (02324)430-054</li>
+          <li>Centro de Educación a Distancia (Bs.As) Tel: (011) 5169-3355</li>
+      </ul>
+
+  </div>
+</p-dialog>

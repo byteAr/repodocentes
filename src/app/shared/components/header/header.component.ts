@@ -13,13 +13,18 @@ import { faUserLarge } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
   @ViewChild('asMenu') menu!: Menubar;
   @ViewChild('itemsMenu') itemsMenu!: ElementRef;
+
+  isSubmenuOpen = false;
+  isSubmenu2Open = false;
+  isSubmenu3Open = false;
+
   mostrar: boolean = false;
   visibleSidebar1: boolean = false;
 
-  
+
 
   menuHeader: MenuItem[] = [];
-  
+
   items: MenuItem[] = [];
   faUserLarge = faUserLarge
 
@@ -43,7 +48,7 @@ export class HeaderComponent implements OnInit {
         {
           label: 'Cerrar Sesión',
           icon: 'pi pi-sign-out',
-          
+
         }
         ]}
     ];
@@ -70,11 +75,11 @@ export class HeaderComponent implements OnInit {
       },
       {
           label: 'EXTENSIÓN',
-          
+
       },
       {
           label: 'BIBLIOTECA',
-         
+
       },
       {
           label: 'OFERTA ACADÉMICA',
@@ -101,7 +106,16 @@ export class HeaderComponent implements OnInit {
     /* const menu = this.itemsMenu.nativeElement
     this.render2.addClass(menu, "mostrar") */
   }
+  toggleSubmenu() {
+    this.isSubmenuOpen = !this.isSubmenuOpen;
+  }
+  toggleSubmenu2() {
+    this.isSubmenu2Open = !this.isSubmenu2Open;
+  }
+  toggleSubmenu3() {
+    this.isSubmenu3Open = !this.isSubmenu3Open;
+  }
 
-  
+
 
 }

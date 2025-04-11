@@ -1,8 +1,8 @@
 <!-- <img class="logo" src="../../../../assets/img/banner.png" alt=""> -->
 
 <div class="wrapper">
-    <div class="logo">
-        <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
+    <div  class="logo">
+        <img routerLink="/"  class="iconIugna" src="../../../../assets/img/banner.png" alt="">
     </div>
     <div class="contenedorMenu">
         <div class="rightMenu">
@@ -86,13 +86,66 @@
 </section> -->
 
 <p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
-    <ul class="containerItemsSideBar">
-        <li routerLink="/institucional" class="itemsSideBar mt-5">INSTITUCIONAL</li>
-        <li routerLink="/investigacion" class="itemsSideBar mt-5">INVESTIGACIÓN</li>
-        <li routerLink="/extension" class="itemsSideBar mt-5">EXTENSIÓN</li>
-        <li routerLink="/biblioteca" class="itemsSideBar mt-5">BIBLIOTECA</li>
-        <li routerLink="/auth" class="itemsSideBar mt-5">INGRESAR</li>
-    </ul>
+  <nav class=" text-white">
+    <!-- Ítem simple -->
+
+
+    <!-- Ítem con submenú -->
+    <div class="">
+      <button (click)="toggleSubmenu()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700">
+        <div class="flex items-center">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#ffffff" d="M2 21V3h10v4h10v14zm2-2h6v-2H4zm0-4h6v-2H4zm0-4h6V9H4zm0-4h6V5H4zm8 12h8V9h-8zm2-6v-2h4v2zm0 4v-2h4v2z"/></svg>
+          <p class="text-xl">Institucional</p>
+        </div>
+        <svg [ngClass]="{ 'rotate-180': isSubmenuOpen }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div *ngIf="isSubmenuOpen" class="ml-4 mt-1 space-y-1">
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">El Instituto Universitario</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Oferta Académica</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Gendarmeria Nacional Argentina</a>
+      </div>
+      <button (click)="toggleSubmenu2()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700">
+        <div class="flex items-center">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 64 64"><path fill="#ffffff" d="M55.217 8.782c-9.044-9.043-23.708-9.043-32.752 0c-8.4 8.402-8.985 21.645-1.779 30.735l-1.893 1.893l-1.572-1.572L4.376 52.682c-.754-.479-1.335-.684-1.572-.445l-.703.701C.958 54.081 9.919 63.044 11.062 61.9l.703-.702c.238-.237.031-.819-.446-1.575L24.163 46.78l-1.573-1.572l1.894-1.892c9.091 7.207 22.331 6.621 30.734-1.78c9.042-9.045 9.044-23.708-.001-32.754m-2.729 30.024c-7.538 7.536-19.757 7.538-27.293 0c-7.537-7.535-7.537-19.758 0-27.293c7.534-7.537 19.757-7.537 27.293 0s7.534 19.756 0 27.293"/><path fill="#ffffff" d="M55.317 23.902a16.6 16.6 0 0 1-3.789 5.879c-6.513 6.514-17.076 6.514-23.592-.003a16.6 16.6 0 0 1-4.813-10.243c-2.256 5.949-1 12.926 3.79 17.716c6.515 6.515 17.078 6.515 23.593 0c3.654-3.651 5.255-8.577 4.811-13.349"/></svg>
+          <p class="text-xl">Investigación</p>
+        </div>
+        <svg [ngClass]="{ 'rotate-180': isSubmenu2Open }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div *ngIf="isSubmenu2Open" class="ml-4 mt-1 space-y-1">
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Usuarios</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Roles</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Permisos</a>
+      </div>
+      <div  class="flex justify-start items-center w-full px-2 py-2 hover:bg-teal-700">
+        <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 36 36"><path fill="#ffffff" d="M29.81 16H29v-.6h-2V18h2.81A3.13 3.13 0 0 1 33 20.69a3 3 0 0 1-.78 2.31A3 3 0 0 1 30 24h-3v7.83H4V25h1a5 5 0 0 0 5-5.51A5.15 5.15 0 0 0 4.81 15H4V8.83h9V7a3 3 0 0 1 1-2.22A3 3 0 0 1 16.31 4A3.13 3.13 0 0 1 19 7.19v1.64h.66L21 6.59A5.12 5.12 0 0 0 16.51 2A5 5 0 0 0 11 6.83H4a2 2 0 0 0-2 2V17h2.81A3.13 3.13 0 0 1 8 19.69A3 3 0 0 1 7.22 22A3 3 0 0 1 5 23H2v8.83a2 2 0 0 0 2 2h23a2 2 0 0 0 2-2V26h1a5 5 0 0 0 5-5.51A5.15 5.15 0 0 0 29.81 16" class="clr-i-outline--alerted clr-i-outline-path-1--alerted"/><path fill="#ffffff" d="M26.85 1.14L21.13 11a1.28 1.28 0 0 0 1.1 2h11.45a1.28 1.28 0 0 0 1.1-2l-5.72-9.86a1.28 1.28 0 0 0-2.21 0" class="clr-i-outline--alerted clr-i-outline-path-2--alerted clr-i-alert"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+        <p class="text-xl">Extensión</p>
+       </div>
+       <button (click)="toggleSubmenu3()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700">
+        <div class="flex items-center">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 256"><g fill="#ffffff"><path d="M192 80v96h-88a32 32 0 1 0-32-32h-8V80Z" opacity=".2"/><path d="M216 40H40a16 16 0 0 0-16 16v144a16 16 0 0 0 16 16h13.39a8 8 0 0 0 7.23-4.57a48 48 0 0 1 86.76 0a8 8 0 0 0 7.23 4.57H216a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16M80 144a24 24 0 1 1 24 24a24 24 0 0 1-24-24m136 56h-56.57a64.4 64.4 0 0 0-28.83-26.16a40 40 0 1 0-53.2 0A64.4 64.4 0 0 0 48.57 200H40V56h176ZM56 96V80a8 8 0 0 1 8-8h128a8 8 0 0 1 8 8v96a8 8 0 0 1-8 8h-16a8 8 0 0 1 0-16h8V88H72v8a8 8 0 0 1-16 0"/></g></svg>
+          <p class="text-xl">Docentes</p>
+        </div>
+        <svg [ngClass]="{ 'rotate-180': isSubmenu3Open }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+
+      <div *ngIf="isSubmenu3Open" class="ml-4 mt-1 space-y-1">
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Usuarios</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Roles</a>
+        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Permisos</a>
+      </div>
+    </div>
+    <div  class="flex justify-start items-center w-full px-2 py-2 hover:bg-teal-700">
+      <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 18 16"><path fill="#ffffff" d="M3.5 2h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5M3 5H1V4h2zm5.5-3h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5M8 5H6V4h2z"/><path fill="#ffffff" d="m11.954 2.773l-2.679 1.35a.5.5 0 0 0-.222.671l4.5 8.93a.5.5 0 0 0 .671.222l2.679-1.35a.5.5 0 0 0 .222-.671l-4.5-8.93a.5.5 0 0 0-.671-.222"/><path fill="#ffffff" d="M14.5 13.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0"/></svg>
+      <p class="text-xl">Biblioteca</p>
+     </div>
+  </nav>
 </p-sidebar>
 <div class="containerMenuResponsive">
     <div class="containerMenuBar">
