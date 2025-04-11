@@ -3,7 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0% 1% 0% 1%;
+    padding: 0% 3% 0% 3%;
+    margin:1% 0% 1% 0%;
     background-color: white;
     /* background: linear-gradient(90deg, rgba(254,254,254,1) 0%, rgb(58,149,142) 50%,rgb(18, 93, 104) 100%); */
 }
@@ -11,7 +12,7 @@
 
 .logo {
     float: left;
-    width: 40%;
+    width: 50%;
     height: 80%;
     margin-bottom: 1%;
 }
@@ -41,21 +42,31 @@ button {
     display: block;
 }
 .dropDownMenuDocentes {
-    margin-top: 3px;
     display: none;
     position: absolute;
-    background-color: #125D68;
+    background-color: white;
     min-width: 400px;
     z-index: 5;
+    -webkit-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+}
+ul > a {
+  color: #004F59;
+  padding-bottom: 2%;
+    color: #008584;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 li {
     list-style: none;
     padding-bottom: 2%;
-    color: white;
+    color: #008584;
     font-size: 1.2rem;
     font-weight: 400;
 }
+
  hr {
      margin-bottom: 2%;
  }
@@ -77,9 +88,13 @@ li {
 .dropDownMenuDocentes2 {
     display: none;
     position: absolute;
-    background-color: #125D68;
+    background-color: white;
     min-width: 400px;
     z-index: 5;
+
+    -webkit-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
 }
 
 .rightMenu2:hover .dropDownMenuDocentes2 {
@@ -101,9 +116,13 @@ li {
     position: absolute;
     left: -310px;
     padding: 5% 2%;
-    background-color: #125D68;
+    background-color: white;
     min-width: 400px;
     z-index: 5;
+
+    -webkit-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 43px -32px rgba(0,0,0,0.75);
 }
 
 a {
@@ -192,7 +211,7 @@ a {
 
 
 :host ::ng-deep .iconIugna {
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 

@@ -1,13 +1,14 @@
 <app-header></app-header>
-<section class="containerBanner">
-  <img src="../../../../assets/img/newbanner.png" alt="Banner de la página principal">
-</section>
+
+<img class="bannerStatic" src="../../../../assets/img/newbanner.png" alt="Banner de la página principal">
 <!-- splide -->
 <!-- <splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
   <splide-slide>
     <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/extension25.png" alt="" />
   </splide-slide>
-
+  <splide-slide>
+    <img routerLink="/novedad/extension" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/slider/extension25.png" alt="" />
+  </splide-slide>
 </splide> -->
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
@@ -36,9 +37,7 @@
                         <a  class="container-extension" (click)="ejecutarTab(4)">CURSOS DE EXTENSIÓN</a>
                     </div>
                 </li>
-
         </ul>
-
         <div class="secciones">
             <div *ngIf="isTab1Active">
                 <article id="tab1">
@@ -192,30 +191,16 @@
     </div>
 
 </section> -->
-<section class="unidadesAcademicas">
-    <h2>Unidades Académicas</h2>
-    <br>
-    <div class="iconsUnidadesAcademicas">
-        <div class="escuelas1">
-            <img routerLink="./uuaa/escusub" src="../../../../assets/img/icon escuelas/01.png" alt="Escuela de Suboficiales Raul Remberto Cuello">
-            <img routerLink="./uuaa/insbarreal" src="../../../../assets/img/icon escuelas/02.png" alt="Escuela de formacion de Gendarmes">
-            <img routerLink="./uuaa/escugen" src="../../../../assets/img/icon escuelas/03.png" alt="Ecuela de Oficiales Martin Miguel de Güemes">
-        </div>
-        <div class="escuelas2">
-            <img routerLink="./uuaa/escusuper" src="../../../../assets/img/icon escuelas/04.png" alt="Escuela Superior Maria Calderon">
-            <img routerLink="./uuaa/inscaes" src="../../../../assets/img/icon escuelas/05.png" alt="Escuela de Capacitacion Especializada Cabo Juan Adolfo Romero">
-        </div>
-    </div>
-</section>
-<br>
-<br>
-<br>
-<section class="enlaces">
-    <div class="sistemasExternos">
-        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/CV.png" alt=""></a>
-        <a href="https://plataformavirtual.iugna.edu.ar/cenedis/"><img class="imgEnlacesExternos" src="../../../../assets/img/portalCENEDIS.png" alt=""></a>
-        <a (click)="showDialog()"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/SIU.png" alt=""></a>
-    </div>
+<section class="w-full mt-8 mb-8  flex">
+  <a style="width: 33.333%;" class="h-auto "  href="https://plataformavirtual.iugna.edu.ar/login/index.php">
+    <img src="../../../../assets/img/enlaces/moodle.png" alt="" class="w-full">
+  </a>
+  <a style="width: 33.333%;" class="h-auto "  href="https://plataformavirtual.iugna.edu.ar/cenedis/">
+    <img src="../../../../assets/img/enlaces/cenedis.png" alt="" class="w-full">
+  </a>
+  <a style="width: 33.333%;" class="h-auto " >
+    <img (click)="showDialog()" src="../../../../assets/img/enlaces/siu.png" alt="" class="w-full cursor-pointer">
+  </a>
 </section>
 <p-dialog header="" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
     <section class="containerSiu">
@@ -234,18 +219,12 @@
                 <p class="autogestion">Autogestión</p>
             </div>
         </a>
-
         <a href="https://siu.iugna.edu.ar/guarani/">
             <div>
                 <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
                 <p class="administracion">Administración</p>
             </div>
         </a>
-
-
     </section>
 </p-dialog>
-<br>
-<br>
-<br>
 <app-footer></app-footer>
