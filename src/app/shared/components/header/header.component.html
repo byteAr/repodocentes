@@ -17,8 +17,11 @@
                 <ul>
                     <li routerLink="/institucional">El Instituto Universitario</li>
                     <hr>
+                    <li routerLink="/uuaa">Oferta Académica</li>
+                    <hr>
                     <a href="https://www.argentina.gob.ar/gendarmeria">Gendarmeria Nacional Argentina</a>
                 </ul>
+
             </div>
         </div>
         <div class="rightMenu text-teal-600 font-bold">
@@ -28,8 +31,6 @@
             <button routerLink="/investigacion" class="menuDocentes2">INVESTIGACIÓN</button>
             <div class="dropDownMenuDocentes2 p-3 animate__animated animate__fadeIn">
                 <ul>
-                    <a href="https://revistacys.iugna.edu.ar/">Revista Ciencia y Seguridad</a>
-                    <hr class="mb-2 mt-2">
                     <a href="https://REPOSITORIODIGITAL.iugna.edu.ar/">Repositorio Digital</a>
                 </ul>
             </div>
@@ -95,16 +96,16 @@
       <button (click)="toggleSubmenu()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
         <div class="flex items-center">
           <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="#ffffff" d="M2 21V3h10v4h10v14zm2-2h6v-2H4zm0-4h6v-2H4zm0-4h6V9H4zm0-4h6V5H4zm8 12h8V9h-8zm2-6v-2h4v2zm0 4v-2h4v2z"/></svg>
-          <p class="text-base">Institucional</p>
+          <p  class="text-base">Institucional</p>
         </div>
         <svg [ngClass]="{ 'rotate-180': isSubmenuOpen }" class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
         </svg>
       </button>
       <div *ngIf="isSubmenuOpen" class="ml-4 mt-1 space-y-1">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">El Instituto Universitario</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Oferta Académica</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Gendarmeria Nacional Argentina</a>
+        <a routerLink="/institucional" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">El Instituto Universitario</a>
+        <a routerLink="/uuaa" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Oferta Académica</a>
+        <a href="https://www.argentina.gob.ar/gendarmeria" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Gendarmeria Nacional Argentina</a>
       </div>
       <button (click)="toggleSubmenu2()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
         <div class="flex items-center">
@@ -117,11 +118,11 @@
       </button>
 
       <div *ngIf="isSubmenu2Open" class="ml-4 mt-1 space-y-1">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Repositorio Digital</a>
+        <a href="https://repositoriodigital.iugna.edu.ar" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Repositorio Digital</a>
       </div>
       <div  class="flex justify-start items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
         <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 36 36"><path fill="#ffffff" d="M29.81 16H29v-.6h-2V18h2.81A3.13 3.13 0 0 1 33 20.69a3 3 0 0 1-.78 2.31A3 3 0 0 1 30 24h-3v7.83H4V25h1a5 5 0 0 0 5-5.51A5.15 5.15 0 0 0 4.81 15H4V8.83h9V7a3 3 0 0 1 1-2.22A3 3 0 0 1 16.31 4A3.13 3.13 0 0 1 19 7.19v1.64h.66L21 6.59A5.12 5.12 0 0 0 16.51 2A5 5 0 0 0 11 6.83H4a2 2 0 0 0-2 2V17h2.81A3.13 3.13 0 0 1 8 19.69A3 3 0 0 1 7.22 22A3 3 0 0 1 5 23H2v8.83a2 2 0 0 0 2 2h23a2 2 0 0 0 2-2V26h1a5 5 0 0 0 5-5.51A5.15 5.15 0 0 0 29.81 16" class="clr-i-outline--alerted clr-i-outline-path-1--alerted"/><path fill="#ffffff" d="M26.85 1.14L21.13 11a1.28 1.28 0 0 0 1.1 2h11.45a1.28 1.28 0 0 0 1.1-2l-5.72-9.86a1.28 1.28 0 0 0-2.21 0" class="clr-i-outline--alerted clr-i-outline-path-2--alerted clr-i-alert"/><path fill="none" d="M0 0h36v36H0z"/></svg>
-        <p class="text-base font-extrabold">Extensión</p>
+        <p routerLink="/extension" class="text-base font-extrabold">Extensión</p>
        </div>
        <button (click)="toggleSubmenu3()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
         <div class="flex items-center">
@@ -134,8 +135,8 @@
       </button>
 
       <div *ngIf="isSubmenu3Open" class="ml-4 mt-1 space-y-1">
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Convocatoria a Docentes Interinos</a>
-        <a href="#" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Repositorio Docentes</a>
+        <a routerLink="/convocatoria" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Convocatoria a Docentes Interinos</a>
+        <a routerLink="/auth" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Repositorio Docentes</a>
       </div>
     </div>
     <div  class="flex justify-start items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
