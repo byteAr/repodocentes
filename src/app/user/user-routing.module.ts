@@ -48,6 +48,7 @@ import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-pos
 import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
 import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
+import { OfertaacademicaComponent } from './components/ofertaacademica/ofertaacademica.component';
 
 const routes: Routes = [
   {
@@ -184,6 +185,10 @@ const routes: Routes = [
   {
     path: 'uuaa/escugen',
     component: EscugenComponent
+  },
+  {
+    path: 'oferta-academica',
+    component: OfertaacademicaComponent
   },
   {
     path: 'uuaa/escugen/oferta',

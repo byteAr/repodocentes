@@ -2,7 +2,7 @@
 
 <div class="wrapper">
     <div  class="logo">
-        <img routerLink="/"  class="iconIugna" src="../../../../assets/img/banner.png" alt="">
+        <img routerLink="/"  class="iconIugna cursor-pointer" src="../../../../assets/img/banner.png" alt="">
     </div>
     <div class="contenedorMenu">
         <div class="rightMenu">
@@ -17,7 +17,7 @@
                 <ul>
                     <li routerLink="/institucional">El Instituto Universitario</li>
                     <hr>
-                    <li routerLink="/uuaa">Oferta Académica</li>
+                    <li routerLink="/oferta-academica">Unidades Académicas</li>
                     <hr>
                     <a href="https://www.argentina.gob.ar/gendarmeria">Gendarmeria Nacional Argentina</a>
                 </ul>
@@ -104,7 +104,7 @@
       </button>
       <div *ngIf="isSubmenuOpen" class="ml-4 mt-1 space-y-1">
         <a routerLink="/institucional" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">El Instituto Universitario</a>
-        <a routerLink="/uuaa" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Oferta Académica</a>
+        <a routerLink="/oferta-academica" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Unidades Académicas</a>
         <a href="https://www.argentina.gob.ar/gendarmeria" class="block px-4 py-2 text-sm hover:bg-teal-700 rounded">Gendarmeria Nacional Argentina</a>
       </div>
       <button (click)="toggleSubmenu2()" class="flex justify-between items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
@@ -141,7 +141,7 @@
     </div>
     <div  class="flex justify-start items-center w-full px-2 py-2 hover:bg-teal-700 mb-2">
       <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 18 16"><path fill="#ffffff" d="M3.5 2h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5M3 5H1V4h2zm5.5-3h-3c-.275 0-.5.225-.5.5v11c0 .275.225.5.5.5h3c.275 0 .5-.225.5-.5v-11c0-.275-.225-.5-.5-.5M8 5H6V4h2z"/><path fill="#ffffff" d="m11.954 2.773l-2.679 1.35a.5.5 0 0 0-.222.671l4.5 8.93a.5.5 0 0 0 .671.222l2.679-1.35a.5.5 0 0 0 .222-.671l-4.5-8.93a.5.5 0 0 0-.671-.222"/><path fill="#ffffff" d="M14.5 13.5a.5.5 0 1 1-1 0a.5.5 0 0 1 1 0"/></svg>
-      <p class="text-base">Biblioteca</p>
+      <p routerLink="/biblioteca" class="text-base curs">Biblioteca</p>
      </div>
   </nav>
 </p-sidebar>
@@ -151,6 +151,6 @@
             <i class="pi pi-bars" style="font-size: 3rem"></i>
         </button>
     </div>
-    <img class="logo" src="../../../../assets/img/iconos/iugna-4.png" alt="">
+    <img routerLink="/" class="logo iconIugna cursor-pointer" src="../../../../assets/img/iconos/iugna-4.png" alt="">
 
 </div>

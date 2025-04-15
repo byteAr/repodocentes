@@ -202,27 +202,27 @@
     <img (click)="showDialog()" src="../../../../assets/img/enlaces/siu.png" alt="" class="w-full cursor-pointer">
   </a>
 </section>
-<p-dialog header="" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
-    <section class="containerSiu">
+<p-dialog header="" [(visible)]="display" [breakpoints]="{'389px':'20vw','960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
+    <section class="flex justify-around">
         <div>
             <img src="" alt="">
             <p></p>
         </div>
         <a href="https://preinscripcion.iugna.edu.ar/escuelas/">
-            <div>
-            <img class="imgSiu" src="../../../../assets/img/siu/A1.png" alt="">
-            <p class="preinscripcion">Preinscripción</p>
-        </div></a>
+            <div class="text-center">
+              <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A1.png" alt="">
+              <p class="preinscripcion text-sm sm:text-base">Preinscripción</p>
+            </div></a>
         <a href="https://siu.iugna.edu.ar/autogestion/">
-            <div>
-                <img class="imgSiu" src="../../../../assets/img/siu/A2.png" alt="">
-                <p class="autogestion">Autogestión</p>
+            <div class="text-center">
+                <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A2.png" alt="">
+                <p class="autogestion text-sm sm:text-base">Autogestión</p>
             </div>
         </a>
         <a href="https://siu.iugna.edu.ar/guarani/">
-            <div>
-                <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
-                <p class="administracion">Administración</p>
+            <div class="text-center">
+                <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A3.png" alt="">
+                <p class="administracion text-sm sm:text-base">Administración</p>
             </div>
         </a>
     </section>
