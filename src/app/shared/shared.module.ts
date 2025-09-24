@@ -23,6 +23,9 @@ import { SubmenuInvestigacionComponent } from './components/submenu-investigacio
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderActualizacionComponent } from './components/header-actualizacion/header-actualizacion.component';
 import { HeaderDigestoComponent } from './components/header-digesto/header-digesto.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { AccordionComponent } from './components/accordion/accordion.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -37,6 +40,8 @@ import { HeaderDigestoComponent } from './components/header-digesto/header-diges
     SubmenuInvestigacionComponent,
     HeaderActualizacionComponent,
     HeaderDigestoComponent,
+    DropdownComponent,
+    AccordionComponent
 
   ],
   imports: [
@@ -50,7 +55,8 @@ import { HeaderDigestoComponent } from './components/header-digesto/header-diges
     MenuModule,
     SidebarModule,
     DialogModule,
-    DividerModule
+    DividerModule,
+    RouterModule
 
   ],
   exports: [
@@ -60,7 +66,9 @@ import { HeaderDigestoComponent } from './components/header-digesto/header-diges
     FooterRepoComponent,
     SubmenuInvestigacionComponent,
     HeaderActualizacionComponent,
-    HeaderDigestoComponent
+    HeaderDigestoComponent,
+    DropdownComponent,
+    AccordionComponent
   ]
 })
 export class SharedModule { }

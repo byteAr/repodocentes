@@ -4,16 +4,27 @@
     <img class="imgOferta" src="../../../../assets/img/oferta/iconoofertaacad.png" alt="">
     <p>Oferta Académica</p>
 </div>
-<div class="containerContent">
-    <section class="menuLateral m-3">
+<div class="flex">
+  <div class="p-6 space-y-6 w-[35%]">
+    <!-- <label class="flex items-center gap-2 text-sm">
+      <input type="checkbox" [(ngModel)]="multi" class="h-4 w-4 rounded border-gray-300" />
+      Permitir múltiples paneles abiertos
+    </label> -->
+    <app-accordion [items]="sections" [multi]="true"></app-accordion>
+  </div>
+    <!-- <app-dropdown label="Acciones"
+              [options]="itemsDropdown"
+              (select)="onPick($event)">
+    </app-dropdown> -->
+    <!-- <section class="menuLateral m-3">
         <div *ngFor="let category of categories">
             <p-radioButton class="radioButton mb-4" styleClass="radioButton" style="font-size: 2rem; font-weight: 700" [label]="category.name" [routerLink]="category.route" [inputId]="category.key" name="category" [value]="category" [(ngModel)]="selectedCategory"
                 [disabled]="category.key === 'U'"></p-radioButton>
                 <hr class="hrMenuLateral mb-5 ml-5">
         </div>
-        
+
     </section>
-    <p-divider layout="vertical"></p-divider>
+    <p-divider layout="vertical"></p-divider> -->
     <section>
         <router-outlet></router-outlet>
     </section>

@@ -126,7 +126,7 @@ const routes: Routes = [
     component: EscusuperComponent
   },
   {
-    path: 'uuaa/escusuper/oferta',
+    path: 'uuaa/ofertas',
     component: EscusuperOfertaComponent,
     children: [
       {
@@ -144,6 +144,14 @@ const routes: Routes = [
       {
         path: 'diplomaturas',
         component: EscusuperDiplomaturasComponent
+      },
+      {
+        path: 'tecnicaturas-inscaes',
+        component: InscaesComponent
+      },
+      {
+        path: 'tecnicaturas-escusub',
+        component: EscusubTecnicaturasComponent
       }
     ]
   },
