@@ -5,6 +5,8 @@ import { environment } from '../../../../environments/environment.prod';
 import { Novedad } from '../../interfaces/interfaces.interface';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 
+import {MenuItem} from 'primeng/api';
+
 
 @Component({
   selector: 'app-novedad-detail',
@@ -12,6 +14,8 @@ import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./novedad-detail.component.css']
 })
 export class NovedadDetailComponent implements OnInit {
+
+  items: MenuItem[] = [];
 
   id:any = '';
   url = environment.baseUrl;
@@ -25,6 +29,10 @@ export class NovedadDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.items = [
+      {label:'Inicio', routerLink: '/'},
+      {label:'Novedad', disabled: true}
+  ];
     /* this.id = this.activateRoute.snapshot.paramMap.get("id");
     this.novedadService.traerNovedad(this.id)
       .subscribe(data => {

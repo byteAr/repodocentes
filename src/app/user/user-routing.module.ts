@@ -105,11 +105,11 @@ const routes: Routes = [
     component: NovedadProfesoradoComponent
 
   },
-  {
-    path:'novedad/escusuper/inscripciones',
-    component: NovedadRapidaSeguridadDistanciaComponent
+  // {
+  //   path:'novedad/escusuper/inscripciones',
+  //   component: NovedadRapidaSeguridadDistanciaComponent
 
-  },
+  // },
   {
     path:'novedad/escusuper/posgrado',
     component: NovedadRapidaPostgradoComponent
@@ -243,10 +243,10 @@ const routes: Routes = [
     path: 'inscripciones-ciclos',
     component: NovedadRapidaComponent
   },
-  {
+  /* {
     path: 'convocatoria-docentes',
     component: ConvocatoriaDocentesComponent
-  },
+  }, */
   {
     path: 'digesto',
     component: DigestoComponent

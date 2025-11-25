@@ -1,7 +1,21 @@
 <app-header></app-header>
-<section class="containerBanner">
-  <img src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="Banner de la página principal">
+<section class="containerBanner cursor-pointer">
+  <img routerLink="/novedad/1" src="../../../../assets/img/novedades//banner/banner-2025.png" alt="Banner de la página principal">
 </section>
+<!-- <section class="containerBanner">
+  <img src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="Banner de la página principal">
+</section> -->
+<!-- <section class="">
+    <div routerLink="/novedad/escusuper/inscripciones" class="flex justify-between cursor-pointer">
+        <img class="w-4 h-28 md:w-2 md:h-64" src="../../../../assets/img/slider/patron1.png" alt="Banner de la página principal">
+        <div class="flex flex-col justify-center ">
+            <p class="md:text-2xl font-light text-gray-600 text-xs md:text-base">IUGNA: Unidad Académica Escuela Superior</p>
+            <p class="text-[#123261] font-bold text-xs md:text-5xl leading-4">CONVOCATORIA DE SELECCIÓN PARA <br class="hidden md:block"/> DOCENTES INTERINOS</p>
+            <p class="text-[#123261] font-semibold md:text-2xl text-xs ">Ingreso Febrero 2026</p>
+        </div>
+        <img class="w-2 h-28 md:w-1 md:h-64" src="../../../../assets/img/slider/patron2.png" alt="Banner de la página principal">
+    </div>
+</section> -->
 <!-- <section routerLink="/novedad/extension" class="h-[25vh] md:h-[100%] relative overflow-hidden cursor-pointer">
   <img class="w-full h-full" src="/assets/img/novedades/banner/fondo-banner.png" alt="">
   <div class="absolute inset-0 flex flex-col items-center justify-center md:text-left text-white p-4">
@@ -145,16 +159,26 @@
 </section>
 
 <!-- <section class="containerNovedadDestacada2">
-  <div class="imgNovedadDestacada">
-      <img src="../../../../assets/img/iconos/librito.png" alt="">
+  <div class="w-1/4 flex justify-center items-center">
+      <img class="w-342" src="../../../../assets/img/iconos/info.png" alt="">
   </div>
   <div class="descripcionNovedadDestacada">
       <div>
-          <p class="text-teal-600 font-bold">IUGNA: Unidad Académica Escuela Superior</p>
-          <p class="font-bold mb-2">Inscripciones abiertas para los Cursos de Extensión Universitaria: Inglés Nivel I,
-            Inglés Nivel III, Francés Nivel I, Introducción a la Gestión Organizacional y
-            Prevención del Delito, desde el 04 de febrero al 14 de marzo 2025, para más
-            información <span routerLink="/novedad/extension" class="underline text-blue-400 cursor-pointer md: text-base">Más información</span></p>
+          <p class=" font-bold text-gray-600">IUGNA: Unidad Académica Escuela Superior</p>
+          <p class="font-bold text-2xl my-2">Convocatoria de Selección para Docentes Interinos <br>
+            <span class="text-[#123261]">Ingreso Febrero 2026</span></p>
+          <ul class="list-disc">
+            <div class="flex list-none items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#1e5668" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+                <li class="font-semibold text-sky-700">Asesor Técnico - Pedagógico y Diseñador Didáctico</li>
+            </div>
+            <div class="flex list-none items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#1e5668" d="m9.55 18l-5.7-5.7l1.425-1.425L9.55 15.15l9.175-9.175L20.15 7.4z"/></svg>
+                <li class="font-semibold text-sky-700">Técnico - Diseñador Multimedial</li>
+            </div>
+          </ul>
+         <p class="font-bold mb-2 text-teal-00">Período de inscripción: del 06 al 31 de octubre de 2025.-</p>
+        <span routerLink="/novedad/escusuper/inscripciones" class="underline text-sky-600 cursor-pointer md: text-base">Más información</span>
 
 
       </div>
