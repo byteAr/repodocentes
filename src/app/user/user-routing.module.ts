@@ -101,15 +101,15 @@ const routes: Routes = [
 
   },
   {
-    path:'novedad/profesorado&caligrafo',
+    path:'novedad/ciclos-profesorado-caligrafo',
     component: NovedadProfesoradoComponent
 
   },
-  {
+  /* {
     path:'novedad/escusuper/inscripciones',
     component: NovedadRapidaSeguridadDistanciaComponent
 
-  },
+  }, */
   {
     path:'novedad/escusuper/posgrado',
     component: NovedadRapidaPostgradoComponent
