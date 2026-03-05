@@ -70,7 +70,6 @@ export class EscusuperOfertaComponent implements OnInit {
         label:'Inicio',
         routerLink:'/'
       },
-      {label:'Unidad Académica Escuela Superior',routerLink:'/uuaa/escusuper'},
       {label:'Oferta Académica', disabled: true}
   ];
     this.selectedCategory = this.categories[0];
