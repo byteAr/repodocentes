@@ -159,4 +159,8 @@ h3 {
     width: 68vw;
   }
 
+  :host ::ng-deep p-breadcrumb ul {
+    padding-left: 2rem !important;
+  }
+
  

@@ -1,0 +1,3 @@
+:host ::ng-deep p-breadcrumb ul {
+    padding-left: 2rem !important;
+}
