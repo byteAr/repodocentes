@@ -8,14 +8,8 @@
 
 }
 
-.subtitulo {
-  color: white;
-  padding-left: 8.5% !important
-}
 
-:host ::ng-deep p-breadcrumb ul {
-  padding-left: 8.5% !important;
-}
+
 
 .containerBiblioteca {
   margin: 0;
@@ -276,4 +270,8 @@ p > span {
     margin: 0
   }
 
+}
+
+:host ::ng-deep p-breadcrumb ul {
+  padding-left: 2rem !important;
 }
