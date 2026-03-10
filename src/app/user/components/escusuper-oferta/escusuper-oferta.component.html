@@ -3,48 +3,91 @@
 <div class="bg-gradient-to-r from-teal-500 to-green-500 py-3 text-white pl-6 md:pl-28">
   <h1 class="subtitulo md:text-[1.5rem]">Oferta Académica</h1>
 </div>
-<p class="mt-3 mb-3 mx-[3rem] text-teal-600 font-bold text-[1.2rem]">El Instituto Universitario de Gendarmería Nacional nuclea capacitaciones dictadas por las diferentes unidades  académicas distribuidas en varias provincias y <span class="text-orange-500 font-bold">dicta sus cursos de manera remota a través de su plataforma virtual.</span></p>
+<p class="mt-3 mb-3 mx-[3rem] text-teal-600 font-bold text-[1.2rem]">El Instituto Universitario de Gendarmería Nacional nuclea capacitaciones dictadas por las unidades académicas e Institutos de Formación, las cuales se desarrollan bajo la modalidad presencial y de manera remota a través de su plataforma virtual.</p>
 <div class="flex">
   <div class="p-6 space-y-6 w-[35%]">
     <div class="w-full rounded-xl border border-gray-200 bg-white">
-      <div class="px-4 pb-4 pt-4 text-sm text-gray-700">
-        <div class="flex flex-col gap-2" role="group" aria-label="Acciones Buenos Aires">
-          <a
-            routerLink="./ciclos"
-            class="block w-full px-3 py-3 font-medium
-                   ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
-                   focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.1rem]
-                   bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
-          >
-            Licenciaturas
-          </a>
-          <a
-            routerLink="./tecnicaturas-escusub"
-            class="block w-full px-3 py-3 font-medium
-                   ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
-                   focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.1rem]
-                   bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
-          >
-            Tecnicaturas
-          </a>
-          <a
-            routerLink="./diplomaturas"
-            class="block w-full px-3 py-3 font-medium
-                   ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
-                   focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.1rem]
-                   bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
-          >
-            Diplomaturas
-          </a>
-          <a
-            routerLink="/uuaa/escusuper/extension"
-            class="block w-full px-3 py-3 font-medium
-                   ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
-                   focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.1rem]
-                   bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
-          >
-            Extensión
-          </a>
+      <div class="px-4 pb-4 pt-4 text-sm text-gray-700 space-y-4">
+        <!-- Grado -->
+        <div>
+          <p class="text-[1.05rem] font-semibold text-teal-700 mb-2">Grado</p>
+          <div class="flex flex-col gap-2" role="group" aria-label="Grado">
+            <a
+              routerLink="./ciclos"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Escuela Superior <span class="text-xs font-normal">(Ciclos de Licenciaturas)</span>
+            </a>
+            <a
+              routerLink="./grado-escugen"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Escuela de Oficiales <span class="text-xs font-normal">(Licenciaturas)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pregrado -->
+        <div>
+          <p class="text-[1.05rem] font-semibold text-teal-700 mb-2">Pregrado</p>
+          <div class="flex flex-col gap-2" role="group" aria-label="Pregrado">
+            <a
+              routerLink="./caligrafo"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Escuela Superior <span class="text-xs font-normal">(Calígrafo Público)</span>
+            </a>
+            <a
+              routerLink="./tecnicaturas-escusub"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Escuela de Suboficiales <span class="text-xs font-normal">(Tecnicaturas)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Posgrado -->
+        <div>
+          <p class="text-[1.05rem] font-semibold text-teal-700 mb-2">Posgrado</p>
+          <div class="flex flex-col gap-2" role="group" aria-label="Posgrado">
+            <a
+              routerLink="./diplomaturas"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Diplomaturas
+            </a>
+          </div>
+        </div>
+
+        <!-- Cursos de Extensión -->
+        <div>
+          <p class="text-[1.05rem] font-semibold text-teal-700 mb-2">Cursos de Extensión</p>
+          <div class="flex flex-col gap-2" role="group" aria-label="Cursos de Extensión">
+            <a
+              routerLink="/uuaa/escusuper/extension"
+              class="block w-full px-3 py-3 font-medium
+                     ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                     focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.05rem]
+                     bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]"
+            >
+              Cursos de Extensión
+            </a>
+          </div>
         </div>
       </div>
     </div>

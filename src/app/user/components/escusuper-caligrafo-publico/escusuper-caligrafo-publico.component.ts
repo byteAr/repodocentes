@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import {MenuItem} from 'primeng/api';
+import { ActivatedRoute } from '@angular/router';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-escusuper-caligrafo-publico',
@@ -10,16 +10,23 @@ import {MenuItem} from 'primeng/api';
 export class EscusuperCaligrafoPublicoComponent implements OnInit {
 
   items: MenuItem[] = [];
+  showLayout = true;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.items = [
-      {label:'Inicio', routerLink: '/'},
-      {label:'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper'},
-      {label:'Oferta Académica', routerLink:'/uuaa/escusuper/oferta/ciclos'},
-      {label:'Calígrafo Público Nacional', disabled: true}
-  ];
+    const useEmbedded = this.route.snapshot.data?.['embed'] === true;
+    this.showLayout = !useEmbedded;
+
+    if (!useEmbedded) {
+      this.items = [
+        { label:'Inicio', routerLink: '/' },
+        { label:'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper' },
+        { label:'Oferta Académica', routerLink:'/uuaa/escusuper/oferta/ciclos' },
+        { label:'Calígrafo Público Nacional', disabled: true }
+      ];
+    }
   }
 
 }
+

@@ -49,6 +49,7 @@ import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
 import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
 import { OfertaacademicaComponent } from './components/ofertaacademica/ofertaacademica.component';
+import { ExtensionEscusuperComponent } from './components/extension-escusuper/extension-escusuper.component';
 
 const routes: Routes = [
   {
@@ -138,6 +139,10 @@ const routes: Routes = [
         component: EscusuperCiclosComponent
       },
       {
+        path: 'grado-escugen',
+        component: EscugenGradoComponent
+      },
+      {
         path: 'nivelacion',
         component: EscusuperNivelacionComponent
       },
@@ -152,6 +157,12 @@ const routes: Routes = [
       {
         path: 'tecnicaturas-escusub',
         component: EscusubTecnicaturasComponent
+      }
+      ,
+      {
+        path: 'caligrafo',
+        component: EscusuperCaligrafoPublicoComponent,
+        data: { embed: true }
       }
     ]
   },
@@ -181,8 +192,12 @@ const routes: Routes = [
   },{
     path: 'uuaa/escusuper/extension',
     component: CursosExtensionComponent
-  }
-  ,{
+  },
+  {
+    path: 'uuaa/escusuper/extension-universitaria',
+    component: ExtensionEscusuperComponent
+  },
+  {
     path: 'uuaa/escusuper/frontera',
     component: FronterasComponent
   }
