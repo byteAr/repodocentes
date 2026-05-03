@@ -95,11 +95,11 @@ const routes: Routes = [
     component: NovedadesComponent
 
   },
-  {
+  /* {
     path:'novedad/extension',
     component: NovedadRapidaExtensionComponent
 
-  },
+  }, */
   // {
   //   path:'novedad/ciclos-profesorado-caligrafo',
   //   component: NovedadProfesoradoComponent
