@@ -1,8 +1,98 @@
-::ng-deep .containerBusqueda {
-    display: flex;
+/* Stats cards */
+.statsRow {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 0;
+  flex-wrap: wrap;
 }
 
-.containerAction {
-    display: flex;
-    justify-content: space-around;
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 180px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.statCard--blue  { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+.statCard--teal  { background: linear-gradient(135deg, #0f766e, #14b8a6); }
+.statCard--green { background: linear-gradient(135deg, #166534, #22c55e); }
+
+.statCard__icon  { font-size: 2rem; opacity: 0.85; }
+.statCard__label { margin: 0; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85; }
+.statCard__value { margin: 0.15rem 0 0; font-size: 2rem; font-weight: 700; line-height: 1; }
+
+/* Tabla */
+.card {
+  margin: 1.25rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+.tableTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tableTitle {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+}
+
+.tableCaption {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+}
+
+.actionCell {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.unidadBadge {
+  display: inline-block;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.mono { font-family: monospace; letter-spacing: 0.03em; }
+
+.emptyMessage { text-align: center; padding: 2rem; color: #6b7280; }
+
+.buttonsMenu { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+:host ::ng-deep .toolbar-custom {
+  background: #f8fafc;
+  border: none;
+  border-bottom: 1px solid #e2e8f0;
+  border-radius: 0;
+}
+
+:host ::ng-deep .p-field { margin-bottom: 1rem; }
+
+:host ::ng-deep .p-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #374151;
 }

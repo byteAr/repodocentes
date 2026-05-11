@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-uudd',
-  templateUrl: './uudd.component.html',
-  styleUrls: ['./uudd.component.css']
+    selector: 'app-uudd',
+    templateUrl: './uudd.component.html',
+    styleUrls: ['./uudd.component.css'],
+    standalone: false
 })
 export class UuddComponent implements OnInit {
 

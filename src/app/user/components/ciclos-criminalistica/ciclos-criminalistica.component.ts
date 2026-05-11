@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-ciclos-criminalistica',
-  templateUrl: './ciclos-criminalistica.component.html',
-  styleUrls: ['./ciclos-criminalistica.component.css']
+    selector: 'app-ciclos-criminalistica',
+    templateUrl: './ciclos-criminalistica.component.html',
+    styleUrls: ['./ciclos-criminalistica.component.css'],
+    standalone: false
 })
 export class CiclosCriminalisticaComponent implements OnInit {
 

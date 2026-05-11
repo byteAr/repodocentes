@@ -9,9 +9,10 @@ import {MenuItem} from 'primeng/api';
 
 
 @Component({
-  selector: 'app-novedad-detail',
-  templateUrl: './novedad-detail.component.html',
-  styleUrls: ['./novedad-detail.component.css']
+    selector: 'app-novedad-detail',
+    templateUrl: './novedad-detail.component.html',
+    styleUrls: ['./novedad-detail.component.css'],
+    standalone: false
 })
 export class NovedadDetailComponent implements OnInit {
 

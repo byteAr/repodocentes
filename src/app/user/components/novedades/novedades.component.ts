@@ -7,9 +7,10 @@ import { environment } from 'src/environments/environment';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-novedades',
-  templateUrl: './novedades.component.html',
-  styleUrls: ['./novedades.component.css']
+    selector: 'app-novedades',
+    templateUrl: './novedades.component.html',
+    styleUrls: ['./novedades.component.css'],
+    standalone: false
 })
 export class NovedadesComponent implements OnInit {
 

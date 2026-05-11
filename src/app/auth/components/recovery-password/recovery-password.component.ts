@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import {MessageService} from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
 import { AuthService } from 'src/app/admin/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-recovery-password',
-  templateUrl: './recovery-password.component.html',
-  styleUrls: ['./recovery-password.component.css'],
-  providers: [MessageService,ConfirmationService]
+    selector: 'app-recovery-password',
+    templateUrl: './recovery-password.component.html',
+    styleUrls: ['./recovery-password.component.css'],
+    providers: [MessageService, ConfirmationService],
+    standalone: false
 })
 export class RecoveryPasswordComponent implements OnInit {
 
-  formRegister: FormGroup;
+  formRegister: UntypedFormGroup;
   id: any;
 
   submitForm(value: {password: string, rePassword: string}): void {
@@ -29,7 +30,7 @@ export class RecoveryPasswordComponent implements OnInit {
 
 
 
-  confirmValidator = (control: FormControl): { [s: string]: boolean } => {
+  confirmValidator = (control: UntypedFormControl): { [s: string]: boolean } => {
     if (!control.value) {
       return { error: true, required: true };
     } else if (control.value !== this.formRegister.controls['password'].value) {
@@ -43,7 +44,7 @@ export class RecoveryPasswordComponent implements OnInit {
               private messageService: MessageService,
               private router: Router,
               private authService: AuthService,
-              private fb: FormBuilder) {
+              private fb: UntypedFormBuilder) {
     this.formRegister = this.fb.group({
       password: ['', [Validators.required,Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&#.$($)$-$_])[A-Za-z\d$@$!%*?&#.$($)$-$_]{8,15}$/)]],
       repassword: ['', [Validators.required, this.confirmValidator]]

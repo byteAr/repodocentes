@@ -7,9 +7,10 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-convocatoria-docentes',
-  templateUrl: './convocatoria-docentes.component.html',
-  styleUrls: ['./convocatoria-docentes.component.css']
+    selector: 'app-convocatoria-docentes',
+    templateUrl: './convocatoria-docentes.component.html',
+    styleUrls: ['./convocatoria-docentes.component.css'],
+    standalone: false
 })
 export class ConvocatoriaDocentesComponent implements OnInit {
 

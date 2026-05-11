@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 import { DocumentService } from '../../services/document.service';
 import { Document } from '../../interfaces/document.interface';
 import { environment } from '../../../../environments/environment.prod';
@@ -8,9 +9,10 @@ import { MessageService } from 'primeng/api';
 import { UsersService } from '../../services/users.service';
 
 @Component({
-  selector: 'app-docente-detail',
-  templateUrl: './docente-detail.component.html',
-  styleUrls: ['./docente-detail.component.css']
+    selector: 'app-docente-detail',
+    templateUrl: './docente-detail.component.html',
+    styleUrls: ['./docente-detail.component.css'],
+    standalone: false
 })
 export class DocenteDetailComponent implements OnInit {
 
@@ -25,7 +27,8 @@ export class DocenteDetailComponent implements OnInit {
                private messageService: MessageService,
                private usersService: UsersService,
                private documentService: DocumentService,
-               private confirmationService: ConfirmationService,) { }
+               private confirmationService: ConfirmationService,
+               private http: HttpClient) { }
 
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get("id");
@@ -72,6 +75,15 @@ export class DocenteDetailComponent implements OnInit {
   getFile(event: any): any {
     this.fileTmp = event.files;    
     this.sendFile()    
+  }
+
+  abrirPdf(nombreenbase: string) {
+    this.http.get(`${this.baseUrl}/uploads/documentos/${nombreenbase}`, { responseType: 'blob' })
+      .subscribe(blob => {
+        const url = URL.createObjectURL(blob);
+        window.open(url, '_blank');
+        setTimeout(() => URL.revokeObjectURL(url), 10000);
+      });
   }
 
   sendFile() {

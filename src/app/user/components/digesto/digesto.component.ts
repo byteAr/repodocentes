@@ -6,10 +6,11 @@ import { City, Digesto } from '../../interfaces/interfaces.interface';
 
 
 @Component({
-  selector: 'app-digesto',
-  templateUrl: './digesto.component.html',
-  styleUrls: ['./digesto.component.css'],
-  providers: [MessageService,ConfirmationService]
+    selector: 'app-digesto',
+    templateUrl: './digesto.component.html',
+    styleUrls: ['./digesto.component.css'],
+    providers: [MessageService, ConfirmationService],
+    standalone: false
 })
 export class DigestoComponent implements OnInit {
 

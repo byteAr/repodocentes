@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-cursos-extension',
-  templateUrl: './cursos-extension.component.html',
-  styleUrls: ['./cursos-extension.component.css']
+    selector: 'app-cursos-extension',
+    templateUrl: './cursos-extension.component.html',
+    styleUrls: ['./cursos-extension.component.css'],
+    standalone: false
 })
 export class CursosExtensionComponent implements OnInit {
 

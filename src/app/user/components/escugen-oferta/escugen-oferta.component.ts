@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-escugen-oferta',
-  templateUrl: './escugen-oferta.component.html',
-  styleUrls: ['./escugen-oferta.component.css']
+    selector: 'app-escugen-oferta',
+    templateUrl: './escugen-oferta.component.html',
+    styleUrls: ['./escugen-oferta.component.css'],
+    standalone: false
 })
 export class EscugenOfertaComponent implements OnInit {
 

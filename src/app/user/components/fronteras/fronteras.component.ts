@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-fronteras',
-  templateUrl: './fronteras.component.html',
-  styleUrls: ['./fronteras.component.css']
+    selector: 'app-fronteras',
+    templateUrl: './fronteras.component.html',
+    styleUrls: ['./fronteras.component.css'],
+    standalone: false
 })
 export class FronterasComponent implements OnInit {
 

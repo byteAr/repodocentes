@@ -3,9 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/admin/services/auth.service';
 
 @Component({
-  selector: 'app-verify',
-  templateUrl: './verify.component.html',
-  styleUrls: ['./verify.component.css']
+    selector: 'app-verify',
+    templateUrl: './verify.component.html',
+    styleUrls: ['./verify.component.css'],
+    standalone: false
 })
 export class VerifyComponent implements OnInit {
 

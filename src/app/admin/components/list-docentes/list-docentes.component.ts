@@ -8,19 +8,14 @@ import { UsersService } from '../../services/users.service'
 moment.locale('es');
 
 @Component({
-  selector: 'app-list-docentes',
-  templateUrl: './list-docentes.component.html',
-  styles: [`
-        :host ::ng-deep .p-dialog .product-image {
-            width: 150px;
-            margin: 0 auto 2rem auto;
-            display: block;
-        }
-    `],
+    selector: 'app-list-docentes',
+    templateUrl: './list-docentes.component.html',
+    styleUrls: ['./list-docentes.component.css'],
+    standalone: false
 })
 export class ListDocentesComponent implements OnInit {
 
-  productDialog?: boolean;
+  productDialog: boolean = false;
 
   docentes: any[] = [];
 
@@ -41,8 +36,8 @@ export class ListDocentesComponent implements OnInit {
   tablaUsuarios : boolean = false;
 
   submitted?: boolean;
-  productDialog1?: boolean;
-  productDialog2?: boolean;
+  productDialog1: boolean = false;
+  productDialog2: boolean = false;
 
 
 

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { StandartRoutingModule } from './standart-routing.module';
@@ -30,57 +29,44 @@ import {InputNumberModule} from 'primeng/inputnumber';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { Textarea } from 'primeng/inputtextarea';
 import {CardModule} from 'primeng/card';
 import {TooltipModule} from 'primeng/tooltip';
 
 //Ngx-spinner
 import { NgxSpinnerModule } from 'ngx-spinner'
-import { InterceptorService } from './../admin/services/interceptor.service';
-
-
-@NgModule({
-  declarations: [
-    DashboardStandartComponent,
-    DocenteDetailComponent
-  ],
-  imports: [
-    CommonModule,
-    StandartRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    FormsModule,
-    SharedModule,
-    TableModule,
-    ToastModule,
-    CalendarModule,
-    SliderModule,
-    MultiSelectModule,
-    ContextMenuModule,
-    DialogModule,
-    ButtonModule,
-    DropdownModule,
-    ProgressBarModule,
-    InputTextModule,
-    FileUploadModule,
-    ToolbarModule,
-    RatingModule,
-    RadioButtonModule,
-    InputNumberModule,
-    ConfirmDialogModule,
-    InputTextareaModule,
-    CardModule,
-    TooltipModule,
-    NgxSpinnerModule
 
 
 
-
-  ],
-  providers: [
-    MessageService, ConfirmationService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
-  ],
-  
-})
+@NgModule({ declarations: [
+        DashboardStandartComponent,
+        DocenteDetailComponent
+    ], imports: [CommonModule,
+        StandartRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        SharedModule,
+        TableModule,
+        ToastModule,
+        CalendarModule,
+        SliderModule,
+        MultiSelectModule,
+        ContextMenuModule,
+        DialogModule,
+        ButtonModule,
+        DropdownModule,
+        ProgressBarModule,
+        InputTextModule,
+        FileUploadModule,
+        ToolbarModule,
+        RatingModule,
+        RadioButtonModule,
+        InputNumberModule,
+        ConfirmDialogModule,
+        Textarea,
+        CardModule,
+        TooltipModule,
+        NgxSpinnerModule], providers: [
+        MessageService, ConfirmationService,
+    ] })
 export class StandartModule { }

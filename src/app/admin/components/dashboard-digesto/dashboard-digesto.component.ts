@@ -4,9 +4,10 @@ import { MessageService } from 'primeng/api';
 import { ConditionalExpr } from '@angular/compiler';
 
 @Component({
-  selector: 'app-dashboard-digesto',
-  templateUrl: './dashboard-digesto.component.html',
-  styleUrls: ['./dashboard-digesto.component.css']
+    selector: 'app-dashboard-digesto',
+    templateUrl: './dashboard-digesto.component.html',
+    styleUrls: ['./dashboard-digesto.component.css'],
+    standalone: false
 })
 export class DashboardDigestoComponent implements OnInit {
 

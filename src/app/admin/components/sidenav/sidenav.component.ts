@@ -8,35 +8,30 @@ interface SideNavToggle {
 }
 
 @Component({
-  selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css'],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({opacity: 0}),
-        animate('100ms',
-          style({opacity: 1})
-        )
-      ]),
-      transition(':leave', [
-        style({opacity: 1}),
-        animate('350ms',
-          style({opacity: 0})
-        )
-      ])
-    ]),
-    trigger('rotate', [
-      transition(':enter', [
-        animate('500ms', 
-          keyframes([
-            style({transform: 'rotate(180deg)', offset: '0'}),
-            style({transform: 'rotate(1turn)', offset: '1'})
-          ])
-        )
-      ])
-    ])
-  ]
+    selector: 'app-sidenav',
+    templateUrl: './sidenav.component.html',
+    styleUrls: ['./sidenav.component.css'],
+    animations: [
+        trigger('fadeInOut', [
+            transition(':enter', [
+                style({ opacity: 0 }),
+                animate('100ms', style({ opacity: 1 }))
+            ]),
+            transition(':leave', [
+                style({ opacity: 1 }),
+                animate('350ms', style({ opacity: 0 }))
+            ])
+        ]),
+        trigger('rotate', [
+            transition(':enter', [
+                animate('500ms', keyframes([
+                    style({ transform: 'rotate(180deg)', offset: '0' }),
+                    style({ transform: 'rotate(1turn)', offset: '1' })
+                ]))
+            ])
+        ])
+    ],
+    standalone: false
 })
 export class SidenavComponent implements OnInit {
 

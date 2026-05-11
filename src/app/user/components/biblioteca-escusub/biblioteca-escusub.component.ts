@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-biblioteca-escusub',
-  templateUrl: './biblioteca-escusub.component.html',
-  styleUrls: ['./biblioteca-escusub.component.css']
+    selector: 'app-biblioteca-escusub',
+    templateUrl: './biblioteca-escusub.component.html',
+    styleUrls: ['./biblioteca-escusub.component.css'],
+    standalone: false
 })
 export class BibliotecaEscusubComponent implements OnInit {
 

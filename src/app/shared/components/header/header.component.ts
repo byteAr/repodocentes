@@ -1,14 +1,14 @@
 import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 import { Menubar } from 'primeng/menubar';
-import { PrimeNGConfig } from 'primeng/api';
 
 import { faUserLarge } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css'],
+    standalone: false
 })
 export class HeaderComponent implements OnInit {
   @ViewChild('asMenu') menu!: Menubar;
@@ -23,11 +23,9 @@ export class HeaderComponent implements OnInit {
   items: MenuItem[] = [];
   faUserLarge = faUserLarge
 
-  constructor( private primengConfig: PrimeNGConfig,
-               private render2 : Renderer2) { }
+  constructor(private render2 : Renderer2) { }
 
   ngOnInit(): void {
-    this.primengConfig.ripple = true;
     this.menuHeader = [{
         label: ``,
         items: [

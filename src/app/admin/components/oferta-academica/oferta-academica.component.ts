@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-oferta-academica',
-  templateUrl: './oferta-academica.component.html',
-  styleUrls: ['./oferta-academica.component.css']
+    selector: 'app-oferta-academica',
+    templateUrl: './oferta-academica.component.html',
+    styleUrls: ['./oferta-academica.component.css'],
+    standalone: false
 })
 export class OfertaAcademicaComponent implements OnInit {
 

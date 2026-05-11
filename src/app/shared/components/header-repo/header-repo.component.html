@@ -1,4 +1,26 @@
-<section class="headerContainer">
-    <h2 class="tituloPrincipal">REPOSITORIO DOCENTES</h2>                
-    <p-splitButton label="{{usuario.nombre | slice:0:1}}{{usuario.apellido | slice:0:1}}"  styleClass="p-button-info" [model]="items"></p-splitButton>    
-</section>
+<header class="headerContainer">
+  <div class="headerBrand">
+    <div class="headerLogo">
+      <img src="favicon.png" alt="IUGNA" class="headerLogo__img">
+    </div>
+    <div>
+      <h1 class="headerTitle">Repositorio Docentes</h1>
+      <p class="headerSubtitle">Instituto Universitario de Gendarmería Nacional</p>
+    </div>
+  </div>
+  <div class="headerActions">
+    <div class="userDropdown" (click)="toggleMenu()" (clickOutside)="closeMenu()">
+      <span class="userChip">
+        <span class="userChip__avatar">{{ usuario.nombre | slice:0:1 }}{{ usuario.apellido | slice:0:1 }}</span>
+        <span class="userChip__name">{{ usuario.nombre }} {{ usuario.apellido }}</span>
+        <i class="pi pi-chevron-down userChip__chevron" [class.rotated]="menuOpen"></i>
+      </span>
+      <div class="userDropdown__menu" *ngIf="menuOpen">
+        <button class="userDropdown__item" (click)="logout()">
+          <i class="pi pi-sign-out"></i>
+          <span>Cerrar Sesión</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

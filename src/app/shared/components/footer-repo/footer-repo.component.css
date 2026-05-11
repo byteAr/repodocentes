@@ -1,18 +1,31 @@
-body {
-    padding: 0;
-    margin: 0;
-    background-color: black;
-}
-
 .footerContainer {
-    height: 30vh;
-    background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.5rem;
+  background: #0f172a;
+  border-top: 3px solid #1e3799;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-h4 {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.footerText {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.4;
+}
+
+.footerIcon {
+  color: #3b82f6;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.footerYear {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  flex-shrink: 0;
 }

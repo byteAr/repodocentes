@@ -1,32 +1,196 @@
-:host ::ng-deep .containerLogin {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 3% 2%;
-    border-radius: 5px;
-    -webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
--moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.24);
+/* ── Layout principal ──────────────────────────────────────────────────────── */
+.authPage {
+  display: flex;
+  min-height: 100vh;
 }
 
-:host ::ng-deep .containerButtonLogin {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+/* ── Panel de branding (izquierdo) ─────────────────────────────────────────── */
+.authBrand {
+  flex: 1;
+  background: linear-gradient(160deg, #0c2461 0%, #1e3799 55%, #0652dd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
 }
 
-:host ::ng-deep .buttonLogin {
-    text-align: center !important;
-    background-color:  rgb(58, 149, 142)
+.authBrand__inner {
+  text-align: center;
+  max-width: 340px;
 }
 
-:host ::ng-deep figure {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.authBrand__logo {
+  width: 75%;
+  max-width: 260px;
+  margin-bottom: 2rem;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
 
-:host ::ng-deep .iconIugna {
-    width: 80%;
-    text-align: center;
+.authBrand__title {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.authBrand__subtitle {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Panel de formulario (derecho) ─────────────────────────────────────────── */
+.authForm {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(12, 36, 97, 0.12);
+  padding: 2.5rem;
+}
+
+.authCard__header {
+  margin-bottom: 1.75rem;
+}
+
+.authCard__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0c2461;
+}
+
+.authCard__subtitle {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+/* ── Campos del formulario ──────────────────────────────────────────────────── */
+.formGroup {
+  margin-bottom: 1.1rem;
+}
+
+.formLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.formInput {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0.65rem 0.9rem !important;
+  font-size: 0.9rem !important;
+  color: #1e293b !important;
+  transition: border-color 0.2s, box-shadow 0.2s !important;
+  background: white !important;
+}
+
+.formInput:focus {
+  border-color: #0652dd !important;
+  box-shadow: 0 0 0 3px rgba(6, 82, 221, 0.1) !important;
+  outline: none !important;
+}
+
+.formInput--disabled {
+  background: #f8fafc !important;
+  color: #64748b !important;
+  cursor: not-allowed !important;
+}
+
+.formError {
+  display: block;
+  color: #dc2626;
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+}
+
+.formHint {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.76rem;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ── Botón principal ────────────────────────────────────────────────────────── */
+.authBtn {
+  width: 100% !important;
+  background: linear-gradient(90deg, #0c2461, #0652dd) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 0.75rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.04em !important;
+  margin-top: 0.5rem !important;
+  transition: opacity 0.2s !important;
+}
+
+.authBtn:hover:not(:disabled) {
+  opacity: 0.9 !important;
+}
+
+.authBtn:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* ── Footer del card ────────────────────────────────────────────────────────── */
+.authCard__footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.authLink {
+  color: #0652dd;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.authLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .authBrand {
+    display: none;
+  }
+
+  .authForm {
+    padding: 1.5rem 1rem;
+  }
+
+  .authCard {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
 }

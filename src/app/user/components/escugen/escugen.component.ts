@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-escugen',
-  templateUrl: './escugen.component.html',
-  styleUrls: ['./escugen.component.css']
+    selector: 'app-escugen',
+    templateUrl: './escugen.component.html',
+    styleUrls: ['./escugen.component.css'],
+    standalone: false
 })
 export class EscugenComponent implements OnInit {
 

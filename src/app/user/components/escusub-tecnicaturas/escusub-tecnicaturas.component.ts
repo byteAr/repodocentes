@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-escusub-tecnicaturas',
-  templateUrl: './escusub-tecnicaturas.component.html',
-  styleUrls: ['./escusub-tecnicaturas.component.css']
+    selector: 'app-escusub-tecnicaturas',
+    templateUrl: './escusub-tecnicaturas.component.html',
+    styleUrls: ['./escusub-tecnicaturas.component.css'],
+    standalone: false
 })
 export class EscusubTecnicaturasComponent implements OnInit {
 

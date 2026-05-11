@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-insbarreal',
-  templateUrl: './insbarreal.component.html',
-  styleUrls: ['./insbarreal.component.css']
+    selector: 'app-insbarreal',
+    templateUrl: './insbarreal.component.html',
+    styleUrls: ['./insbarreal.component.css'],
+    standalone: false
 })
 export class InsbarrealComponent implements OnInit {
 

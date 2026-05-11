@@ -1,18 +1,136 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>IUGNA</title>
+    <title>IUGNA — Instituto Universitario de Gendarmería Nacional Argentina</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sistema de gestión académica del Instituto Universitario de Gendarmería Nacional Argentina (IUGNA).">
+
+    <!-- SEO básico -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.iugna.edu.ar/">
+
+    <!-- Security headers via meta -->
+    <!-- X-Frame-Options y frame-ancestors SOLO funcionan como HTTP headers del servidor, no via meta -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' 'unsafe-inline';
+               style-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com;
+               font-src 'self' https://unpkg.com https://cdnjs.cloudflare.com;
+               img-src 'self' data: blob: https://servicioiugna.iugna.edu.ar;
+               connect-src 'self' https://servicioiugna.iugna.edu.ar https://www.googleapis.com;
+               object-src 'none';
+               base-uri 'self';">
+
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    <script src="https://cdn.ckeditor.com/4.19.1/full-all/ckeditor.js"></script>
-    <!-- <meta  http-equiv = "Content-Security-Policy"  content = "default-src 'self'; style-src 'self' 'unsafe-inline'" > -->
+
+    <!-- Datos estructurados: Organización -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "@id": "https://www.iugna.edu.ar/#organization",
+      "name": "IUGNA — Instituto Universitario de Gendarmería Nacional Argentina",
+      "alternateName": "IUGNA",
+      "url": "https://www.iugna.edu.ar",
+      "logo": "https://www.iugna.edu.ar/favicon.png",
+      "description": "El Instituto Universitario de Gendarmería Nacional (IUGNA) ha sido creado por la ley 26.286 en el marco de la Ley de Educación Superior N° 24.521. Ofrece formación profesional, investigación, producción y extensión en el área de Seguridad Pública.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Paseo Colón 533, Piso 6",
+        "addressLocality": "Ciudad Autónoma de Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://plataformavirtual.iugna.edu.ar",
+        "https://siu.iugna.edu.ar"
+      ],
+      "department": [
+        {
+          "@type": "EducationalOrganization",
+          "name": "Escuela Superior",
+          "url": "https://www.iugna.edu.ar/uuaa/escusuper"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Escuela de Gendarmería Nacional",
+          "url": "https://www.iugna.edu.ar/uuaa/escugen"
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Escuela de Suboficiales",
+          "url": "https://www.iugna.edu.ar/uuaa/escusub"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Datos estructurados: Sitio Web -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.iugna.edu.ar/#website",
+      "name": "IUGNA",
+      "url": "https://www.iugna.edu.ar"
+    }
+    </script>
+
+    <!-- Datos estructurados: Navegación principal (sitelinks) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Institucional",
+          "url": "https://www.iugna.edu.ar/institucional"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Campus Virtual",
+          "url": "https://plataformavirtual.iugna.edu.ar/login/index.php"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Portal CENEDIS",
+          "url": "https://plataformavirtual.iugna.edu.ar/cenedis/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Preinscripción",
+          "url": "https://preinscripcion.iugna.edu.ar/escuelas/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "SIU Autogestión",
+          "url": "https://siu.iugna.edu.ar/autogestion/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "SIU Administración",
+          "url": "https://siu.iugna.edu.ar/guarani/"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Novedades",
+          "url": "https://www.iugna.edu.ar/novedades"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "name": "Oferta Académica",
+          "url": "https://www.iugna.edu.ar/uuaa"
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   </head>
-  <body class="">
+  <body>
     <app-root></app-root>
   </body>
 </html>

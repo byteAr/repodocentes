@@ -1,7 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 //components
@@ -33,7 +32,7 @@ import {InputNumberModule} from 'primeng/inputnumber';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService } from 'primeng/api';
 import { MessageService } from 'primeng/api';
-import { InputTextareaModule } from 'primeng/inputtextarea';
+import { Textarea } from 'primeng/inputtextarea';
 import {CardModule} from 'primeng/card';
 import {TooltipModule} from 'primeng/tooltip';
 import {AccordionModule} from 'primeng/accordion';
@@ -42,12 +41,9 @@ import {SplitButtonModule} from 'primeng/splitbutton';
 
 //Ngx-spinner
 import { NgxSpinnerModule } from 'ngx-spinner'
-import { InterceptorService } from './services/interceptor.service';
 import { ListUsuariosComponent } from './components/list-usuarios/list-usuarios.component';
 import { DashboardActualizacionesComponent } from './components/dashboard-actualizaciones/dashboard-actualizaciones.component';
 
-//ckeditor
-import {EditorModule} from 'primeng/editor';
 import { BodyDashboardActualizacionesComponent } from './components/body-dashboard-actualizaciones/body-dashboard-actualizaciones.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
@@ -57,57 +53,47 @@ import { ConvocatoriaComponent } from './components/convocatoria/convocatoria.co
 import { DashboardDigestoComponent } from './components/dashboard-digesto/dashboard-digesto.component';
 
 
-@NgModule({
-  declarations: [
-    DashboardAdminComponent,
-    ListDocentesComponent,
-    DocenteDetailComponent,
-    ListUsuariosComponent,
-    DashboardActualizacionesComponent,
-    BodyDashboardActualizacionesComponent,
-    SidenavComponent,
-    InscripcionesComponent,
-    OfertaAcademicaComponent,
-    ConvocatoriaComponent,
-    DashboardDigestoComponent
-  ],
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule,
-    AdminRoutingModule,
-    SharedModule,
-    TableModule,
-    ToastModule,
-    CalendarModule,
-    SliderModule,
-    MultiSelectModule,
-    ContextMenuModule,
-    DialogModule,
-    ButtonModule,
-    DropdownModule,
-    ProgressBarModule,
-    InputTextModule,
-    FileUploadModule,
-    ToolbarModule,
-    RatingModule,
-    RadioButtonModule,
-    InputNumberModule,
-    ConfirmDialogModule,
-    InputTextareaModule,
-    CardModule,
-    TooltipModule,
-    NgxSpinnerModule,
-    SplitButtonModule,
-    EditorModule,
-    AccordionModule
-  ],
-
-  providers: [
-    MessageService,
-    ConfirmationService,
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true}
-   ]
-})
+@NgModule({ declarations: [
+        DashboardAdminComponent,
+        ListDocentesComponent,
+        DocenteDetailComponent,
+        ListUsuariosComponent,
+        DashboardActualizacionesComponent,
+        BodyDashboardActualizacionesComponent,
+        SidenavComponent,
+        InscripcionesComponent,
+        OfertaAcademicaComponent,
+        ConvocatoriaComponent,
+        DashboardDigestoComponent
+    ], imports: [CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        AdminRoutingModule,
+        SharedModule,
+        TableModule,
+        ToastModule,
+        CalendarModule,
+        SliderModule,
+        MultiSelectModule,
+        ContextMenuModule,
+        DialogModule,
+        ButtonModule,
+        DropdownModule,
+        ProgressBarModule,
+        InputTextModule,
+        FileUploadModule,
+        ToolbarModule,
+        RatingModule,
+        RadioButtonModule,
+        InputNumberModule,
+        ConfirmDialogModule,
+        Textarea,
+        CardModule,
+        TooltipModule,
+        NgxSpinnerModule,
+        SplitButtonModule,
+        AccordionModule], providers: [
+        MessageService,
+        ConfirmationService,
+    ] })
 export class AdminModule { }

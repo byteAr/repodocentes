@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/admin/services/auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ValidarRolAdminGuard implements CanActivate {
+export class ValidarRolAdminGuard  {
 
   constructor(private router: Router,
               private authService: AuthService) {

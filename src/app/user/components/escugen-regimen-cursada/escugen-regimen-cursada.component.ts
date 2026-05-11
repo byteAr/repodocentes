@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-escugen-regimen-cursada',
-  templateUrl: './escugen-regimen-cursada.component.html',
-  styleUrls: ['./escugen-regimen-cursada.component.css']
+    selector: 'app-escugen-regimen-cursada',
+    templateUrl: './escugen-regimen-cursada.component.html',
+    styleUrls: ['./escugen-regimen-cursada.component.css'],
+    standalone: false
 })
 export class EscugenRegimenCursadaComponent implements OnInit {
 

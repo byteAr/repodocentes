@@ -5,9 +5,10 @@ interface SideNavToggle {
   collapsed: boolean;
 }
 @Component({
-  selector: 'app-dashboard-actualizaciones',
-  templateUrl: './dashboard-actualizaciones.component.html',
-  styleUrls: ['./dashboard-actualizaciones.component.css']
+    selector: 'app-dashboard-actualizaciones',
+    templateUrl: './dashboard-actualizaciones.component.html',
+    styleUrls: ['./dashboard-actualizaciones.component.css'],
+    standalone: false
 })
 export class DashboardActualizacionesComponent {
   

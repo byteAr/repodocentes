@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-inscaes',
-  templateUrl: './inscaes.component.html',
-  styleUrls: ['./inscaes.component.css']
+    selector: 'app-inscaes',
+    templateUrl: './inscaes.component.html',
+    styleUrls: ['./inscaes.component.css'],
+    standalone: false
 })
 export class InscaesComponent implements OnInit {
 

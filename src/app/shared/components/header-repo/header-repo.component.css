@@ -1,74 +1,152 @@
-* {
-    height: 17vh;
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 70px;
+  background: linear-gradient(90deg, #0c2461 0%, #1e3799 50%, #0652dd 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-:host ::ng-deep .headerContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2% 1%;
-    background: linear-gradient(90deg, rgb(83, 163, 255) 0%, rgb(6, 114, 185) 50%,rgb(2, 51, 107) 100%);
+.headerBrand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
 }
 
-:host ::ng-deep p-splitButton {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.headerLogo {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.2);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 4px;
 }
 
-
-
-.tituloPrincipal {
-    display: flex;
-    align-items: center;
-    color: white
+.headerLogo__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-
-
-:host ::ng-deep p-avatar {
-    display: flex;
-    align-items: center;
+.headerTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
-:host ::ng-deep p-avatar:hover {
-    cursor: pointer;
+.headerSubtitle {
+  margin: 0;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1;
 }
 
-:host ::ng-deep .menuContainer {
-    width: 50%;
-    height: 100%;
-    
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
-
-
-:host ::ng-deep ul {
-    width: 100%;
-    height: 100%;
-    display: block;
-    list-style: none;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding-bottom: 1%;
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem 0.3rem 0.3rem;
 }
 
-:host ::ng-deep li {
-    width: auto;
-    display: flex;
-    align-items: flex-end;
-    line-height: 100%;
-    color: white;
-    font-weight: 400;
+.userChip__avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  color: white;
+  font-weight: 700;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-:host ::ng-deep li:hover {
-    cursor: pointer
-}
-:host ::ng-deep .p-menuitem-link {
-    width: 100%;
-    text-align: center;
+.userChip__name {
+  font-size: 0.82rem;
+  color: white;
+  font-weight: 500;
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* Dropdown del usuario */
+.userDropdown {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
 
+.userChip {
+  cursor: pointer;
+}
+
+.userChip__chevron {
+  color: white;
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.userChip__chevron.rotated {
+  transform: rotate(180deg);
+}
+
+.userDropdown__menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  min-width: 170px;
+  z-index: 9999;
+  overflow: hidden;
+  animation: fadeInDown 0.15s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.userDropdown__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #333;
+  text-align: left;
+  transition: background 0.15s;
+}
+
+.userDropdown__item:hover {
+  background: #f5f5f5;
+  color: #c0392b;
+}

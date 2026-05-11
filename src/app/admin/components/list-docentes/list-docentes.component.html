@@ -1,241 +1,244 @@
-
 <p-toast></p-toast>
-
-<div class="card">
-    <p-toolbar styleClass="p-mb-4">
-        <ng-template pTemplate="right">
-            <div class="containerToolbar">
-                <div class="buttonsMenu">           
-                    <button pButton pRipple label="Agregar Docente" icon="pi pi-plus" class="p-button-info p-mr-6 " (click)="openNew2()"></button>           
-                    <button pButton pRipple label="Nuevo usuario veedor" icon="pi pi-plus" class="p-button-info p-mr-2" (click)="openNew3()"></button>           
-                    <button pButton pRipple *ngIf="!tablaUsuarios" label="Lista de Usuarios" icon="pi pi-book" class="p-button-info p-mr-2" (click)="tablaUsuariosVisible()"></button>           
-                    <button pButton pRipple *ngIf="tablaUsuarios" label="Lista de Docentes" icon="pi pi-book" class="p-button-info p-mr-2" (click)="tablaDocentesVisible()"></button>           
-                </div>
-            </div>
-        </ng-template>     
-    </p-toolbar>    
-
-    <p-table *ngIf="!tablaUsuarios" #dt [value]="docentes" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','apellido', 'dni', 'email','unidadrevista']" responsiveLayout="scroll"
-        [(selection)]="selectedProducts" [rowHover]="true" dataKey="id"
-        currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas" [showCurrentPageReport]="true">
-        <ng-template pTemplate="caption">
-            <div class="p-d-flex p-jc-between">                        
-                    <h5 class="p-m-0">DOCENTES</h5>
-                    <br>                                                                               
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar..." />
-                    </span>
-               
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <!-- <th style="width: 3rem">
-                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                </th> -->
-                <th>Orden</th>
-                <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
-                <th pSortableColumn="apellido">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>
-                <!-- <th>Image</th> -->
-                <th pSortableColumn="dni">Dni <p-sortIcon field="dni"></p-sortIcon></th>
-                <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
-                <th pSortableColumn="unidadrevista">Unidad de Revista <p-sortIcon field="unidadrevista"></p-sortIcon></th>  
-                <th >Acciones</th>  
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-docente let-i="rowIndex">
-            <tr>
-                <!-- <td>
-                    <p-tableCheckbox [value]="persona"></p-tableCheckbox>
-                </td> -->
-                <td>{{i + 1}}</td>
-                <td>{{docente.nombre}}</td>
-                <!-- <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="p-shadow-4" /></td> -->
-                <td>{{docente.apellido}}</td>
-                <td>{{docente.dni}}</td>
-                <td>{{docente.email}}</td>
-                <td>{{docente.unidadrevista}}</td>
-                <!-- <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td> -->
-                
-                <td class="containerAction">                    
-                    <button pButton pRipple  icon="pi pi-book" tooltipPosition="left" pTooltip="Ver documentación de {{docente.nombre}} {{docente.apellido}}" class="p-button-rounded p-button-info" [routerLink]="['docente/', docente.id]"></button>
-                    <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success p-mr-2" tooltipPosition="top" pTooltip="Editar datos de {{docente.nombre}} {{docente.apellido}}" (click)="editProduct(docente)"></button>
-                    <button pButton pRipple  icon="pi pi-trash" class="p-button-rounded p-button-danger" tooltipPosition="bottom" pTooltip="Eliminar a {{docente.nombre}} {{docente.apellido}}" (click)="deleteDocente(docente)"></button>                    
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
-    
-    
-    <ngx-spinner type ="ball-scale-multiple"></ngx-spinner>
-</div>
-<div class="card">
-    <p-toolbar styleClass="p-mb-4">
-        <ng-template pTemplate="right">
-            <div class="containerToolbar">
-                
-            </div>
-        </ng-template>     
-    </p-toolbar>    
-
-    <p-table *ngIf="tablaUsuarios" #dt [value]="usuarios" [rows]="10" [paginator]="true" [globalFilterFields]="['nombre','apellido', 'email']" responsiveLayout="scroll"
-        [(selection)]="selectedProducts" [rowHover]="true" dataKey="id"
-        currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas" [showCurrentPageReport]="true">
-        <ng-template pTemplate="caption">
-            <div class="p-d-flex p-jc-between">                        
-                    <h5 class="p-m-0">USUARIOS DEL SISTEMA</h5>
-                    <br>                                                                               
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar..." />
-                    </span>
-               
-            </div>
-        </ng-template>
-        <ng-template pTemplate="header">
-            <tr>
-                <!-- <th style="width: 3rem">
-                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                </th> -->
-                <th>Orden</th>
-                <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
-                <th pSortableColumn="apellido">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>              
-                <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th> 
-                <th >Acciones</th>  
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-usuario let-i="rowIndex">
-            <tr>
-                <!-- <td>
-                    <p-tableCheckbox [value]="persona"></p-tableCheckbox>
-                </td> -->
-                <td>{{i + 1}}</td>
-                <td>{{usuario.nombre}}</td>
-                <!-- <td><img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.name" width="100" class="p-shadow-4" /></td> -->
-                <td>{{usuario.apellido}}</td>
-                <td>{{usuario.email}}</td>
-                <!-- <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td> -->
-                
-                <td class="containerAction">
-                    <button pButton pRipple  icon="pi pi-trash" class="p-button-rounded p-button-danger" tooltipPosition="bottom" pTooltip="Eliminar a {{usuario.nombre}} {{usuario.apellido}}" (click)="deleteUsuario(usuario)"></button>                    
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
-    
-    
-    <ngx-spinner type ="ball-scale-multiple"></ngx-spinner>
-</div>
-
-<p-dialog [(visible)]="productDialog" [style]="{width: '450px'}" header="Datos Personales" [modal]="true" styleClass="p-fluid">
-    <ng-template pTemplate="content">
-        <!-- <img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.image" class="product-image" *ngIf="product.image"> -->
-        <div class="p-field">
-            <label for="inventoryStatus">Unidad de Revista</label>
-            <p-dropdown [(ngModel)]="docente.unidadrevista" inputId="docente.unidadrevista" [options]="statuses" placeholder="Seleccione una unidad de Revista">
-                <ng-template let-option pTemplate="item">
-                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>                    
-                </ng-template>
-            </p-dropdown>
-        </div>
-        <div class="p-field">
-            <label for="name">Nombre</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.nombre" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.nombre">El Nombre es requerido.</small>
-        </div>
-        <div class="p-field">
-            <label for="name">Apellido</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.apellido" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.apellido">El Apellido es requerido.</small>
-        </div>
-        <div class="p-field">
-            <label for="name">email</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.email" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
-        </div>
-        <!-- <div class="p-field">
-            <label for="description">description</label>
-            <textarea id="description" pInputTextarea [(ngModel)]="persona.description" required rows="3" cols="20"></textarea>
-        </div> -->
-        <div class="p-field">
-            <label for="name">DNI</label>
-            <input type="text" pInputText id="dni" [(ngModel)]="docente.dni" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.dni">El número de DNI es requerido.</small>
-        </div> 
-      
-          
-                  
-    </ng-template>
-
-    <ng-template pTemplate="footer">
-        <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-        <button pButton pRipple label="Actualizar" icon="pi pi-refresh" class="p-button-text" (click)="updateUser()"></button>
-    </ng-template>
-</p-dialog>
-
-<p-dialog [(visible)]="productDialog1" [style]="{width: '450px', height: '600px'}" header="Nuevo Docente" [modal]="true" styleClass="p-fluid">
-    <ng-template pTemplate="content">
-        <!-- <img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.image" class="product-image" *ngIf="product.image"> -->
-        <div class="p-field">
-            <label for="name">Nombre</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.nombre" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.nombre">El Nombre es requerido.</small>
-        </div>
-        <div class="p-field">
-            <label for="name">Apellido</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.apellido" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.apellido">El Apellido es requerido.</small>
-        </div>
-        <div class="p-field">
-            <label for="name">Email</label>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.email" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
-        </div>
-        <!-- <div class="p-field">
-            <label for="description">description</label>
-            <textarea id="description" pInputTextarea [(ngModel)]="persona.description" required rows="3" cols="20"></textarea>
-        </div> -->
-        <div class="p-field">
-            <label for="inventoryStatus">Unidad de Revista</label>
-            <p-dropdown [(ngModel)]="docente.unidadrevista" inputId="inventoryStatus" [options]="statuses" placeholder="Seleccione una unidad de Revista">
-                <ng-template let-option pTemplate="item">
-                    <span [class]="'product-badge status-' + option.value">{{option.label}}</span>
-                </ng-template>
-            </p-dropdown>
-            <small class="p-error" *ngIf="submitted && !docente.unidadrevista">La unidad de Revista es obligatoria.</small>
-        </div>
-        
-        <div class="p-field">
-            <label for="name">DNI</label>
-            <input type="text" pInputText id="numeroDni" [(ngModel)]="docente.dni" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.dni">El número de DNI es requerido.</small>
-        </div>        
-             
-    </ng-template>
-
-    <ng-template pTemplate="footer">
-        <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-        <button pButton pRipple label="Guardar" icon="pi pi-check" class="p-button-text" (click)="saveProduct()"></button>
-    </ng-template>
-</p-dialog>
-<p-dialog [(visible)]="productDialog2" [style]="{width: '450px', height: '300px'}" header="Nuevo Usuario Veedor" [modal]="true" styleClass="p-fluid">
-    <ng-template pTemplate="content">
-        <!-- <img [src]="'assets/showcase/images/demo/product/' + product.image" [alt]="product.image" class="product-image" *ngIf="product.image"> -->
-        <div class="p-field">
-            <label for="name">Email</label>
-            <br>
-            <br>
-            <input type="text" pInputText id="name" [(ngModel)]="docente.email" required autofocus />
-            <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
-        </div>       
-             
-    </ng-template>
-
-    <ng-template pTemplate="footer">
-        <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-        <button pButton pRipple label="Crear nuevo usuario" icon="pi pi-check" class="p-button-text" (click)="saveNewUsuario()"></button>
-    </ng-template>
-</p-dialog>
-
 <p-confirmDialog [style]="{width: '450px'}"></p-confirmDialog>
+
+<!-- Stats cards -->
+<div class="statsRow">
+  <div class="statCard statCard--blue">
+    <i class="pi pi-users statCard__icon"></i>
+    <div>
+      <p class="statCard__label">Total Docentes</p>
+      <p class="statCard__value">{{ docentes.length }}</p>
+    </div>
+  </div>
+  <div class="statCard statCard--teal">
+    <i class="pi pi-user statCard__icon"></i>
+    <div>
+      <p class="statCard__label">Usuarios del Sistema</p>
+      <p class="statCard__value">{{ usuarios.length }}</p>
+    </div>
+  </div>
+  <div class="statCard statCard--green">
+    <i class="pi pi-building statCard__icon"></i>
+    <div>
+      <p class="statCard__label">Unidades de Revista</p>
+      <p class="statCard__value">{{ statuses.length }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <!-- Toolbar -->
+  <p-toolbar styleClass="p-mb-4 toolbar-custom">
+    <ng-template pTemplate="left">
+      <div class="tableTitleGroup">
+        <h2 class="tableTitle">
+          <i class="pi pi-{{ tablaUsuarios ? 'user' : 'users' }} mr-2"></i>
+          {{ tablaUsuarios ? 'Usuarios del Sistema' : 'Docentes' }}
+        </h2>
+        <button pButton pRipple *ngIf="!tablaUsuarios" label="Ver Usuarios" icon="pi pi-list" class="p-button-outlined p-button-secondary p-button-sm" (click)="tablaUsuariosVisible()"></button>
+        <button pButton pRipple *ngIf="tablaUsuarios" label="Ver Docentes" icon="pi pi-list" class="p-button-outlined p-button-secondary p-button-sm" (click)="tablaDocentesVisible()"></button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="right">
+      <div class="buttonsMenu">
+        <button pButton pRipple label="Agregar Docente" icon="pi pi-plus" class="p-button-success p-mr-2" (click)="openNew2()"></button>
+        <button pButton pRipple label="Nuevo Veedor" icon="pi pi-user-plus" class="p-button-info p-mr-2" (click)="openNew3()"></button>
+      </div>
+    </ng-template>
+  </p-toolbar>
+
+  <!-- Tabla Docentes -->
+  <p-table *ngIf="!tablaUsuarios"
+    #dt
+    [value]="docentes"
+    [rows]="10"
+    [paginator]="true"
+    [globalFilterFields]="['nombre','apellido','dni','email','unidadrevista']"
+    responsiveLayout="scroll"
+    [(selection)]="selectedProducts"
+    [rowHover]="true"
+    dataKey="id"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} docentes"
+    [showCurrentPageReport]="true"
+    styleClass="p-datatable-striped p-datatable-gridlines">
+
+    <ng-template pTemplate="caption">
+      <div class="tableCaption">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="dt.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar por nombre, DNI, email..." />
+        </span>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width:3rem">#</th>
+        <th pSortableColumn="apellido">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>
+        <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+        <th pSortableColumn="dni">DNI <p-sortIcon field="dni"></p-sortIcon></th>
+        <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+        <th pSortableColumn="unidadrevista">Unidad de Revista <p-sortIcon field="unidadrevista"></p-sortIcon></th>
+        <th style="width:9rem; text-align:center">Acciones</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-docente let-i="rowIndex">
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td><strong>{{ docente.apellido }}</strong></td>
+        <td>{{ docente.nombre }}</td>
+        <td class="mono">{{ docente.dni }}</td>
+        <td>{{ docente.email }}</td>
+        <td><span class="unidadBadge">{{ docente.unidadrevista }}</span></td>
+        <td class="actionCell">
+          <button pButton pRipple icon="pi pi-book" class="p-button-rounded p-button-info p-button-sm" pTooltip="Ver documentación" tooltipPosition="top" [routerLink]="['docente/', docente.id]"></button>
+          <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-warning p-button-sm" pTooltip="Editar" tooltipPosition="top" (click)="editProduct(docente)"></button>
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-sm" pTooltip="Eliminar" tooltipPosition="top" (click)="deleteDocente(docente)"></button>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="7" class="emptyMessage">
+          <i class="pi pi-inbox" style="font-size:2rem; display:block; margin-bottom:.5rem"></i>
+          No se encontraron docentes.
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <!-- Tabla Usuarios -->
+  <p-table *ngIf="tablaUsuarios"
+    #dtU
+    [value]="usuarios"
+    [rows]="10"
+    [paginator]="true"
+    [globalFilterFields]="['nombre','apellido','email']"
+    responsiveLayout="scroll"
+    [rowHover]="true"
+    dataKey="id"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} usuarios"
+    [showCurrentPageReport]="true"
+    styleClass="p-datatable-striped p-datatable-gridlines">
+
+    <ng-template pTemplate="caption">
+      <div class="tableCaption">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" (input)="dtU.filterGlobal($any($event.target).value, 'contains')" placeholder="Buscar usuario..." />
+        </span>
+      </div>
+    </ng-template>
+
+    <ng-template pTemplate="header">
+      <tr>
+        <th style="width:3rem">#</th>
+        <th pSortableColumn="apellido">Apellido <p-sortIcon field="apellido"></p-sortIcon></th>
+        <th pSortableColumn="nombre">Nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+        <th pSortableColumn="email">Email <p-sortIcon field="email"></p-sortIcon></th>
+        <th style="width:7rem; text-align:center">Acciones</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-usuario let-i="rowIndex">
+      <tr>
+        <td>{{ i + 1 }}</td>
+        <td><strong>{{ usuario.apellido }}</strong></td>
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.email }}</td>
+        <td class="actionCell">
+          <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-danger p-button-sm" pTooltip="Eliminar usuario" tooltipPosition="top" (click)="deleteUsuario(usuario)"></button>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="5" class="emptyMessage">
+          <i class="pi pi-inbox" style="font-size:2rem; display:block; margin-bottom:.5rem"></i>
+          No se encontraron usuarios.
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+</div>
+
+<!-- Dialog: Editar Docente -->
+<p-dialog [(visible)]="productDialog" [style]="{width: '480px'}" header="Editar Docente" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <div class="p-field">
+      <label>Unidad de Revista</label>
+      <p-dropdown [(ngModel)]="docente.unidadrevista" [options]="statuses" optionLabel="label" optionValue="value" placeholder="Seleccione una unidad"></p-dropdown>
+    </div>
+    <div class="p-field"><label>Nombre</label>
+      <input type="text" pInputText [(ngModel)]="docente.nombre" required />
+      <small class="p-error" *ngIf="submitted && !docente.nombre">El Nombre es requerido.</small>
+    </div>
+    <div class="p-field"><label>Apellido</label>
+      <input type="text" pInputText [(ngModel)]="docente.apellido" required />
+      <small class="p-error" *ngIf="submitted && !docente.apellido">El Apellido es requerido.</small>
+    </div>
+    <div class="p-field"><label>Email</label>
+      <input type="email" pInputText [(ngModel)]="docente.email" required />
+      <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
+    </div>
+    <div class="p-field"><label>DNI</label>
+      <input type="text" pInputText [(ngModel)]="docente.dni" required />
+      <small class="p-error" *ngIf="submitted && !docente.dni">El DNI es requerido.</small>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text p-button-secondary" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Guardar cambios" icon="pi pi-check" class="p-button-success" (click)="updateUser()"></button>
+  </ng-template>
+</p-dialog>
+
+<!-- Dialog: Nuevo Docente -->
+<p-dialog [(visible)]="productDialog1" [style]="{width: '480px'}" header="Nuevo Docente" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <div class="p-field"><label>Nombre</label>
+      <input type="text" pInputText [(ngModel)]="docente.nombre" required />
+      <small class="p-error" *ngIf="submitted && !docente.nombre">El Nombre es requerido.</small>
+    </div>
+    <div class="p-field"><label>Apellido</label>
+      <input type="text" pInputText [(ngModel)]="docente.apellido" required />
+      <small class="p-error" *ngIf="submitted && !docente.apellido">El Apellido es requerido.</small>
+    </div>
+    <div class="p-field"><label>Email</label>
+      <input type="email" pInputText [(ngModel)]="docente.email" required />
+      <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
+    </div>
+    <div class="p-field">
+      <label>Unidad de Revista</label>
+      <p-dropdown [(ngModel)]="docente.unidadrevista" [options]="statuses" optionLabel="label" optionValue="value" placeholder="Seleccione una unidad"></p-dropdown>
+      <small class="p-error" *ngIf="submitted && !docente.unidadrevista">La unidad de Revista es obligatoria.</small>
+    </div>
+    <div class="p-field"><label>DNI</label>
+      <input type="text" pInputText [(ngModel)]="docente.dni" required />
+      <small class="p-error" *ngIf="submitted && !docente.dni">El DNI es requerido.</small>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text p-button-secondary" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Crear Docente" icon="pi pi-check" class="p-button-success" (click)="saveProduct()"></button>
+  </ng-template>
+</p-dialog>
+
+<!-- Dialog: Nuevo Veedor -->
+<p-dialog [(visible)]="productDialog2" [style]="{width: '420px'}" header="Nuevo Usuario Veedor" [modal]="true" styleClass="p-fluid">
+  <ng-template pTemplate="content">
+    <p style="color:#6b7280; margin-bottom:1rem">El usuario recibirá un email para activar su cuenta.</p>
+    <div class="p-field"><label>Email institucional</label>
+      <input type="email" pInputText [(ngModel)]="docente.email" required />
+      <small class="p-error" *ngIf="submitted && !docente.email">El email es requerido.</small>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text p-button-secondary" (click)="hideDialog()"></button>
+    <button pButton pRipple label="Crear Veedor" icon="pi pi-user-plus" class="p-button-info" (click)="saveNewUsuario()"></button>
+  </ng-template>
+</p-dialog>

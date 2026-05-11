@@ -7,16 +7,19 @@ import { finalize } from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
-export class InterceptorService implements HttpInterceptor{
+export class InterceptorService implements HttpInterceptor {
 
-  constructor( private spinnerService: SpinnerService) { }
+  constructor(private spinnerService: SpinnerService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.spinnerService.llamarSpinner();
-    return next.handle(req).pipe(
-      finalize( () => {
-        this.spinnerService.detenerSpinner()
+
+    const reqConCredenciales = req.clone({ withCredentials: true });
+
+    return next.handle(reqConCredenciales).pipe(
+      finalize(() => {
+        this.spinnerService.detenerSpinner();
       })
-    )
+    );
   }
 }

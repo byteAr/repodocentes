@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { AuthResponse, Usuario } from '../interfaces/auth.interfaces';
 import { of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators'
@@ -24,15 +24,12 @@ export class AuthService {
   login( email: string, password: string) {
 
     const url = `${this.baseUrl}/login`;
-
-
     const body = { email, password }
 
-    return this.http.post<AuthResponse>( url, body )
+    return this.http.post<AuthResponse>( url, body, { withCredentials: true } )
      .pipe(
        tap( resp => {
          if (resp.ok ){
-           localStorage.setItem('token', resp.token);
            this._usuario = {
              nombre: resp.nombre,
              apellido: resp.apellido,
@@ -42,9 +39,8 @@ export class AuthService {
              rol: resp.rol
            };
          }
-        }),/*
-       map( res => res.ok), */
-       catchError( err => of (err.error.message) )
+        }),
+       catchError( err => of (err?.error?.message ?? 'Error de conexión con el servidor') )
      );
   }
 
@@ -55,19 +51,8 @@ export class AuthService {
 
     return this.http.post<AuthResponse>(url, body)
     .pipe(
-      tap( resp => {
-        if (resp.ok ){
-          /* this._usuario = {
-            nombre: resp.nombre,
-            apellido: resp.apellido,
-            id: resp.id,
-            rol: resp.rol,
-            unidadrevista: resp.unidadrevista
-          } */
-        }
-       }),
       map( res => res.ok ),
-      catchError( err => of (err.error.message) )
+      catchError( err => of (err?.error?.message ?? 'Error de conexión con el servidor') )
     );
 
   }
@@ -79,22 +64,13 @@ export class AuthService {
   }
 
   validarToken(): any {
-    const url   = `${this.baseUrl}/renew`;
-    const headers = new HttpHeaders()
-      .set('x-token', localStorage.getItem('token') || '');
+    const url = `${this.baseUrl}/renew`;
 
-    return this.http.get<AuthResponse>( url, { headers } )
+    return this.http.get<AuthResponse>( url, { withCredentials: true } )
       .pipe(
         map( resp => {
-          const { token, nombre, apellido, id, email, rol} = resp;
-          localStorage.setItem('token', resp.token);
-           this._usuario = {
-            nombre,
-            id,
-            email,
-            apellido,
-            rol
-           }
+          const { nombre, apellido, id, email, rol } = resp;
+           this._usuario = { nombre, id, email, apellido, rol }
           return resp.ok;
         }),
         catchError( err => of(false))
@@ -102,8 +78,13 @@ export class AuthService {
   }
 
   verifyEmail(token: string) {
-   const url   = `${this.baseUrl}/verify/${token}`
+   const url = `${this.baseUrl}/verify/${token}`
    return this.http.get<any>(url)
+  }
+
+  validateInviteToken(token: string) {
+    const url = `${this.baseUrl}/users/validate-invite/${token}`;
+    return this.http.get<{ ok: boolean; email?: string; message?: string }>(url);
   }
 
   recoveryPassword(email: string) {
@@ -111,17 +92,13 @@ export class AuthService {
     const body = { email };
     return this.http.post<any>(url, body)
     .pipe(
-      map( resp => {
-        const { ok, message } = resp;
-        return resp
-      })
-
+      map( resp => resp )
     )
   }
 
   logout() {
-    localStorage.clear();
-    localStorage.removeItem('usuario');
+    this.http.post(`${this.baseUrl}/logout`, {}, { withCredentials: true }).subscribe();
+    this._usuario = undefined;
     this.router.navigateByUrl('');
   }
 }

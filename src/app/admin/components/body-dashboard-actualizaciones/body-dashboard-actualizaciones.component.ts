@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-body-dashboard-actualizaciones',
-  templateUrl: './body-dashboard-actualizaciones.component.html',
-  styleUrls: ['./body-dashboard-actualizaciones.component.css']
+    selector: 'app-body-dashboard-actualizaciones',
+    templateUrl: './body-dashboard-actualizaciones.component.html',
+    styleUrls: ['./body-dashboard-actualizaciones.component.css'],
+    standalone: false
 })
 export class BodyDashboardActualizacionesComponent{
 

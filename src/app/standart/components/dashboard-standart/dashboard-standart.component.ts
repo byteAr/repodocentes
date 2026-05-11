@@ -9,15 +9,16 @@ import { UsersService } from '../../../admin/services/users.service';
 moment.locale('es');
 
 @Component({
-  selector: 'app-dashboard-standart',
-  templateUrl: './dashboard-standart.component.html',
-  styles: [`
+    selector: 'app-dashboard-standart',
+    templateUrl: './dashboard-standart.component.html',
+    styles: [`
         :host ::ng-deep .p-dialog .product-image {
             width: 150px;
             margin: 0 auto 2rem auto;
             display: block;
         }
     `],
+    standalone: false
 })
 export class DashboardStandartComponent implements OnInit {
   productDialog?: boolean;

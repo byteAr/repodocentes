@@ -1,61 +1,91 @@
-
 <p-toast></p-toast>
-<div class="cardContainer">
-    <section  class="containerLogin">
-        <div class=" surface-card p-12 lg:w-12 cardLogin">
-            <figure>
-                <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
-            </figure>
-            <div class="text-center mb-5">
-                <span  class="text-600 font-medium line-height-3">Todavía no tiene una cuenta?</span>
-                <a routerLink="./registro" class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Cree una ahora!</a>
-            </div>
-        
-            <div class="">
-                <form autocomplete="off" [formGroup]="formLogin">
-                    <label  class="block text-900 font-medium mb-2">Email</label>
-                    <input formControlName="email" id="email1" type="text" pInputText class="text-center w-full mb-3" autocomplete="off">
-            
-                    <label  class="block text-900 font-medium mb-2">Contraseña</label>
-                    <input formControlName="password" id="password1" type="password" pInputText class="text-center w-full mb-3" autocomplete="off">
-                </form>
-        
-                <div class="flex align-items-center justify-content-between mb-6">
-                    
-                    <a class="font-medium no-underline ml-2 text-blue-500 text-right cursor-pointer" (click)="openDialog()">Olvidó su contraseña?</a>
-                </div>
-                <div class="containerButtonLogin">
-                    <button #isButton (click)="login()" pButton pRipple label="INGRESAR"  class= "buttonLogin lg:w-6 mb-6"></button>
-                    
-                </div>
-                <div #isSpinner class="spinnerContainer">
-                    <div class="lds-ellipsis">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <p-dialog [(visible)]="productDialog" [style]="{width: '450px', height: '300px'}" header="Ingrese su Email de recuperación" [modal]="true" styleClass="p-fluid">
-        <ng-template pTemplate="content">
-            <div class="p-field">
-                <label for="name">Email</label>
-                <br>
-                <br>
-                <input type="text" pInputText id="name" [(ngModel)]="email" required autofocus />
-                <small class="p-error" *ngIf="submitted && !email">El email es requerido.</small>
-            </div>       
-                 
-        </ng-template>
-    
-        <ng-template pTemplate="footer">
-            <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
-            <button [disabled]="!email" pButton pRipple label="Recuperar Contraseña" icon="pi pi-check" class="p-button-text" (click)="recuperarPass()"></button>
-        </ng-template>
-    </p-dialog>
+<div class="authPage">
+  <!-- Panel izquierdo branding -->
+  <div class="authBrand">
+    <div class="authBrand__inner">
+      <img src="../../../../assets/img/banner.png" alt="IUGNA" class="authBrand__logo">
+      <h2 class="authBrand__title">Repositorio Docentes</h2>
+      <p class="authBrand__subtitle">Instituto Universitario de Gendarmería Nacional Argentina</p>
+    </div>
+  </div>
+
+  <!-- Panel derecho formulario -->
+  <div class="authForm">
+    <div class="authCard">
+      <div class="authCard__header">
+        <h3 class="authCard__title">Iniciar Sesión</h3>
+        <p class="authCard__subtitle">Ingrese sus credenciales para continuar</p>
+      </div>
+
+      <form [formGroup]="formLogin" (ngSubmit)="login()" autocomplete="off" novalidate>
+
+        <div class="formGroup">
+          <label class="formLabel">Email</label>
+          <input formControlName="email" type="text" pInputText class="formInput" placeholder="correo@ejemplo.com" autocomplete="off">
+        </div>
+
+        <div class="formGroup">
+          <label class="formLabel">Contraseña</label>
+          <input formControlName="password" type="password" pInputText class="formInput" placeholder="Su contraseña" autocomplete="off">
+        </div>
+
+        <div class="formGroup--link">
+          <a class="authLink" (click)="openDialog()">¿Olvidó su contraseña?</a>
+        </div>
+
+        <!-- Rate limit banner -->
+        <div *ngIf="bloqueado" class="rateLimitBanner">
+          <i class="pi pi-lock rateLimitIcon"></i>
+          <div>
+            <p class="rateLimitTitle">Demasiados intentos fallidos</p>
+            <p class="rateLimitMsg">Podrá volver a intentarlo en <strong>{{ segundosRestantes }}</strong> segundo{{ segundosRestantes !== 1 ? 's' : '' }}.</p>
+          </div>
+        </div>
+
+        <button
+          #isButton
+          type="submit"
+          pButton pRipple
+          [disabled]="bloqueado"
+          class="authBtn"
+          label="INGRESAR"
+          icon="pi pi-sign-in">
+        </button>
+
+        <div #isSpinner class="spinnerContainer">
+          <div class="lds-ellipsis">
+            <div></div><div></div><div></div><div></div>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="authCard__footer">
+        <span>¿No tiene cuenta?</span>
+        <span class="authLink--muted">Contacte al administrador del sistema</span>
+      </div>
+    </div>
+  </div>
 </div>
 
+<!-- Dialog recuperar contraseña -->
+<p-dialog
+  [(visible)]="productDialog"
+  [style]="{width: '420px'}"
+  header="Recuperar contraseña"
+  [modal]="true"
+  styleClass="p-fluid recoveryDialog">
+  <ng-template pTemplate="content">
+    <div class="p-field" style="padding: 0.5rem 0;">
+      <label for="emailRecupero" style="font-weight:600;color:#334155;font-size:0.85rem;">Email registrado</label>
+      <br><br>
+      <input type="text" pInputText id="emailRecupero" [(ngModel)]="email" placeholder="correo@ejemplo.com" autofocus />
+      <small class="p-error" *ngIf="submitted && !email">El email es requerido.</small>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text" (click)="hideDialog()"></button>
+    <button [disabled]="!email" pButton pRipple label="Enviar instrucciones" icon="pi pi-send" class="p-button-text" (click)="recuperarPass()"></button>
+  </ng-template>
+</p-dialog>

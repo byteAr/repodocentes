@@ -28,7 +28,7 @@ export class UsersService {
     const usuario = {     
      email     
     }
-    return this.http.post<any>(`${this.baseUrl}/user`, usuario)
+    return this.http.post<any>(`${this.baseUrl}/users`, usuario)
   }
 
   getDocente(id:any) {

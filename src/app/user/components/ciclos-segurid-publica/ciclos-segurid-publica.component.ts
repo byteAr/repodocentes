@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-  selector: 'app-ciclos-segurid-publica',
-  templateUrl: './ciclos-segurid-publica.component.html',
-  styleUrls: ['./ciclos-segurid-publica.component.css']
+    selector: 'app-ciclos-segurid-publica',
+    templateUrl: './ciclos-segurid-publica.component.html',
+    styleUrls: ['./ciclos-segurid-publica.component.css'],
+    standalone: false
 })
 export class CiclosSeguridPublicaComponent implements OnInit {
 

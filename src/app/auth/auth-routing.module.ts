@@ -4,15 +4,17 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { VerifyComponent } from './components/verify/verify.component';
 import { RecoveryPasswordComponent } from './components/recovery-password/recovery-password.component';
+import { InviteTokenGuard } from './guards/invite-token.guard';
 
 const routes: Routes = [
   {
-    path:'',
+    path: '',
     component: LoginComponent
   },
   {
-    path:'registro',
-    component: RegistroComponent
+    path: 'registro/:token',
+    component: RegistroComponent,
+    canActivate: [InviteTokenGuard]
   },
   {
     path: 'verify/:id',

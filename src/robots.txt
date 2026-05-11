@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /auth
+Disallow: /invitado
+
+Sitemap: https://www.iugna.edu.ar/sitemap.xml

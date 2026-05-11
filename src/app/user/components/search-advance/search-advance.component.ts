@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-search-advance',
-  templateUrl: './search-advance.component.html',
-  styleUrls: ['./search-advance.component.css']
+    selector: 'app-search-advance',
+    templateUrl: './search-advance.component.html',
+    styleUrls: ['./search-advance.component.css'],
+    standalone: false
 })
 export class SearchAdvanceComponent implements OnInit {
 
