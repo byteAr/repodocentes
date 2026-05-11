@@ -44,17 +44,27 @@ export class AuthService {
      );
   }
 
-  register(nombre:string, apellido:string,  email:string,  password:string ) {
-
+  register(nombre: string, apellido: string, email: string, password: string) {
     const url = `${this.baseUrl}/register`;
-    const body = {nombre,apellido,email,password};
+    const body = { nombre, apellido, email, password };
 
-    return this.http.post<AuthResponse>(url, body)
-    .pipe(
-      map( res => res.ok ),
-      catchError( err => of (err?.error?.message ?? 'Error de conexión con el servidor') )
-    );
-
+    return this.http.post<AuthResponse>(url, body, { withCredentials: true })
+      .pipe(
+        tap(resp => {
+          if (resp.ok) {
+            this._usuario = {
+              nombre: resp.nombre,
+              apellido: resp.apellido,
+              email: resp.email,
+              estado: resp.estado,
+              id: resp.id,
+              rol: resp.rol
+            };
+          }
+        }),
+        map(resp => resp),
+        catchError(err => of({ ok: false, message: err?.error?.message ?? 'Error de conexión con el servidor' } as any))
+      );
   }
 
   updatePassword(password:string, id: any) {

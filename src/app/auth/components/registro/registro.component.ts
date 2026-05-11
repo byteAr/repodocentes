@@ -73,21 +73,15 @@ export class RegistroComponent implements OnInit {
     const { nombre, apellido, password } = this.formRegister.value;
     const email = this.formRegister.get('email')?.value;
 
-    this.authService.register(nombre, apellido, email, password).subscribe(ok => {
+    this.authService.register(nombre, apellido, email, password).subscribe(resp => {
       this.loading = false;
-      if (ok === true) {
-        this.messageService.add({
-          severity: 'success',
-          summary: 'Registro Exitoso',
-          detail: 'Verifique la bandeja de entrada de su correo para activar su cuenta.',
-          life: 6000
-        });
-        setTimeout(() => this.router.navigateByUrl('/auth'), 6000);
+      if (resp?.ok) {
+        this.router.navigateByUrl('/invitado');
       } else {
         this.messageService.add({
           severity: 'error',
           summary: 'Error',
-          detail: typeof ok === 'string' ? ok : 'No se pudo completar el registro.',
+          detail: resp?.message ?? 'No se pudo completar el registro.',
           life: 5000
         });
       }
