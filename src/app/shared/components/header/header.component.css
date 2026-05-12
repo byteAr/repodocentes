@@ -313,20 +313,6 @@ a {
 
 
 /* ═══════════════════════════════════════════════════════════════
-   RESPONSIVE — ocultar/mostrar según breakpoint
-═══════════════════════════════════════════════════════════════ */
-@media (max-width: 940px) {
-    :host ::ng-deep .wrapper {
-        display: none;
-    }
-}
-@media (min-width: 941px) {
-    :host ::ng-deep .containerMenuResponsive {
-        display: none;
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════════
    HEADER MOBILE BAR
 ═══════════════════════════════════════════════════════════════ */
 :host ::ng-deep .containerMenuResponsive {
@@ -542,6 +528,25 @@ a {
     height: 1px;
     background: rgba(255, 255, 255, 0.12);
     margin: 0.5rem 1.4rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE — ocultar/mostrar (siempre al final para ganar la cascada)
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 940px) {
+    :host ::ng-deep .wrapper {
+        display: none !important;
+    }
+}
+
+@media (min-width: 941px) {
+    :host ::ng-deep .containerMenuResponsive {
+        display: none !important;
+    }
+    .sidebar-overlay,
+    .sidebar-panel {
+        display: none !important;
+    }
 }
 
 

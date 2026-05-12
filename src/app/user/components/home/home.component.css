@@ -61,7 +61,14 @@ p-card ng-template img {
 }
 
 .imgEnlacesExternos {
-	width: 25%;
+	width: 200px;
+	max-width: 28%;
+	transition: transform 0.2s ease;
+}
+
+.imgEnlacesExternos:hover {
+	transform: scale(1.04);
+	cursor: pointer;
 }
 
 
@@ -259,6 +266,25 @@ ul.tabs li a{
 @media (max-width: 940px) {
 	.carreras {
 		display: none;
+	}
+
+	/* Logos externos: columna centrada en mobile */
+	.sistemasExternos {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5rem;
+		padding: 1rem 0;
+	}
+
+	.sistemasExternos a {
+		width: auto !important;
+		display: flex !important;
+		justify-content: center !important;
+	}
+
+	.imgEnlacesExternos {
+		width: 72vw !important;
+		max-width: 320px !important;
 	}
 	.tituloNovedadDestacada {
 		font-size: 1rem !important;
