@@ -332,15 +332,10 @@ a {
 :host ::ng-deep .containerMenuResponsive {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     background: linear-gradient(90deg, #004F59 0%, #0d7a6e 100%);
-    padding: 0.5rem 1rem;
-    gap: 1rem;
-}
-
-:host ::ng-deep .containerMenuBar {
-    display: flex;
-    align-items: center;
+    padding: 0.6rem 1rem;
 }
 
 .hamburgerBtn {
@@ -351,6 +346,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .hamburgerBtn .pi {
@@ -361,9 +357,16 @@ a {
 }
 
 .logoMobile {
-    height: 42px;
+    height: 56px;
     width: auto;
     object-fit: contain;
+    /* centrado real usando el placeholder como contrapeso */
+}
+
+.hamburgerPlaceholder {
+    /* mismo ancho que el botón hamburguesa para centrar el logo */
+    width: 44px;
+    flex-shrink: 0;
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -492,15 +495,17 @@ a {
 
 .sidebar-link--group {
     cursor: default;
-    opacity: 0.75;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-    padding-bottom: 0.3rem;
+    opacity: 0.65;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    padding-top: 0.9rem;
+    padding-bottom: 0.2rem;
+    padding-left: 2.9rem;   /* mismo margen que los subitems */
 }
 
 .sidebar-link--group:hover {
     background: transparent;
-    padding-left: 1.4rem;
+    padding-left: 2.9rem;
 }
 
 .sidebar-link--external {

@@ -14,8 +14,9 @@
 .acc-header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 0.6rem;
   padding: 1rem 1.2rem;
   border: none;
   cursor: pointer;
@@ -23,7 +24,7 @@
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  text-align: left;
+  text-align: center;
   transition: filter 0.2s;
 }
 
