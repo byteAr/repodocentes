@@ -1,8 +1,9 @@
-<!-- <img class="logo" src="../../../../assets/img/banner.png" alt=""> -->
-
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER DESKTOP (oculto en mobile < 940px)
+═══════════════════════════════════════════════════════════════ -->
 <div class="wrapper">
     <div class="logo">
-        <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
+        <img class="iconIugna" src="../../../../assets/img/banner.png" alt="IUGNA">
     </div>
     <div class="contenedorMenu">
         <div class="rightMenu">
@@ -14,7 +15,7 @@
                 <ul>
                     <li routerLink="/institucional">El Instituto Universitario</li>
                     <hr>
-                    <a href="https://www.argentina.gob.ar/gendarmeria">Gendarmeria Nacional Argentina</a>
+                    <a href="https://www.argentina.gob.ar/gendarmeria">Gendarmería Nacional Argentina</a>
                 </ul>
             </div>
         </div>
@@ -37,55 +38,103 @@
                 <ul>
                     <li routerLink="/convocatoria">Convocatoria a Docentes Interinos</li>
                     <hr>
-                    <li routerLink="/auth" >Repositorio Docente</li>
+                    <li routerLink="/auth">Repositorio Docente</li>
                 </ul>
-
             </div>
         </div>
-        <a>
-            <div class="rightMenu">
-                <!-- <button  class="menuDocentes pb-3"><a class="menuDocentes pb-3 text-base font-medium" href=" https://bgn.bibliotecarios.ar/">BIBLIOTECA</a></button> -->
-                <button  class="menuDocentes pb-3"><a class="menuDocentes pb-3 text-base font-medium" routerLink="/biblioteca">BIBLIOTECA</a></button>
-            </div>
-        </a>
+        <div class="rightMenu">
+            <button class="menuDocentes pb-3">
+                <a class="menuDocentes pb-3 text-base font-medium" routerLink="/biblioteca">BIBLIOTECA</a>
+            </button>
+        </div>
     </div>
 </div>
 
-<!-- <section class="headerContainer">
-    <img class="iconIugna" src="../../../../assets/img/banner.png" alt="">
-    <div class="containeritemsMenu">
-        <ul class="menuContainer">
-            <li routerLink="/">INICIO</li>
-            <li>|</li>
-            <li  routerLink="/institucional">INSTITUCIONAL</li>
-            <li>|</li>
-            <li  routerLink="/investigacion">INVESTIGACION</li>
-            <li >|</li>
-            <li  routerLink="/extension">EXTENSION</li>
-            <li>|</li>
-            <li class="docentes">DOCENTES</li>
-            <li>|</li>
-            <li>BIBLIOTECA</li>
-        </ul>
-    </div>
-</section> -->
-
-<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
-    <ul class="containerItemsSideBar">
-        <li routerLink="/institucional" class="itemsSideBar mt-5">INSTITUCIONAL</li>
-        <li routerLink="/investigacion" class="itemsSideBar mt-5">INVESTIGACIÓN</li>
-        <li routerLink="/extension" class="itemsSideBar mt-5">EXTENSIÓN</li>
-        <li routerLink="/biblioteca" class="itemsSideBar mt-5">BIBLIOTECA</li>
-        <a  href="https://plataformavirtual.iugna.edu.ar/login/index.php"><li class="itemsSideBar mt-5">CAMPUS VIRTUAL</li></a>
-        <a  href="https://plataformavirtual.iugna.edu.ar/cenedis/"><li class="itemsSideBar mt-5">PORTAL CENEDIS</li></a>
-    </ul>
-</p-sidebar>
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER MOBILE (visible en < 940px)
+═══════════════════════════════════════════════════════════════ -->
 <div class="containerMenuResponsive">
     <div class="containerMenuBar">
-        <button pButton class="p-button-outlined" type="button" (click)="visibleSidebar1 = true">
-            <i class="pi pi-bars" style="font-size: 3rem"></i>
+        <button class="hamburgerBtn" type="button" (click)="visibleSidebar1 = true" aria-label="Abrir menú">
+            <i class="pi pi-bars"></i>
         </button>
     </div>
-    <img class="logo" src="../../../../assets/img/iconos/iugna-4.png" alt="">
-
+    <img class="logoMobile" src="../../../../assets/img/iconos/iugna-4.png" alt="IUGNA">
 </div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SIDEBAR CUSTOM
+═══════════════════════════════════════════════════════════════ -->
+<div class="sidebar-overlay" [class.active]="visibleSidebar1" (click)="visibleSidebar1 = false"></div>
+
+<nav class="sidebar-panel" [class.open]="visibleSidebar1" aria-label="Menú de navegación">
+
+    <div class="sidebar-header">
+        <img src="../../../../assets/img/iconos/iugna-4.png" alt="IUGNA" class="sidebar-logo">
+        <button class="sidebar-close" (click)="visibleSidebar1 = false" aria-label="Cerrar menú">
+            <i class="pi pi-times"></i>
+        </button>
+    </div>
+
+    <ul class="sidebar-nav">
+
+        <li>
+            <a routerLink="/" class="sidebar-link" (click)="visibleSidebar1 = false">
+                <i class="pi pi-home"></i> INICIO
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/institucional" class="sidebar-link" (click)="visibleSidebar1 = false">
+                <i class="pi pi-building"></i> INSTITUCIONAL
+            </a>
+        </li>
+
+        <li>
+            <a routerLink="/investigacion" class="sidebar-link" (click)="visibleSidebar1 = false">
+                <i class="pi pi-search"></i> INVESTIGACIÓN
+            </a>
+            <div class="sidebar-subitems">
+                <a href="https://revistacys.iugna.edu.ar/" class="sidebar-sublink">Revista Ciencia y Seguridad</a>
+                <a href="https://REPOSITORIODIGITAL.iugna.edu.ar/" class="sidebar-sublink">Repositorio Digital</a>
+            </div>
+        </li>
+
+        <li>
+            <a routerLink="/extension" class="sidebar-link" (click)="visibleSidebar1 = false">
+                <i class="pi pi-star"></i> EXTENSIÓN
+            </a>
+        </li>
+
+        <li>
+            <span class="sidebar-link sidebar-link--group">
+                <i class="pi pi-users"></i> DOCENTES
+            </span>
+            <div class="sidebar-subitems">
+                <a routerLink="/convocatoria" class="sidebar-sublink" (click)="visibleSidebar1 = false">Convocatoria a Docentes Interinos</a>
+                <a routerLink="/auth" class="sidebar-sublink" (click)="visibleSidebar1 = false">Repositorio Docente</a>
+            </div>
+        </li>
+
+        <li>
+            <a routerLink="/biblioteca" class="sidebar-link" (click)="visibleSidebar1 = false">
+                <i class="pi pi-book"></i> BIBLIOTECA
+            </a>
+        </li>
+
+        <li class="sidebar-divider"></li>
+
+        <li>
+            <a href="https://plataformavirtual.iugna.edu.ar/login/index.php" class="sidebar-link sidebar-link--external">
+                <i class="pi pi-desktop"></i> CAMPUS VIRTUAL
+            </a>
+        </li>
+
+        <li>
+            <a href="https://plataformavirtual.iugna.edu.ar/cenedis/" class="sidebar-link sidebar-link--external">
+                <i class="pi pi-globe"></i> PORTAL CENEDIS
+            </a>
+        </li>
+
+    </ul>
+</nav>

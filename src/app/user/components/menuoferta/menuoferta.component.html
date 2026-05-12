@@ -1,41 +1,71 @@
-<p-accordion class="accordionMenuOfertaResponsive">
-    <p-accordionTab class="tecnicaturas" header="TECNICATURAS">
-        <div class="containerItemsAccordion">
-            <p>Seguridad Pública y Ciudadana</p>
-            <p>Seguridad Pública y Ciudadana con orientación en Administración Pública</p>
-            <p>Seguridad Pública y Ciudadana con orientación en Criminalística</p>
-            <p>Seguridad Pública y Ciudadana con orientación en Gestión de las Comunicaciones</p>
-            <p>Seguridad Pública y Ciudadana con orientación en Investigación Criminal</p>
-            <p>Seguridad Pública y Ciudadana con orientación en Seguridad Vial</p>
-        </div>
-    </p-accordionTab>
-    <p-accordionTab header="LICENCIATURAS">
-        <div class="containerItemsAccordion">
-            <p>Licenciatura en Seguridad Pública</p>
-            <p>Licenciatura en Administración Pública</p>
-            <p>Licenciatura en Criminalística</p>
-            <p>Licenciatura en Gestión y Seguridad de las Tecnologías de la Información</p>
-        </div>
-    </p-accordionTab>
-    <p-accordionTab header="CICLOS DE LICENCIATURA">
-        <div class="containerItemsAccordion">
-            <p>Licenciatura en Seguridad Pública - Ciclo de Complementación Curricular</p>
-            <p>Licenciatura en Administración Pública - Ciclo de Complementación Curricular</p>
-            <p>Licenciatura en Criminalística - Ciclo de Complementación Curricular</p>
-            <p>Licenciatura en Investigación Judicial - Ciclo de Complementación Curricular</p>
-            <p>Profesorado Universitario (en la Disciplina correspondiente al título de base) - Ciclo</p>
-        </div>
-    </p-accordionTab>
-    <p-accordionTab header="CURSOS DE EXTENSIÓN">
-        <div class="containerItemsAccordion">
-            <p>NaN</p>
-        </div>
-    </p-accordionTab>
-    <p-accordionTab header="CURSOS DE POSGRADO">
-        <div class="containerItemsAccordion">
-            <p>Diplomatura en Fronteras</p>
-            <p>Diplomatura en Gestión Integral de Riesgo de Desastre</p>
-            <p>Diplomatura en Inteligencia Criminal y Crimen Organizado</p>
-        </div>
-    </p-accordionTab>    
-</p-accordion>
+<div class="accordion">
+
+  <!-- PREGRADO -->
+  <div class="acc-item">
+    <button class="acc-header acc-1" (click)="toggle(0)">
+      <span>PREGRADO</span>
+      <i class="pi" [class.pi-chevron-down]="!isOpen(0)" [class.pi-chevron-up]="isOpen(0)"></i>
+    </button>
+    <div class="acc-body acc-body-1" [class.open]="isOpen(0)">
+      <a routerLink="/caligrafo" class="acc-link">Calígrafo Público Nacional</a>
+      <div class="acc-subtitle">Tecnicaturas Universitarias</div>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Seguridad Pública y Ciudadana</a>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Administración Pública</a>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Criminalística</a>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Gestión de las Comunicaciones</a>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Investigación Criminal</a>
+      <a routerLink="/uuaa/escusub/oferta/tecnicaturas" class="acc-link">Seguridad Vial</a>
+    </div>
+  </div>
+
+  <!-- GRADO -->
+  <div class="acc-item">
+    <button class="acc-header acc-2" (click)="toggle(1)">
+      <span>GRADO</span>
+      <i class="pi" [class.pi-chevron-down]="!isOpen(1)" [class.pi-chevron-up]="isOpen(1)"></i>
+    </button>
+    <div class="acc-body acc-body-2" [class.open]="isOpen(1)">
+      <div class="acc-subtitle">Licenciaturas</div>
+      <span class="acc-link acc-nolink">Administración Pública</span>
+      <span class="acc-link acc-nolink">Seguridad Pública</span>
+      <span class="acc-link acc-nolink">Criminalística</span>
+      <span class="acc-link acc-nolink">Gestión y Seg. de las TI</span>
+      <div class="acc-subtitle">Ciclos de Complementación Curricular</div>
+      <a routerLink="/ciclos/administracion" class="acc-link">Administración Pública (CCC)</a>
+      <a routerLink="/ciclos/seguridad" class="acc-link">Seguridad Pública (CCC)</a>
+      <a routerLink="/ciclos/criminalistica" class="acc-link">Criminalística (CCC)</a>
+      <a routerLink="/ciclos/investigacion" class="acc-link">Investigación Judicial (CCC)</a>
+      <a routerLink="/profesorado" class="acc-link">Profesorado Universitario</a>
+    </div>
+  </div>
+
+  <!-- CURSOS DE POSGRADO -->
+  <div class="acc-item">
+    <button class="acc-header acc-3" (click)="toggle(2)">
+      <span>CURSOS DE POSGRADO</span>
+      <i class="pi" [class.pi-chevron-down]="!isOpen(2)" [class.pi-chevron-up]="isOpen(2)"></i>
+    </button>
+    <div class="acc-body acc-body-3" [class.open]="isOpen(2)">
+      <a routerLink="/uuaa/escusuper/oferta/diplomaturas" class="acc-link">Diplomatura en Seguridad y Desarrollo de Fronteras (a distancia)</a>
+      <a routerLink="/uuaa/escusuper/oferta/diplomaturas" class="acc-link">Diplomatura en Gestión Integral de Riesgos de Desastres (a distancia)</a>
+      <a routerLink="/uuaa/escusuper/oferta/diplomaturas" class="acc-link">Diplomatura en Inteligencia Criminal y Crimen Organizado (a distancia)</a>
+    </div>
+  </div>
+
+  <!-- CURSOS DE EXTENSIÓN -->
+  <div class="acc-item">
+    <button class="acc-header acc-4" (click)="toggle(3)">
+      <span>CURSOS DE EXTENSIÓN</span>
+      <i class="pi" [class.pi-chevron-down]="!isOpen(3)" [class.pi-chevron-up]="isOpen(3)"></i>
+    </button>
+    <div class="acc-body acc-body-4" [class.open]="isOpen(3)">
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Francés - Nivel I</a>
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Inglés - Nivel I</a>
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Francés - Nivel II</a>
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Inglés - Nivel II</a>
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Liderar para el cambio</a>
+      <a routerLink="/uuaa/escusuper/extension" class="acc-link">Introducción a la Mediación y la Negociación</a>
+    </div>
+  </div>
+
+</div>

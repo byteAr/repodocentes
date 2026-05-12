@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-menuoferta',
-    templateUrl: './menuoferta.component.html',
-    styleUrls: ['./menuoferta.component.css'],
-    standalone: false
+  selector: 'app-menuoferta',
+  templateUrl: './menuoferta.component.html',
+  styleUrls: ['./menuoferta.component.css'],
+  standalone: false
 })
-export class MenuofertaComponent implements OnInit {
+export class MenuofertaComponent {
 
-  constructor() { }
+  openIndex: number | null = null;
 
-  ngOnInit(): void {
+  toggle(index: number): void {
+    this.openIndex = this.openIndex === index ? null : index;
   }
 
+  isOpen(index: number): boolean {
+    return this.openIndex === index;
+  }
 }
