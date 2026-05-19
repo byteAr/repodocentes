@@ -23,46 +23,43 @@
     </div>
 
 </div> -->
-<div class="bg-gray-600 block lg:flex lg:justify-between w-full text-white pt-5 pb-5">
-  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-left px-16 mb-3 lg:mb-0">
-    <p class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-2">RECTORADO</p>
-    <hr class="hidden md:hidden lg:block">
+<div class="bg-gray-600 flex flex-col lg:flex-row justify-between w-full text-white py-6 px-8 lg:px-16">
+  <div class="text-center lg:text-left mb-4 lg:mb-0">
+    <p class="font-extrabold underline lg:no-underline underline-offset-4 mb-2">RECTORADO</p>
     <p>Paseo Colón N° 533 CABA</p>
     <p>Tel: (011) 5169-3322</p>
     <p>info@iugna.edu.ar</p>
   </div>
-  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-left px-16 mb-3 lg:mb-0">
-    <p class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-2">ACCESO</p>
-    <hr class="hidden md:hidden lg:block">
-    <p><a href="https://plataformavirtual.iugna.edu.ar/login/index.php">Campus Virtual</a></p>
-    <p routerLink="/uuaa" class="cursor-pointer">Oferta Académica</p>
+  <div class="text-center lg:text-left mb-4 lg:mb-0">
+    <p class="font-extrabold underline lg:no-underline underline-offset-4 mb-2">ACCESO</p>
+    <p><a href="https://plataformavirtual.iugna.edu.ar/login/index.php" class="hover:underline">Campus Virtual</a></p>
+    <p routerLink="/uuaa" class="cursor-pointer hover:underline">Oferta Académica</p>
   </div>
-  <div class="text-center w-full md:w-1/3 md:px-5 lg:text-right px-16 mb-3 lg:mb-0">
-    <p  class="[text-decoration-line:underline] lg:[text-decoration-line:none] underline-offset-4 font-extrabold mb-1">CONTACTO</p>
-    <hr class="hidden md:hidden lg:block">
+  <div class="text-center lg:text-right mb-4 lg:mb-0">
+    <p class="font-extrabold underline lg:no-underline underline-offset-4 mb-2">CONTACTO</p>
     <div (click)="showDialog()" class="flex w-full justify-center lg:justify-end cursor-pointer">
       <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="#ffffff" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"/></svg>
     </div>
   </div>
 </div>
 
-<p-dialog header="Contactos" [(visible)]="display" [breakpoints]="{'600px': '60vw', '640px': '95vw'}" [style]="{width: '70vw'}">
-  <hr >
-  <div class="containerContacto pt-3">
-      <ul>
-          <li class="pb-2"><span class="font-medium">Escuela de Oficiales (Bs. As):</span> Tel: (011) 4620-2063 Interno 253</li>
-          <li class="pb-2"><span class="font-medium">Escuela de Suboficiales (Córdoba):</span> Tel/Fax: (03525)401-964</li>
-          <li class="pb-2"><span class="font-medium">Guardia:</span> (03525)401-965</li>
-          <li class="pb-2"><span class="font-medium">Escuela de Gendarmes (San Juan):</span> Tel: (02648) 441-023 </li>
-      </ul>
-      <ul>
-          <li><span class="font-medium">Escuela Superior (Bs.As) Tel:</span> (011) 5169-3322</li>
-          <ul>
-              <li class="ml-5 depAlumnos">Departamento Alumnos (011) 5169-3364</li>
-          </ul>
-          <li><span class="font-medium">Instituto de Capacitación Especializada (Bs.As) Tel:</span> (02324)430-054</li>
-          <li><span class="font-medium">Centro de Educación a Distancia (Bs.As) Tel:</span> (011) 5169-3355</li>
-      </ul>
-
+<!-- Custom contact dialog — reemplaza p-dialog (PrimeNG 19 Aura inyecta backdrop fixed que tapa el footer) -->
+<div *ngIf="display" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40" (click)="display = false">
+  <div class="bg-white text-gray-800 rounded-lg shadow-xl w-11/12 lg:w-2/3 p-6" (click)="$event.stopPropagation()">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Contactos</h2>
+      <button (click)="display = false" class="text-gray-500 hover:text-gray-900 text-2xl leading-none">&times;</button>
+    </div>
+    <hr class="mb-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+      <p><span class="font-semibold">Escuela de Oficiales (Bs. As):</span> Tel: (011) 4620-2063 Interno 253</p>
+      <p><span class="font-semibold">Escuela de Suboficiales (Córdoba):</span> Tel/Fax: (03525)401-964</p>
+      <p><span class="font-semibold">Guardia:</span> (03525)401-965</p>
+      <p><span class="font-semibold">Escuela de Gendarmes (San Juan):</span> Tel: (02648) 441-023</p>
+      <p><span class="font-semibold">Escuela Superior (Bs.As):</span> (011) 5169-3322</p>
+      <p class="ml-4"><span class="font-semibold">Departamento Alumnos:</span> (011) 5169-3364</p>
+      <p><span class="font-semibold">Instituto de Capacitación Especializada:</span> (02324)430-054</p>
+      <p><span class="font-semibold">Centro de Educación a Distancia:</span> (011) 5169-3355</p>
+    </div>
   </div>
-</p-dialog>
+</div>
