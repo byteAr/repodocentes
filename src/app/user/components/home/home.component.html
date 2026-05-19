@@ -2,14 +2,18 @@
 
 <!-- <img class="bannerStatic" src="../../../../assets/img/newbanner.png" alt="Banner de la página principal"> -->
 <!-- splide -->
-<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
-  <splide-slide>
-    <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets//img/novedades/banner/BANNER1.png" alt="" />
-  </splide-slide>
-  <splide-slide>
-    <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/BANNER2.png" alt="" />
-  </splide-slide>
-</splide>
+<div id="home-splide" class="splide" aria-label="Banner principal">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/BANNER1.png" alt="" />
+      </li>
+      <li class="splide__slide">
+        <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/BANNER2.png" alt="" />
+      </li>
+    </ul>
+  </div>
+</div>
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
 </section>

@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Novedad } from '../../interfaces/interfaces.interface';
 import { NovedadesService } from '../../../admin/services/novedades.service';
 import { environment } from '../../../../environments/environment.prod';
-import { Carousel } from "flowbite";
-import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
+import Splide from '@splidejs/splide';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +10,7 @@ import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite"
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
 
   novedades:Novedad[] = [];
@@ -29,6 +28,14 @@ export class HomeComponent implements OnInit {
   constructor(
     private novedadesService: NovedadesService
   ) { }
+
+  ngAfterViewInit(): void {
+    new Splide('#home-splide', {
+      type: 'loop',
+      autoplay: true,
+      interval: 7000,
+    }).mount();
+  }
 
   ngOnInit(): void {
 
