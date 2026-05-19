@@ -4,10 +4,10 @@ import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-novedad-rapida-seguridad-distancia',
-    templateUrl: './novedad-rapida-seguridad-distancia.component.html',
-    styleUrls: ['./novedad-rapida-seguridad-distancia.component.css'],
-    standalone: false
+  selector: 'app-novedad-rapida-seguridad-distancia',
+  standalone: false,
+  templateUrl: './novedad-rapida-seguridad-distancia.component.html',
+  styleUrls: ['./novedad-rapida-seguridad-distancia.component.css']
 })
 export class NovedadRapidaSeguridadDistanciaComponent implements OnInit {
   items: MenuItem[] = [];

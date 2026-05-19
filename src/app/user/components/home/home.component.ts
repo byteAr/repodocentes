@@ -4,13 +4,12 @@ import { NovedadesService } from '../../../admin/services/novedades.service';
 import { environment } from '../../../../environments/environment.prod';
 import { Carousel } from "flowbite";
 import type { CarouselItem, CarouselOptions, CarouselInterface } from "flowbite";
-import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.css'],
-    standalone: false
+  selector: 'app-home',
+  standalone: false,
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
 
@@ -28,17 +27,10 @@ export class HomeComponent implements OnInit {
 
 
   constructor(
-    private novedadesService: NovedadesService,
-    private seo: SeoService
+    private novedadesService: NovedadesService
   ) { }
 
   ngOnInit(): void {
-    this.seo.set({
-      title: 'Instituto Universitario de Gendarmería Nacional Argentina',
-      description: 'Sitio oficial del IUGNA — Instituto Universitario de Gendarmería Nacional Argentina. Oferta académica, investigación, extensión y biblioteca.',
-      keywords: 'IUGNA, Gendarmería Nacional, instituto universitario, oferta académica, Argentina',
-      path: '/'
-    });
 
     this.novedadesService.traerTodasLasNovedades().subscribe(data => {
       this.novedades = data.rows.reverse()

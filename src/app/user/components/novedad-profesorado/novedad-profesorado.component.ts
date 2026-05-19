@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
-    selector: 'app-novedad-profesorado',
-    templateUrl: './novedad-profesorado.component.html',
-    styleUrls: ['./novedad-profesorado.component.css'],
-    standalone: false
+  selector: 'app-novedad-profesorado',
+  standalone: false,
+  templateUrl: './novedad-profesorado.component.html',
+  styleUrls: ['./novedad-profesorado.component.css']
 })
 export class NovedadProfesoradoComponent implements OnInit {
    items: MenuItem[] = [];

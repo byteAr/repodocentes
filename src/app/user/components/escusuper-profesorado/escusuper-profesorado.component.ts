@@ -3,10 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import {MenuItem} from 'primeng/api';
 
 @Component({
-    selector: 'app-escusuper-profesorado',
-    templateUrl: './escusuper-profesorado.component.html',
-    styleUrls: ['./escusuper-profesorado.component.css'],
-    standalone: false
+  selector: 'app-escusuper-profesorado',
+  standalone: false,
+  templateUrl: './escusuper-profesorado.component.html',
+  styleUrls: ['./escusuper-profesorado.component.css']
 })
 export class EscusuperProfesoradoComponent implements OnInit {
 
