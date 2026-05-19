@@ -1,4 +1,4 @@
-FROM node:18-alpine AS pagina-iugna
+FROM node:20-alpine AS pagina-iugna
 
 WORKDIR /app
 
