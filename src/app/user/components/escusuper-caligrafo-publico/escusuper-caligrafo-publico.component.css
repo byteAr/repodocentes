@@ -8,8 +8,18 @@
 }
 
 .containerBodyCarrera {
+    width: 100%;
+    margin: 0;
+}
+
+.standalone-caligrafo {
     width: 80vw;
     margin: auto;
+}
+
+.embedded-caligrafo {
+    width: auto;
+    margin: 0 0.75rem;
 }
 
 :host ::ng-deep p-breadcrumb ul{
@@ -64,8 +74,26 @@ ul li i {
 }
 
 .title {
+    font-size: 1.8rem;
+    color: #439a22;
+    font-weight: 700;
+}
+
+.title2 {
     font-size: 1.5rem;
     font-weight: 700;
+}
+
+.title3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgb(6, 129, 129);
+}
+
+.title4 a {
+    font-size: 1.3rem;
+    color: #439a22;
+    font-weight: 600;
 }
 
 a {

@@ -47,7 +47,9 @@ import { NovedadRapidaSeguridadDistanciaComponent } from './components/novedad-r
 import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-postgrado/novedad-rapida-postgrado.component';
 import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
-// import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
+import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
+import { OfertaacademicaComponent } from './components/ofertaacademica/ofertaacademica.component';
+import { ExtensionEscusuperComponent } from './components/extension-escusuper/extension-escusuper.component';
 
 const routes: Routes = [
   {
@@ -95,21 +97,21 @@ const routes: Routes = [
     component: NovedadesComponent
 
   },
-  /* {
+  {
     path:'novedad/extension',
     component: NovedadRapidaExtensionComponent
 
-  }, */
-  // {
-  //   path:'novedad/ciclos-profesorado-caligrafo',
-  //   component: NovedadProfesoradoComponent
-  //
-  // },
-  /* {
+  },
+  {
+    path:'novedad/profesorado&caligrafo',
+    component: NovedadProfesoradoComponent
+
+  },
+  {
     path:'novedad/escusuper/inscripciones',
     component: NovedadRapidaSeguridadDistanciaComponent
 
-  }, */
+  },
   {
     path:'novedad/escusuper/posgrado',
     component: NovedadRapidaPostgradoComponent
@@ -125,7 +127,7 @@ const routes: Routes = [
     component: EscusuperComponent
   },
   {
-    path: 'uuaa/escusuper/oferta',
+    path: 'uuaa/ofertas',
     component: EscusuperOfertaComponent,
     children: [
       {
@@ -137,12 +139,30 @@ const routes: Routes = [
         component: EscusuperCiclosComponent
       },
       {
+        path: 'grado-escugen',
+        component: EscugenGradoComponent
+      },
+      {
         path: 'nivelacion',
         component: EscusuperNivelacionComponent
       },
       {
         path: 'diplomaturas',
         component: EscusuperDiplomaturasComponent
+      },
+      {
+        path: 'tecnicaturas-inscaes',
+        component: InscaesComponent
+      },
+      {
+        path: 'tecnicaturas-escusub',
+        component: EscusubTecnicaturasComponent
+      }
+      ,
+      {
+        path: 'caligrafo',
+        component: EscusuperCaligrafoPublicoComponent,
+        data: { embed: true }
       }
     ]
   },
@@ -172,8 +192,12 @@ const routes: Routes = [
   },{
     path: 'uuaa/escusuper/extension',
     component: CursosExtensionComponent
-  }
-  ,{
+  },
+  {
+    path: 'uuaa/escusuper/extension-universitaria',
+    component: ExtensionEscusuperComponent
+  },
+  {
     path: 'uuaa/escusuper/frontera',
     component: FronterasComponent
   }
@@ -184,6 +208,10 @@ const routes: Routes = [
   {
     path: 'uuaa/escugen',
     component: EscugenComponent
+  },
+  {
+    path: 'oferta-academica',
+    component: OfertaacademicaComponent
   },
   {
     path: 'uuaa/escugen/oferta',
@@ -243,10 +271,10 @@ const routes: Routes = [
     path: 'inscripciones-ciclos',
     component: NovedadRapidaComponent
   },
-  /* {
+  {
     path: 'convocatoria-docentes',
     component: ConvocatoriaDocentesComponent
-  }, */
+  },
   {
     path: 'digesto',
     component: DigestoComponent

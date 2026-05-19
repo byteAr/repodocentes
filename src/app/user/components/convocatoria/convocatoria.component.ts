@@ -4,10 +4,10 @@ import {MenuItem} from 'primeng/api';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-convocatoria',
-    templateUrl: './convocatoria.component.html',
-    styleUrls: ['./convocatoria.component.css'],
-    standalone: false
+  selector: 'app-convocatoria',
+  standalone: false,
+  templateUrl: './convocatoria.component.html',
+  styleUrls: ['./convocatoria.component.css']
 })
 export class ConvocatoriaComponent implements OnInit {
 

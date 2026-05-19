@@ -1,0 +1,72 @@
+/* Estilos específicos para la vista de Extensión Universitaria de EscuSuper */
+
+:host ::ng-deep p-breadcrumb ul {
+  padding-left: 2rem !important;
+}
+
+/* Carrusel de Novedades (reutilizado de Cursos de Extensión) */
+.carousel-wrapper {
+  overflow-x: clip;
+  width: 100%;
+  padding-bottom: 1.2rem;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 60s linear infinite;
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  flex-shrink: 0;
+  width: 200px;
+  margin-right: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.carousel-track:hover .carousel-slide {
+  opacity: 0.45;
+}
+
+.carousel-track:hover .carousel-slide:hover {
+  transform: scale(1.12);
+  opacity: 1;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.35s ease;
+}
+
+.carousel-slide:hover .carousel-img {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-desc {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #4b5563;
+  line-height: 1.3;
+  padding: 0 4px;
+  transition: color 0.35s.ease, font-weight 0.35s.ease;
+}
+
+.carousel-slide:hover .carousel-desc {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

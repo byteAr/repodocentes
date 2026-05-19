@@ -1,14 +1,13 @@
 <app-header></app-header>
 <p-breadcrumb  [model]="items"></p-breadcrumb>
-<div class="membrete">
-  <h2 class="subtitulo">Sistema de Bibliotecas del Instituto Universitario
-    de Gendarmería Nacional</h2>
+<div class="bg-gradient-to-r from-teal-500 to-green-500 py-3 text-white pl-6 md:pl-28">
+  <h1 class=" md:text-[1.5rem]">Sistema de Bibliotecas del Instituto Universitario de Gendarmería Nacional</h1>
 </div>
 <section class="w-full md:block lg:block xl:flex 2xl:flex ">
   <ul class="containerItems">
     <li class="list-none li1"><a href="https://bgn.bibliotecarios.ar/">Catálogo de búsqueda bibliográfica</a></li>
     <li class="list-none li2"><a href="https://repositoriodigital.iugna.edu.ar">Repositorio Digital Institucional</a></li>
-    <li (click)="showDisplay()" class="list-none li3 cursor-pointer"><a>Biblioteca Digital</a></li>
+    <li (click)="showDisplay()" class="list-none li3 cursor-pointer"><a>Bidi. Biblioteca Digital</a></li>
     <!-- <li class="list-none li3"><a href="https://www.bidi.la/account/iugna/login">Bidi. Biblioteca Digital</a></li> -->
     <li class="list-none li4"><a href="https://biblioteca.mincyt.gob.ar/">Biblioteca Electrónica de Ciencia y Tecnología</a></li>
   </ul>
@@ -30,9 +29,9 @@
   <p-accordion class="mt-5">
     <p-accordionTab class="institutoItems" header="Consultas en Línea" [selected]="false" iconPos="end">
       <ul class="containerServicios list-none">
-        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="https://www.argentina.gob.ar/defensa/red-de-bibliotecas-de-las-fuerzas-armadas-rebifa">- Rebifa</a></li>
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="http://www.rebifa.mindef.gov.ar/">- Rebifa</a></li>
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="http://www.bibliotecadigital.gob.ar/">- Biblioteca Digital Ministerio de Justicia</a></li>
-        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="https://undef.edu.ar/revista-cientifica/">- Biblioteca Digital de la Defensa</a></li>
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="https://www.undef.edu.ar/libros/biblioteca-digital/">- Biblioteca Digital de la Defensa</a></li>
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="http://www.cefadigital.edu.ar/"> - Cefa Digital</a></li>
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="https://repositoriosdigitales.mincyt.gob.ar/vufind/">- Repositorios Digitales</a></li>
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="https://bdu.siu.edu.ar/index.php">- Catálogo Bibliográfico SIU/BDU</a></li>
@@ -48,7 +47,7 @@
     <p-accordionTab class="institutoItems" header="Tutoriales" [selected]="false" iconPos="end">
       <ul class="containerServicios list-none">
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600" href="../../../../assets/pdfs/biblioteca/opac2023.pdf">Búsqueda de libros y revistas impresas</a></li>
-        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="../../../../assets/pdfs/biblioteca/BIBLIOTECADIGITAL2026.pdf">Búsqueda de Biblioteca Digital</a></li>
+        <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="../../../../assets/pdfs/biblioteca/busquedaBIDI.pdf">Búsqueda de BIDI Biblioteca Digital</a></li>
         <li><a class="no-underline text-base lg:text-lg font-semibold text-teal-600"  href="../../../../assets/pdfs/biblioteca/busquedaMincyt.pdf ">Búsqueda de Bibloteca Electrónica Mincyt</a></li>
       </ul>
     </p-accordionTab>
@@ -66,7 +65,7 @@
       toda la comunidad de Gendarmería Nacional.</p>
       <br>
       <br>
-      <p ><a class="text-xl font-bold text-teal-600 underline" href="../../../../assets/pdfs/biblioteca/reglamentobibliotecaiugna.pdf">Reglamento de Bibliotecas del IUGNA</a></p>
+      <p ><a class="text-xl font-bold text-teal-600 underline" href="../../../../assets/pdfs/biblioteca/reglamentoBiblioteca.pdf">Reglamento de Bibliotecas del IUGNA</a></p>
       <br>
     </div>
   </div>
@@ -74,10 +73,10 @@
     <p-accordion class="mb-5" >
       <p-accordionTab class="institutoItems" header="Bibliotecas Integrantes" [selected]="false" iconPos="end">
         <ul class="list-none">
-            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela Superior (CABA):</span> biblioteca.calderon&#64;iugna.edu.ar</p></li>
-            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Gendarmería Nacional (Buenos Aires):</span> biblioteca.escugen&#64;iugna.edu.ar</p></li>
-            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Suboficiales (Córdoba):</span> biblioteca.escusub&#64;iugna.edu.ar</p></li>
-            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Instituto de Capacitación Especializada (Buenos Aires):</span> biblioteca.inscaes&#64;iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela Superior (CABA):</span> biblioteca.calderon@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Gendarmería Nacional (Buenos Aires):</span> biblioteca.escugen@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Unidad Académica Escuela de Suboficiales (Córdoba):</span> biblioteca.escusub@iugna.edu.ar</p></li>
+            <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Instituto de Capacitación Especializada (Buenos Aires):</span> biblioteca.inscaes@iugna.edu.ar</p></li>
             <li class="text-base lg:text-lg"><p class="mb-5 text-lg"><span>Instituto de Formación de Gendarmes:</span> Tel. (02648) 441-023</p></li>
         </ul>
       </p-accordionTab>
@@ -86,10 +85,10 @@
   </section>
   <p-dialog header="" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '50vw'}">
     <section class="containerBidi">
-        <p class="text-center">Para el acceso enviar mail a la Biblioteca de su Unidad Académica.</p>
+        <p class="text-center">Para acceso a BIDI enviar mail a la Biblioteca de su Unidad Académica</p>
         <br>
         <div class="containerButtonBidi">
-          <a href="https://cin.ticmas.io/bidi"><p-button label="Ir a Biblioteca Digital" styleClass="p-button-info"></p-button></a>
+          <a href="https://www.bidi.la/account/iugna/login"><p-button label="Ir a Bidi" styleClass="p-button-info"></p-button></a>
         </div>
     </section>
 </p-dialog>

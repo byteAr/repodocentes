@@ -75,6 +75,8 @@ import { NovedadRapidaPostgradoComponent } from './components/novedad-rapida-pos
 import { DigestoComponent } from './components/digesto/digesto.component';
 import { SearchAdvanceComponent } from './components/search-advance/search-advance.component';
 import { NovedadProfesoradoComponent } from './components/novedad-profesorado/novedad-profesorado.component';
+import { OfertaacademicaComponent } from './components/ofertaacademica/ofertaacademica.component';
+import { ExtensionEscusuperComponent } from './components/extension-escusuper/extension-escusuper.component';
 
 
 @NgModule({
@@ -115,7 +117,7 @@ import { NovedadProfesoradoComponent } from './components/novedad-profesorado/no
     InscaesComponent,
     InsbarrealComponent,
     MenuofertaComponent,
-    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent, DigestoComponent, SearchAdvanceComponent, NovedadProfesoradoComponent
+    NovedadDetailComponent, NovedadRapidaComponent, FronterasComponent, BibliotecaGeneralComponent, ConvocatoriaDocentesComponent, NovedadRapidaSeguridadDistanciaComponent, NovedadRapidaExtensionComponent, NovedadRapidaPostgradoComponent, DigestoComponent, SearchAdvanceComponent, NovedadProfesoradoComponent, OfertaacademicaComponent, ExtensionEscusuperComponent
   ],
   imports: [
     CommonModule,

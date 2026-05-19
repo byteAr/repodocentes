@@ -1,0 +1,31 @@
+/* Estilo base (móviles) */
+:host ::ng-deep p-breadcrumb ul {
+  padding-left: 4% !important;
+  color: white !important
+}
+
+:host ::ng-deep p-component {
+  background-color: rgb(4, 196, 122) !important;
+  color: white !important;
+}
+
+/* md (≥ 768px) */
+@media (min-width: 768px) {
+  :host ::ng-deep p-breadcrumb ul {
+    padding-left: 2% !important;
+  }
+}
+
+/* lg (≥ 1024px) */
+@media (min-width: 1024px) {
+  :host ::ng-deep p-breadcrumb ul {
+    padding-left: 10% !important;
+  }
+}
+
+/* xl (≥ 1280px) */
+@media (min-width: 1280px) {
+  :host ::ng-deep p-breadcrumb ul {
+    padding-left: 2% !important;
+  }
+}

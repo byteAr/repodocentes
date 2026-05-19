@@ -1,0 +1,80 @@
+<div class="w-full rounded-xl border border-gray-200 bg-white ">
+  <ul class="divide-y divide-gray-200 ">
+    <li *ngFor="let it of items; let i = index; trackBy: trackByIndex" class="group">
+      <!-- Header -->
+      <h3 class="flex">
+        <button
+          #headerBtn
+          type="button"
+          (click)="toggle(i)"
+          (keydown)="onHeaderKeydown($event, i)"
+          [disabled]="it.disabled"
+          [attr.aria-disabled]="it.disabled || null"
+          [attr.aria-expanded]="isOpen(i)"
+          [attr.aria-controls]="baseId + '-panel-' + i"
+          [id]="baseId + '-header-' + i"
+          class="flex w-full items-center  justify-between gap-3 px-4 py-3 text-left
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+                 disabled:cursor-not-allowed disabled:opacity-50 bg-gray-400 text-white font-bold"
+          [attr.tabindex]="activeHeaderIndex === i ? 0 : -1"
+        >
+          <span class="text-[1.2rem] font-semibold text-white">{{ it.title }}</span>
+
+          <!-- Ícono chevron (rota al abrir) -->
+           <div class="flex justify-end w-[20%]">
+             <svg class="h-6 w-6 shrink-0 transition-transform duration-200"
+                  [class.rotate-180]="isOpen(i)"
+                  viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+               <path fill-rule="evenodd"
+                 d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+                 clip-rule="evenodd"/>
+             </svg>
+           </div>
+        </button>
+      </h3>
+
+      <!-- Panel -->
+<div
+  role="region"
+  [id]="baseId + '-panel-' + i"
+  [attr.aria-labelledby]="baseId + '-header-' + i"
+  class="overflow-hidden transition-[max-height] duration-300 ease-in-out"
+  #panel
+  [style.maxHeight]="isOpen(i) ? (panel.scrollHeight + 'px') : '0px'"
+>
+  <div class="px-4 pb-4 pt-0 text-sm text-gray-700" [class.pt-2]="isOpen(i)">
+
+    <!-- (B) Si el padre provee un template personalizado, úsalo -->
+    <ng-container *ngIf="itemTemplate; else builtIn"
+                  [ngTemplateOutlet]="itemTemplate"
+                  [ngTemplateOutletContext]="{ $implicit: it, index: i }">
+          </ng-container>
+
+          <!-- (A) Implementación por defecto: botones a rutas -->
+          <ng-template #builtIn>
+            <ng-container *ngIf="it.actions?.length; else textFallback">
+              <div class="flex flex-col gap-2" role="group" aria-label="Acciones">
+                <a *ngFor="let act of it.actions"
+                  [routerLink]="act.link"
+                  [queryParams]="act.queryParams"
+                  class="block w-full  px-3 py-3  font-medium
+                          ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none text-white
+                          focus-visible:ring-2 focus-visible:ring-blue-500 text-left text-[1.1rem] bg-gradient-to-r from-[#598f8f] to-[#b1cb9c]">
+                  {{ act.label }}
+                </a>
+              </div>
+
+            </ng-container>
+            <!-- Fallback opcional si no hay actions -->
+            <ng-template #textFallback>
+              <span>{{ it.content }}</span>
+            </ng-template>
+          </ng-template>
+
+        </div>
+      </div>
+
+    </li>
+  </ul>
+</div>
+

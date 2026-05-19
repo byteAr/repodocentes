@@ -1,0 +1,33 @@
+<div class="relative inline-block text-left" (keydown)="onKeydown($event)">
+  <button
+    type="button"
+    (click)="toggle()"
+    [attr.aria-expanded]="open"
+    aria-haspopup="menu"
+    aria-controls="dropdownMenu"
+    class="inline-flex items-center gap-2 rounded-xl bg-gray-400 px-4 py-2 text-sm font-medium shadow ring-1 ring-gray-200 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+  >
+    {{ label }}
+    <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+    </svg>
+  </button>
+
+  <div *ngIf="open" #menu id="dropdownMenu"
+       role="menu"
+       class="absolute z-50 mt-2 w-56 origin-top-right rounded-xl bg-white shadow-lg ring-1 ring-black/5 focus:outline-none">
+    <ul class="py-2 max-h-64 overflow-auto">
+      <li *ngFor="let opt of options; let i = index">
+        <button type="button"
+                [attr.data-index]="i"
+                role="menuitem"
+                [disabled]="opt.disabled"
+                [attr.aria-disabled]="opt.disabled || null"
+                (click)="onSelect(opt)"
+                class="w-full text-left px-3 py-2 text-sm hover:bg-gray-50 focus:bg-gray-50 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed">
+          {{ opt.label }}
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>

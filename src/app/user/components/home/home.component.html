@@ -1,65 +1,15 @@
 <app-header></app-header>
-<!-- <section class="containerBanner cursor-pointer">
-  <img routerLink="/novedad/1" src="../../../../assets/img/novedades//banner/banner-2025.png" alt="Banner de la página principal">
-</section> -->
 
-<section class="containerBanner">
-  <img src="../../../../assets/img/portadaHome/portadaIugna2022.png" alt="Banner de la página principal">
-</section>
-<!-- <section class="">
-    <div routerLink="/novedad/extension" class="flex justify-between cursor-pointer">
-        <img class="w-4 h-28 md:w-2 md:h-72" src="../../../../assets/img/slider/B4.png" alt="Banner de la página principal">
-        <div class="flex flex-col justify-center ">
-            <p class="md:text-2xl font-light text-gray-600 text-xs ">IUGNA: Unidad Académica Escuela Superior</p>
-            <p class="text-[#123261] font-bold text-xs md:text-4xl leading-3">Incripciones abiertas 2026</p>
-            <p class="text-[#123261] font-bold text-xs md:text-5xl leading-3">Cursos de Extensión</p>
-
-        </div>
-        <img class="w-2 h-28 md:w-1 md:h-72" src="../../../../assets/img/slider/B3.png" alt="Banner de la página principal">
-    </div>
-</section> -->
-<!-- <section routerLink="/novedad/extension" class="h-[25vh] md:h-[100%] relative overflow-hidden cursor-pointer">
-  <img class="w-full h-full" src="/assets/img/novedades/banner/fondo-banner.png" alt="">
-  <div class="absolute inset-0 flex flex-col items-center justify-center md:text-left text-white p-4">
-    <div class=" text-center md:text-left leading-4">
-      <p class="text-md md:text-4xl">IUGNA: Unidad Académica Escuela Superior</p>
-      <p class="text-xl md:text-6xl font-bold">Inscripciones abiertas 2025</p>
-      <p class="text-xl md:text-6xl font-bold"> Cursos de Extensión</p>
-    </div>
-  </div>
-</section> -->
+<!-- <img class="bannerStatic" src="../../../../assets/img/newbanner.png" alt="Banner de la página principal"> -->
 <!-- splide -->
-<!-- <splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
+<splide [options]="{ type: 'loop', autoplay:'true', interval:'7000'}">
   <splide-slide>
-    <section class="">
-        <div routerLink="/novedad/extension" class="flex justify-between cursor-pointer">
-            <img class="w-4 h-28 md:w-2 md:h-72" src="../../../../assets/img/slider/B4.png" alt="Banner de la página principal">
-            <div class="flex flex-col justify-center ">
-                <p class="md:text-2xl font-light text-gray-600 text-xs ">IUGNA: Unidad Académica Escuela Superior</p>
-                <p class="text-[#123261] font-bold text-xs md:text-4xl leading-3">Incripciones abiertas 2026</p>
-                <p class="text-[#123261] font-bold text-xs md:text-5xl leading-3">Cursos de Extensión Universitaria</p>
-    
-            </div>
-            <img class="w-2 h-28 md:w-1 md:h-72" src="../../../../assets/img/slider/B3.png" alt="Banner de la página principal">
-        </div>
-    </section>
+    <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets//img/novedades/banner/BANNER1.png" alt="" />
   </splide-slide>
   <splide-slide>
-    <section class="">
-        <div routerLink="/novedad/ciclos-profesorado-caligrafo" class="flex justify-between cursor-pointer">
-            <img class="w-4 h-28 md:w-2 md:h-72" src="../../../../assets/img/slider/vector.png" alt="Banner de la página principal">
-            <div class="flex flex-col justify-center ">
-                <p class="md:text-2xl font-light text-gray-600 text-xs ">IUGNA: Unidad Académica Escuela Superior</p>
-                <p class="text-teal-700 font-bold text-xs md:text-4xl leading-3">Incripciones abiertas 2026</p>
-                <p class="text-teal-700 font-bold text-xs md:text-5xl leading-3">Ciclos de Licenciaturas, Calígrafo Público y Profesorado Universitario</p>
-    
-            </div>
-            <img class="w-2 h-28 md:w-1 md:h-72" src="../../../../assets/img/slider/vector2.png" alt="Banner de la página principal">
-        </div>
-    </section>
+    <img routerLink="" class="object-cover w-full cursor-pointer h-auto" src="../../../../assets/img/novedades/banner/BANNER2.png" alt="" />
   </splide-slide>
-
-</splide> -->
+</splide>
 <section>
     <app-menuoferta class="menuOfertaResponsive"></app-menuoferta>
 </section>
@@ -69,27 +19,25 @@
 
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a class="container-tecnicaturas" (click)="ejecutarTab(1)">PREGRADO</a>
+                        <a routerLink="/uuaa/ofertas/pregrado" class="container-tecnicaturas font-extrabold text-xl">PREGRADO</a>
                     </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div>
-                        <a class="container-licenciaturas" (click)="ejecutarTab(2)">GRADO</a>
+                        <a routerLink="/uuaa/ofertas/ciclos" class="container-licenciaturas font-extrabold text-xl">GRADO</a>
                     </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a class="container-ciclos" (click)="ejecutarTab(3)">CURSOS DE POSGRADO</a>
+                        <a routerLink="/uuaa/ofertas/diplomaturas" class="container-ciclos font-extrabold text-xl">CURSOS DE POSGRADO</a>
                     </div>
                 </li>
                 <li class="tecnicaturas col-lg">
                     <div >
-                        <a  class="container-extension" (click)="ejecutarTab(4)">CURSOS DE EXTENSIÓN</a>
+                        <a routerLink="/uuaa/escusuper/extension"  class="container-extension font-extrabold text-xl">CURSOS DE EXTENSIÓN</a>
                     </div>
                 </li>
-
         </ul>
-
         <div class="secciones">
             <div *ngIf="isTab1Active">
                 <article id="tab1">
@@ -143,9 +91,9 @@
                     <div class="cursos col-lg" id="cursos">
                         <a routerLink="uuaa/escusuper/oferta/diplomaturas">Diplomatura Universitaria en Seguridad y Desarrollo de fronteras (a distancia)</a>
                         <hr>
-                        <a routerLink="uuaa/escusuper/oferta/diplomaturas" href="">Diplomatura en Gestión Integral de Riesgos de Desastres (a distancia)</a>
+                        <a routerLink="uuaa/escusuper/oferta/diplomaturas" href="">Diplomatura en Gestión Integral de Riesgo de Desastre</a>
                         <hr>
-                        <a routerLink="uuaa/escusuper/oferta/diplomaturas" href="">Diplomatura en Inteligencia Criminal y Crimen Organizado (a distancia)</a>
+                        <a routerLink="uuaa/escusuper/oferta/diplomaturas" href="">Diplomatura en Inteligencia Criminal y Crimen Organizado</a>
                         <hr>
 
 
@@ -186,39 +134,21 @@
 </section>
 
 <!-- <section class="containerNovedadDestacada2">
-  <div class="w-1/4 flex justify-center items-center">
-      <img class="w-342" src="../../../../assets/img/iconos/info.png" alt="">
+  <div class="imgNovedadDestacada">
+      <img src="../../../../assets/img/iconos/librito.png" alt="">
   </div>
   <div class="descripcionNovedadDestacada">
       <div>
-          <p class=" font-bold text-gray-600">IUGNA: Unidad Académica Escuela Superior</p>
-          <p class="font-bold text-2xl my-2 text-blue-700">Inscripciones abiertas 2026
-            Cursos de Extensión
-          </p>
-          <p><b>Inglés Nivel I y III, Francés Nivel I y III, Introducción a la Gestión Organizacional, Prevención del Delito, Resolución de Conflictos y , </b>desde el 09 de febrero al 13 de marzo 2026, <span routerLink="/novedad/extension" class="underline text-sky-600 cursor-pointer md: text-base">Más información</span></p>              
+          <p class="text-teal-600 font-bold">IUGNA: Unidad Académica Escuela Superior</p>
+          <p class="font-bold mb-2">Inscripciones abiertas para los Cursos de Extensión Universitaria: Inglés Nivel I,
+            Inglés Nivel III, Francés Nivel I, Introducción a la Gestión Organizacional y
+            Prevención del Delito, desde el 04 de febrero al 14 de marzo 2025, para más
+            información <span routerLink="/novedad/extension" class="underline text-blue-400 cursor-pointer md: text-base">Más información</span></p>
+
+
       </div>
   </div>
 </section> -->
-<!-- Sección de novedad de ciclos/profesorado/calígrafo deshabilitada porque la preinscripción venció (hasta el 18 de febrero de 2026)
-<section class="containerNovedadDestacada2">
-  <div class="w-1/4 flex justify-center items-center">
-      <img class="w-28" src="../../../../assets/img/iconos/bookblue.png" alt="">
-  </div>
-  <div class="descripcionNovedadDestacada">
-      <div>
-          <p class=" font-bold text-gray-600">IUGNA: Unidad Académica Escuela Superior</p>
-          <p class="font-bold text-2xl my-2 text-teal-700">Inscripciones abiertas 2026</p>
-          <ul class="list-disc list-inside text-teal-700 font-bold ml-5">
-            <li>Ciclos de Licenciaturas en: Investigación Judicial, Administración Pública, Criminalística</li>
-            <li>Ciclo del Profesorado Universitario.</li>
-            <li>Carrera de Pregrado: Calígrafo Público Nacional. </li>
-          </ul>
-          <br>
-          <span routerLink="/novedad/ciclos-profesorado-caligrafo" class="underline text-sky-600 cursor-pointer md: text-base">Más información</span>
-      </div>
-  </div>
-</section>
--->
 
 
 
@@ -227,24 +157,17 @@
 
 <!-- <section class="containerNovedadDestacada">
     <div class="imgNovedadDestacada">
-        <img src="../../../../assets/img/iconos/librito.png" alt="">
+        <img src="../../../../assets/img/iconos/incono-extension-uuaa.png" alt="">
     </div>
     <div class="descripcionNovedadDestacada">
         <div>
-            <p class="font-bold text-base">IUGNA: Unidad Académica Escuela Superior</p>
-            <p class="font-bold text-xl text-teal-600">INSCRIPCIONES ABIERTAS 2026</p>
-            <p class="font-bold text-base text-blue-950 mt-2">Ciclos de Licenciaturas en: Investigación Judicial, Administración Pública,
-              Criminalística, Seguridad Pública, Gestión y Seguridad de las Tecnologías de
-              la Información.</p>
-
-            <p class="font-bold text-base text-blue-950 mt-2">Ciclo del Profesorado Universitario.</p>
-
-            <p class="font-bold text-base text-blue-950 mt-2">Carrera de Pregrado: Calígrafo Público Nacional.</p>
-
-            <p class="font-bold text-base mt-2"><a routerLink="/novedad/escusuper/inscripciones" class="text-blue-400 cursor-pointer underline ">Más información</a>  </p>
-
-            <p class="font-bold text-base mt-2">04 al 19 de diciembre 2025.-</p>
-            <p class="font-bold text-base mt-2">Oferta educativa gratuita.-</p>
+            <p><b>IUGNA: Unidad Académica Escuela Superior</b></p>
+            <p><b>Inscripciones abiertas</b> para los <b>Cursos de Extensión Universitaria:</b> Francés;
+              Introducción a la Gestión Organizacional;
+              Mediación – Negociación; Prevención y Protección de la Violencia
+              Intrafamiliar y de Género e Inglés, hasta el 08 de agosto 2023, más
+              información</p>
+            <p>Más información acceder <a routerLink="/novedad/extension" class="text-blue-400 cursor-pointer underline">aqui</a></p>
         </div>
     </div>
 </section> -->
@@ -268,60 +191,40 @@
     </div>
 
 </section> -->
-<section class="unidadesAcademicas">
-    <h2>Unidades Académicas</h2>
-    <br>
-    <div class="iconsUnidadesAcademicas">
-        <div class="escuelas1">
-            <img routerLink="./uuaa/escusub" src="../../../../assets/img/icon escuelas/01.png" alt="Escuela de Suboficiales Raul Remberto Cuello">
-            <img routerLink="./uuaa/insbarreal" src="../../../../assets/img/icon escuelas/02.png" alt="Escuela de formacion de Gendarmes">
-            <img routerLink="./uuaa/escugen" src="../../../../assets/img/icon escuelas/03.png" alt="Ecuela de Oficiales Martin Miguel de Güemes">
-        </div>
-        <div class="escuelas2">
-            <img routerLink="./uuaa/escusuper" src="../../../../assets/img/icon escuelas/04.png" alt="Escuela Superior Maria Calderon">
-            <img routerLink="./uuaa/inscaes" src="../../../../assets/img/icon escuelas/05.png" alt="Escuela de Capacitacion Especializada Cabo Juan Adolfo Romero">
-        </div>
-    </div>
+<section class="w-full mt-4 mb-4 md:mt-5 md:mb-5 lg:mt-8 lg:mb-8  flex">
+  <a style="width: 33.333%;" class="h-auto "  href="https://plataformavirtual.iugna.edu.ar/login/index.php">
+    <img src="../../../../assets/img/icon escuelas/moodle.png" alt="" class="w-full">
+  </a>
+  <a style="width: 33.333%;" class="h-auto "  href="https://plataformavirtual.iugna.edu.ar/cenedis/">
+    <img src="../../../../assets/img/enlaces/cenedis.png" alt="" class="w-full">
+  </a>
+  <a style="width: 33.333%;" class="h-auto " >
+    <img (click)="showDialog()" src="../../../../assets/img/enlaces/siu.png" alt="" class="w-full cursor-pointer">
+  </a>
 </section>
-<br>
-<br>
-<br>
-<section class="enlaces">
-    <div class="sistemasExternos">
-        <a href="https://plataformavirtual.iugna.edu.ar/login/index.php"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/CV.png" alt=""></a>
-        <a href="https://plataformavirtual.iugna.edu.ar/cenedis/"><img class="imgEnlacesExternos" src="../../../../assets/img/portalCENEDIS.png" alt=""></a>
-        <a (click)="showDialog()"><img class="imgEnlacesExternos" src="../../../../assets/img/icon escuelas/SIU.png" alt=""></a>
-    </div>
-</section>
-<p-dialog header="" [(visible)]="display" [breakpoints]="{'960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
-    <section class="containerSiu">
+<p-dialog header="" [(visible)]="display" [breakpoints]="{'389px':'20vw','960px': '75vw', '640px': '100vw'}" [style]="{width: '80vw'}">
+    <section class="flex justify-around">
         <div>
             <img src="" alt="">
             <p></p>
         </div>
         <a href="https://preinscripcion.iugna.edu.ar/escuelas/">
-            <div>
-            <img class="imgSiu" src="../../../../assets/img/siu/A1.png" alt="">
-            <p class="preinscripcion">Preinscripción</p>
-        </div></a>
+            <div class="text-center">
+              <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A1.png" alt="">
+              <p class="preinscripcion text-sm sm:text-base">Preinscripción</p>
+            </div></a>
         <a href="https://siu.iugna.edu.ar/autogestion/">
-            <div>
-                <img class="imgSiu" src="../../../../assets/img/siu/A2.png" alt="">
-                <p class="autogestion">Autogestión</p>
+            <div class="text-center">
+                <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A2.png" alt="">
+                <p class="autogestion text-sm sm:text-base">Autogestión</p>
             </div>
         </a>
-
         <a href="https://siu.iugna.edu.ar/guarani/">
-            <div>
-                <img class="imgSiu" src="../../../../assets/img/siu/A3.png" alt="">
-                <p class="administracion">Administración</p>
+            <div class="text-center">
+                <img class="w-[7rem] md:w-[12rem]" src="../../../../assets/img/siu/A3.png" alt="">
+                <p class="administracion text-sm sm:text-base">Administración</p>
             </div>
         </a>
-
-
     </section>
 </p-dialog>
-<br>
-<br>
-<br>
 <app-footer></app-footer>

@@ -1,113 +1,21 @@
-/* ── Contenedor ─────────────────────────────────────────────────────────────── */
-.accordion {
+.menuOfertasResponsiveContainer > button {
   width: 100%;
-  font-family: inherit;
-}
-
-/* ── Ítem ────────────────────────────────────────────────────────────────────── */
-.acc-item {
-  width: 100%;
-  overflow: hidden;
-}
-
-/* ── Cabecera del acordeón ───────────────────────────────────────────────────── */
-.acc-header {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 1rem 1.2rem;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-align: center;
-  transition: filter 0.2s;
-}
-
-.acc-header:hover {
-  filter: brightness(1.15);
-}
-
-/* Colores por sección — idénticos a desktop */
-.acc-1 { background-color: #0e3d35; }
-.acc-2 { background-color: #255051; }
-.acc-3 { background-color: #117572; }
-.acc-4 { background-color: #3abf88; }
-
-.acc-header .pi {
-  font-size: 0.9rem !important;
-  color: rgba(255, 255, 255, 0.85) !important;
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-  width: auto !important;
-  height: auto !important;
-}
-
-/* ── Cuerpo del acordeón ─────────────────────────────────────────────────────── */
-.acc-body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1),
-              padding 0.3s ease,
-              opacity 0.3s ease;
-  padding: 0 1.2rem;
-  opacity: 0;
-}
-
-.acc-body.open {
-  max-height: 700px;
-  padding: 0.75rem 1.2rem 1rem;
-  opacity: 1;
-}
-
-/* Colores de fondo del cuerpo (versión más oscura que la cabecera) */
-.acc-body-1 { background-color: #0a2b25; }
-.acc-body-2 { background-color: #1a3a3a; }
-.acc-body-3 { background-color: #0d5250; }
-.acc-body-4 { background-color: #2a9a6a; }
-
-/* ── Links dentro del acordeón ───────────────────────────────────────────────── */
-.acc-link {
-  display: block;
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration: none;
-  font-size: 0.88rem;
+  padding: 4% 0% 4% 0%;
   font-weight: 500;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  transition: color 0.2s;
+  border: none;
+  color: white;
+  font-size: 1rem;
   cursor: pointer;
-  text-align: center;
 }
-
-.acc-link:last-child {
-  border-bottom: none;
+.pregrado{
+  background-color: #0E3D35;
 }
-
-.acc-link:hover {
-  color: #ffffff;
+.grado {
+  background-color: #117572;
 }
-
-.acc-nolink {
-  cursor: default;
-  opacity: 0.75;
+.cursosPosgrado {
+  background-color: #3ABF88;
 }
-
-.acc-nolink:hover {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-/* ── Subtítulo de grupo ──────────────────────────────────────────────────────── */
-.acc-subtitle {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0.75rem 0 0.25rem;
-  text-align: center;
+.cursosExtension {
+ background-color: #8AC979;
 }

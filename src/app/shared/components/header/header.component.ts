@@ -1,105 +1,74 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import {MenuItem} from 'primeng/api';
-import { Menubar } from 'primeng/menubar';
-
-import { faUserLarge } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.css'],
-    standalone: false
+  selector: 'app-header',
+  standalone: false,
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @ViewChild('asMenu') menu!: Menubar;
-  @ViewChild('itemsMenu') itemsMenu!: ElementRef;
+
+  isSubmenuOpen = false;
+  isSubmenu2Open = false;
+  isSubmenu3Open = false;
+
   mostrar: boolean = false;
   visibleSidebar1: boolean = false;
 
-  
-
   menuHeader: MenuItem[] = [];
-  
   items: MenuItem[] = [];
-  faUserLarge = faUserLarge
 
-  constructor(private render2 : Renderer2) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.menuHeader = [{
-        label: ``,
-        items: [
-        {
-            label: 'Perfil',
-            icon: 'pi pi-user',
-            routerLink : '/'
-        },
-        {
-            label: 'Ayuda',
-            icon: 'pi pi-info-circle'
-        },
-        {
-          label: 'Cerrar Sesión',
-          icon: 'pi pi-sign-out',
-          
-        }
-        ]}
-    ];
-
     this.items = [
       {
-          label: 'INSTITUCIONAL',
-          items: [
-              {label: 'El instituto Universitario'},
-              {label: 'Quiénes Somos'},
-              {label: 'Misión'},
-              {label: 'Autoridades'},
-              {label: 'Sedes y localizaciones'},
-              {label: 'Convocatoria a Docentes Interinos'}
-          ],
-          styleClass: 'menucus'
+        label: 'INSTITUCIONAL',
+        items: [
+          { label: 'El instituto Universitario' },
+          { label: 'Quiénes Somos' },
+          { label: 'Misión' },
+          { label: 'Autoridades' },
+          { label: 'Sedes y localizaciones' },
+          { label: 'Convocatoria a Docentes Interinos' }
+        ]
       },
       {
-          label: 'INVESTIGACIÓN',
-          items: [
-              {label: 'Revista Ciencia y Seguridad'},
-              {label: 'Repositorio Digital'}
-          ]
+        label: 'INVESTIGACIÓN',
+        items: [
+          { label: 'Revista Ciencia y Seguridad' },
+          { label: 'Repositorio Digital' }
+        ]
       },
+      { label: 'EXTENSIÓN' },
+      { label: 'BIBLIOTECA' },
       {
-          label: 'EXTENSIÓN',
-          
-      },
-      {
-          label: 'BIBLIOTECA',
-         
-      },
-      {
-          label: 'OFERTA ACADÉMICA',
-          items: [
-              {label: 'Tecnicaturas'},
-              {label: 'Licenciaturas'},
-              {label: 'Ciclos de Licenciatura'},
-              {label: 'Cursos de Extensión'},
-              {label: 'Diplomaturas'}
-          ]
-      },
-      {
-          label: 'Mi IUGNA'
+        label: 'OFERTA ACADÉMICA',
+        items: [
+          { label: 'Tecnicaturas' },
+          { label: 'Licenciaturas' },
+          { label: 'Ciclos de Licenciatura' },
+          { label: 'Cursos de Extensión' },
+          { label: 'Diplomaturas' }
+        ]
       }
-  ];
+    ];
   }
 
   mostrarMenu() {
-      if(this.mostrar == false) {
-          this.mostrar = true
-      } else {
-          this.mostrar = false
-      }
-    /* const menu = this.itemsMenu.nativeElement
-    this.render2.addClass(menu, "mostrar") */
+    this.mostrar = !this.mostrar;
   }
 
-  
+  toggleSubmenu() {
+    this.isSubmenuOpen = !this.isSubmenuOpen;
+  }
 
+  toggleSubmenu2() {
+    this.isSubmenu2Open = !this.isSubmenu2Open;
+  }
+
+  toggleSubmenu3() {
+    this.isSubmenu3Open = !this.isSubmenu3Open;
+  }
 }

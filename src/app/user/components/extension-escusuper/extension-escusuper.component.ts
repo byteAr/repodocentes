@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
-import {MenuItem} from 'primeng/api';
+import { MenuItem } from 'primeng/api';
 
 @Component({
-  selector: 'app-cursos-extension',
+  selector: 'app-extension-escusuper',
   standalone: false,
-  templateUrl: './cursos-extension.component.html',
-  styleUrls: ['./cursos-extension.component.css']
+  templateUrl: './extension-escusuper.component.html',
+  styleUrls: ['./extension-escusuper.component.css']
 })
-export class CursosExtensionComponent implements OnInit {
+export class ExtensionEscusuperComponent implements OnInit {
 
   items: MenuItem[] = [];
 
@@ -37,10 +36,12 @@ export class CursosExtensionComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      {label:'Inicio', routerLink: '/'},
-      {label:'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper'},
-      {label:'Cursos de Extensión', disabled: true}
-  ];
+      { label: 'Inicio', routerLink: '/' },
+      { label: 'Unidad Académica Escuela Superior', routerLink: '/uuaa/escusuper' },
+      { label: 'Extensión Universitaria', disabled: true }
+    ];
   }
 
 }
+
+

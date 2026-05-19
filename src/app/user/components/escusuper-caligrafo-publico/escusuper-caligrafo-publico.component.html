@@ -1,14 +1,21 @@
-<app-header></app-header>
-<p-breadcrumb class=""  [model]="items"></p-breadcrumb>
-<div class="bannerContainer">
+<app-header *ngIf="showLayout"></app-header>
+<p-breadcrumb *ngIf="showLayout" class=""  [model]="items"></p-breadcrumb>
+<div *ngIf="showLayout" class="bannerContainer">
     <p>Calígrafo Público Nacional</p>
 </div>
-<div class="containerBodyCarrera">
-    <p class="title mt-5 mb-3">Título: Calígrafo/a Público/a Nacional</p>
+<div class="containerBodyCarrera" [ngClass]="{'embedded-caligrafo': !showLayout, 'standalone-caligrafo': showLayout}">
+    <p *ngIf="!showLayout" class="title mb-3">Calígrafo Público</p>
+    <hr *ngIf="!showLayout">
+
+    <p *ngIf="showLayout" class="title2 mt-5 mb-3">Carrera: Calígrafo Público Nacional</p>
+    <p *ngIf="!showLayout" class="title2 mt-3 mb-3">Carrera: Calígrafo Público Nacional</p>
+    
+    <p class="title3 mb-3">Título: Calígrafo/a Público/a Nacional</p>
     <p class="mb-3">Duración: 3 años</p>
     <p class="mb-3">Resolución Ministerial: RESOL-2019-4239-APN-MECCYT</p>
-    <p class="title4 mb-3"><a class=" text-base font-bold lg:text-xl text-green-500" href="../../../../assets/pdfs/escusuper/PlanEstudiosCaligrafoPublico.pdf">Plan de estudios</a></p>
-    <p class="mb-3 font-bold text-base lg:text-xl">Requisitos de Ingreso</p>
+    <p class="title4 mb-3"><a href="../../../../assets/pdfs/escusuper/PlanEstudiosCaligrafoPublico.pdf">Plan de estudios</a></p>
+    
+    <p class="title2 mt-5 mb-3">Requisitos de Ingreso</p>
     <p class="mb-3">Tener acreditado el nivel medio o ciclo polimodal de enseñanza.</p>
     <p class="mb-3">Excepcionalmente, mayores de 25 años que no tengan aprobado
         el nivel medio o ciclo polimodal, podrán ingresar siempre que
@@ -16,17 +23,18 @@
         Universitario establezca, preparación y/o experiencia laboral
         acorde, así como aptitudes y conocimientos suficientes</p>
     <p class="mb-3">Las clases se desarrollan bajo la modalidad presencial de lunes a jueves de 15.00 hs a 21.10 hs.</p>
-    <p class="mb-3 font-bold text-base lg:text-xl">Documentación para la inscripción</p>
+    
+    <p class="title2 mt-5 mb-3">Documentación para la inscripción</p>
     <ul>
         <li><a href="https://preinscripcion.iugna.edu.ar/escuelas/">Ficha de pre inscripción SIU GUARANI</a></li>
         <li>Fotocopia del DNI actualizado, frente y dorso.</li>
         <li>Ficha de examen personal <a href="../../../../assets/pdfs/novedades/EXAMEN FISICO DE INGRESO.pdf">aqui</a></li>
         <li>Fotocopia del título y analítico de Título Secundario, o constancia de título en trámite.</li>
     </ul>
-    <p class="mb-3">Toda documentación deberá ser enviada  a: ciclospreinscripciones&#64;iugna.edu.ar (en un solo archivo en formato PDF, legible, no se recibirán archivos en formato JPG). Para realizar consultas también podrá hacerlo a la misma casilla de correo electrónico.</p>
+    <p class="mb-3">Toda documentación deberá ser enviada  a: ciclospreinscripciones@iugna.edu.ar (en un solo archivo en formato PDF, legible, no se recibirán archivos en formato JPG). Para realizar consultas también podrá hacerlo a la misma casilla de correo electrónico.</p>
 </div>
-<br>
-<br>
-<br>
-<br>
-<app-footer></app-footer>
+<br *ngIf="showLayout">
+<br *ngIf="showLayout">
+<br *ngIf="showLayout">
+<br *ngIf="showLayout">
+<app-footer *ngIf="showLayout"></app-footer>
