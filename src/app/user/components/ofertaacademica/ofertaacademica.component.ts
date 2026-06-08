@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { SeoService } from '../../../shared/services/seo.service';
 
 @Component({
   selector: 'app-ofertaacademica',
@@ -11,9 +12,15 @@ export class OfertaacademicaComponent implements OnInit {
 
   items: MenuItem[] = [];
 
-  constructor() { }
+  constructor(private seo: SeoService) { }
 
   ngOnInit(): void {
+    this.seo.set({
+      title: 'Oferta Académica',
+      description: 'Oferta académica del IUGNA: tecnicaturas, licenciaturas, posgrados y cursos de extensión del Instituto Universitario de Gendarmería Nacional.',
+      keywords: 'IUGNA oferta académica, carreras, tecnicaturas, licenciaturas, posgrado',
+      path: '/uuaa'
+    });
     this.items = [
       {label:'Inicio', routerLink: '/'},
       {label:'Unidades Académicas', disabled: true}

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { ConfirmationService } from 'primeng/api';
+import { SeoService } from '../../../shared/services/seo.service';
 import { City, Digesto } from '../../interfaces/interfaces.interface';
 
 
@@ -56,7 +57,8 @@ export class DigestoComponent implements OnInit {
     },
   ]
   constructor(private messageService: MessageService,
-              private confirmationService: ConfirmationService,) {
+              private confirmationService: ConfirmationService,
+              private seo: SeoService) {
     this.cities = [
       {name: 'Gobierno y Gestión', code: 'NY'},
       {name: 'Función y Docencia', code: 'RM'},
@@ -72,11 +74,17 @@ export class DigestoComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.seo.set({
+      title: 'Digesto',
+      description: 'Digesto normativo del IUGNA: resoluciones, normativas de gobierno, gestión, docencia, investigación y extensión universitaria.',
+      keywords: 'IUGNA digesto, normativas, resoluciones, reglamentos',
+      path: '/digesto'
+    });
     this.items = [
       {label:'Inicio', routerLink:'/'},
-      {label:'Instituto Uiversitario', routerLink: '/institucional'},
+      {label:'Instituto Universitario', routerLink: '/institucional'},
       {label:'Digesto', disabled: true}
-  ];
+    ];
   }
 
   hideDialog() {

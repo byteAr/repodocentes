@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Novedad } from '../../interfaces/interfaces.interface';
 import { NovedadesService } from '../../../admin/services/novedades.service';
 import { environment } from '../../../../environments/environment.prod';
+import { SeoService } from '../../../shared/services/seo.service';
 import Splide from '@splidejs/splide';
 
 @Component({
@@ -26,7 +27,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
 
   constructor(
-    private novedadesService: NovedadesService
+    private novedadesService: NovedadesService,
+    private seo: SeoService
   ) { }
 
   ngAfterViewInit(): void {
@@ -38,6 +40,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.seo.set({
+      title: 'Instituto Universitario de Gendarmería Nacional Argentina',
+      description: 'Sitio oficial del IUGNA — Instituto Universitario de Gendarmería Nacional Argentina. Oferta académica, investigación, extensión y biblioteca.',
+      keywords: 'IUGNA, Gendarmería Nacional, universidad, oferta académica, carreras, tecnicaturas, licenciaturas',
+      path: '/'
+    });
 
     this.novedadesService.traerTodasLasNovedades().subscribe(data => {
       this.novedades = data.rows.reverse()
