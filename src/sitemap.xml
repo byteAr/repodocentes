@@ -5,10 +5,10 @@
   <url><loc>https://www.iugna.edu.ar/investigacion</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.iugna.edu.ar/extension</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.iugna.edu.ar/biblioteca</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.iugna.edu.ar/novedades</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.iugna.edu.ar/uuaa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Novedades excluida temporalmente hasta que tenga contenido -->
+<url><loc>https://www.iugna.edu.ar/uuaa</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.iugna.edu.ar/uuaa/escusuper</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.iugna.edu.ar/uuaa/escugen</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.iugna.edu.ar/uuaa/escusub</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.iugna.edu.ar/digesto</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <!-- Digesto excluido temporalmente hasta que tenga contenido -->
 </urlset>
